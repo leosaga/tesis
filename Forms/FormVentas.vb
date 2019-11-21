@@ -103,10 +103,10 @@ Public Class FormVentas
         txtDescripcion.Clear()
         TxtPrecio.Clear()
         txtCantidad.Clear()
-
+        txtIdProducto.Text = 0
         txtTotal.Text = Val(vendeta.cantidad) * Val(vendeta.monto) + Val(txtTotal.Text)
 
-        txtVuelto.Text = Val(txtTotal.Text) - Val(txtRecibido.Text)
+
         
 
 
@@ -114,14 +114,35 @@ Public Class FormVentas
 
     Private Sub btnEliminar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEliminar.Click
         For Each vendeta As DataGridViewRow In dgvventadetalle.SelectedRows
-
             vendeta.Cells("paraBorrar").Value = True
             dgvventadetalle.CurrentCell = Nothing
             vendeta.Visible = False
-
         Next
     End Sub
 
  
     
+    Private Sub txtRecibido_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtRecibido.TextChanged
+        txtVuelto.Text = Val(txtTotal.Text) - Val(txtRecibido.Text)
+    End Sub
+
+   
+    Private Sub BtnAceptar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnAceptar.Click
+        Venta.Id = txtIdVenta.Text
+        Venta.id_cliente = CmbCliente.SelectedValue
+        Venta.fecha = DateTimePicker2.Text
+        Venta.id_comprobante = ComboComprobante.SelectedValue
+        If esNuevo Then
+            Venta.Id = Venta.Agregar(Venta)
+        Else
+            Venta.Id = txtIdVenta.Text
+            Venta.Modificar(Venta)
+        End If
+        ventas.ActualizarTablas(dgvventadetalle, Venta.Id)
+        Close()
+    End Sub
+
+
+
+
 End Class

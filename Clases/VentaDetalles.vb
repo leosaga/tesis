@@ -187,8 +187,9 @@ Public Class VentaDetalles
             ventaDet.monto = detalle.Cells("monto").Value
             ventaDet.producto = detalle.Cells("producto").Value
             ventaDet.paraBorrar = detalle.Cells("paraBorrar").Value
-
-            listaDetalle.Add(ventaDet)
+            If detalle.Cells("id").Value <> 0 Or detalle.Cells("paraBorrar").Value = False Then
+                listaDetalle.Add(ventaDet)
+            End If
         Next
         listaDetalle.Add(vendeta)
         lista.DataSource = listaDetalle

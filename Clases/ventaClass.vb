@@ -96,8 +96,73 @@ Public Class ventaClass
         End Try
 
     End Sub
+    Public Sub ActualizarTablas(ByVal listaventadet As DataGridView, ByVal idVenta As Integer)
+        For Each fila As DataGridViewRow In listaventadet.Rows
+            If fila.Cells("id").Value = 0 And fila.Cells("paraBorrar").Value = False Then
+                Dim vendeta As New VentaDetalles
+                vendeta.idProducto = fila.Cells("idProducto").Value
+                vendeta.idventa = idVenta
+                vendeta.Agregar(vendeta)
+                '¿Controlar si el alumno está repetido?
+            End If
+            If fila.Cells("id").Value <> 0 And fila.Cells("paraBorrar").Value = True Then
+                Dim ventaDetalle As New VentaDetalles
+                ventaDetalle.id = fila.Cells("id").Value
+                ventaDetalle.Borrar(ventaDetalle)
+            End If
+        Next
+    End Sub
 
 
+    Public Function Agregar(ByVal venta As ventaClass) As Integer
+        Try
+            Abrir()
+            Dim objComando As New SqlCommand("ventasAgregar", objConexion)
+            objComando.CommandType = CommandType.StoredProcedure
+            objComando.Parameters.AddWithValue("@id_cliente", venta.id_cliente)
+            objComando.Parameters.AddWithValue("@TdeComprobante", venta.TdeComprobante)
+            objComando.Parameters.AddWithValue("@fecha", venta.fecha)
+            objComando.ExecuteNonQuery()
+
+            Dim objComando2 As New SqlCommand("ventaUltima", objConexion)
+            objComando2.CommandType = CommandType.StoredProcedure
+            Return objComando2.ExecuteScalar()
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            Cerrar()
+        End Try
+    End Function
+
+    Public Sub Modificar(ByVal venta As ventaClass)
+        Try
+            Abrir()
+            Dim objComando As New SqlCommand("ventasModificar", objConexion)
+            objComando.CommandType = CommandType.StoredProcedure
+            objComando.Parameters.AddWithValue("@id_cliente", venta.id_cliente)
+            objComando.Parameters.AddWithValue("@TdeComprobante", venta.TdeComprobante)
+            objComando.Parameters.AddWithValue("@fecha", venta.fecha)
+            objComando.ExecuteNonQuery()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            Cerrar()
+        End Try
+    End Sub
+    Public Sub Borrar(ByVal venta As ventaClass)
+        Try
+            Abrir()
+            Dim objComando As New SqlCommand("ventasEliminar", objConexion)
+            objComando.CommandType = CommandType.StoredProcedure
+            objComando.Parameters.AddWithValue("@id", venta.Id)
+            objComando.ExecuteNonQuery()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            Cerrar()
+        End Try
+    End Sub
 
 
 End Class

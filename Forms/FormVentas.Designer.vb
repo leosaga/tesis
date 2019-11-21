@@ -28,7 +28,7 @@ Partial Class FormVentas
         Me.Label4 = New System.Windows.Forms.Label
         Me.txtIdVenta = New System.Windows.Forms.TextBox
         Me.Label5 = New System.Windows.Forms.Label
-        Me.btnAceptar = New System.Windows.Forms.Button
+        Me.btnImprimir = New System.Windows.Forms.Button
         Me.GroupBox1 = New System.Windows.Forms.GroupBox
         Me.CmbCliente = New System.Windows.Forms.ComboBox
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker
@@ -56,7 +56,7 @@ Partial Class FormVentas
         Me.txtRecibido = New System.Windows.Forms.TextBox
         Me.Label2 = New System.Windows.Forms.Label
         Me.Label8 = New System.Windows.Forms.Label
-        Me.Button1 = New System.Windows.Forms.Button
+        Me.BtnAceptar = New System.Windows.Forms.Button
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
@@ -131,18 +131,18 @@ Partial Class FormVentas
         Me.Label5.TabIndex = 24
         Me.Label5.Text = "Id Venta"
         '
-        'btnAceptar
+        'btnImprimir
         '
-        Me.btnAceptar.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnAceptar.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.btnAceptar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
-        Me.btnAceptar.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.btnAceptar.Location = New System.Drawing.Point(4, 483)
-        Me.btnAceptar.Name = "btnAceptar"
-        Me.btnAceptar.Size = New System.Drawing.Size(177, 39)
-        Me.btnAceptar.TabIndex = 7
-        Me.btnAceptar.Text = "Imprimir"
-        Me.btnAceptar.UseVisualStyleBackColor = False
+        Me.btnImprimir.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btnImprimir.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.btnImprimir.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
+        Me.btnImprimir.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.btnImprimir.Location = New System.Drawing.Point(4, 483)
+        Me.btnImprimir.Name = "btnImprimir"
+        Me.btnImprimir.Size = New System.Drawing.Size(177, 39)
+        Me.btnImprimir.TabIndex = 7
+        Me.btnImprimir.Text = "Imprimir"
+        Me.btnImprimir.UseVisualStyleBackColor = False
         '
         'GroupBox1
         '
@@ -426,18 +426,18 @@ Partial Class FormVentas
         Me.Label8.TabIndex = 56
         Me.Label8.Text = "Vuelto a Dar"
         '
-        'Button1
+        'BtnAceptar
         '
-        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Button1.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
-        Me.Button1.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.Button1.Location = New System.Drawing.Point(476, 483)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(112, 39)
-        Me.Button1.TabIndex = 57
-        Me.Button1.Text = "Aceptar"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.BtnAceptar.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.BtnAceptar.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.BtnAceptar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
+        Me.BtnAceptar.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.BtnAceptar.Location = New System.Drawing.Point(476, 483)
+        Me.BtnAceptar.Name = "BtnAceptar"
+        Me.BtnAceptar.Size = New System.Drawing.Size(112, 39)
+        Me.BtnAceptar.TabIndex = 57
+        Me.BtnAceptar.Text = "Aceptar"
+        Me.BtnAceptar.UseVisualStyleBackColor = False
         '
         'FormVentas
         '
@@ -445,7 +445,7 @@ Partial Class FormVentas
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.ClientSize = New System.Drawing.Size(796, 534)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.BtnAceptar)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.txtRecibido)
@@ -457,7 +457,7 @@ Partial Class FormVentas
         Me.Controls.Add(Me.dgvventadetalle)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.btnAceptar)
+        Me.Controls.Add(Me.btnImprimir)
         Me.Controls.Add(Me.btnCancelar)
         Me.Name = "FormVentas"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -479,7 +479,7 @@ Partial Class FormVentas
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents txtIdVenta As System.Windows.Forms.TextBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents btnAceptar As System.Windows.Forms.Button
+    Friend WithEvents btnImprimir As System.Windows.Forms.Button
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents DateTimePicker2 As System.Windows.Forms.DateTimePicker
     Friend WithEvents CmbCliente As System.Windows.Forms.ComboBox
@@ -505,7 +505,7 @@ Partial Class FormVentas
     Friend WithEvents txtIdComprobante As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents BtnAceptar As System.Windows.Forms.Button
     Friend WithEvents TxtPrecio As System.Windows.Forms.TextBox
     Friend WithEvents labelPrecio As System.Windows.Forms.Label
 End Class
