@@ -146,7 +146,7 @@ Public Class VentaDetalles
                 ventadetalle.idProducto = fila.Cells("idproducto").Value
                 ventadetalle.idventa = idventa
                 ventadetalle.Agregar(ventadetalle)
-                '¿Controlar si el alumno está repetido?
+                '¿Controlar si la venta está repetido?
             End If
             If fila.Cells("id").Value <> 0 And fila.Cells("paraBorrar").Value = True Then
                 Dim ventadet As New VentaDetalles
