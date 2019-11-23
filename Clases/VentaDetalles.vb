@@ -65,23 +65,23 @@ Public Class VentaDetalles
         End Set
     End Property
 
-    Public Property fecha() As DateTime
-        Get
-            Return fecha_
-        End Get
-        Set(ByVal value As DateTime)
-            fecha_ = value
-        End Set
-    End Property
+    'Public Property fecha() As DateTime
+    '    Get
+    '        Return fecha_
+    '    End Get
+    '    Set(ByVal value As DateTime)
+    '        fecha_ = value
+    '    End Set
+    'End Property
 
-    Public Property tipo() As String
-        Get
-            Return tipo_
-        End Get
-        Set(ByVal value As String)
-            tipo_ = value
-        End Set
-    End Property
+    'Public Property tipo() As String
+    '    Get
+    '        Return tipo_
+    '    End Get
+    '    Set(ByVal value As String)
+    '        tipo_ = value
+    '    End Set
+    'End Property
 
     Public Property producto() As String
         Get
@@ -101,8 +101,8 @@ Public Class VentaDetalles
             vendeta.idventa = fila.Cells("id_venta").Value
             vendeta.cantidad = fila.Cells("cantidad").Value
             vendeta.monto = fila.Cells("monto").Value
-            vendeta.fecha = fila.Cells("fecha").Value
-            vendeta.tipo = fila.Cells("tipo").Value
+            'vendeta.fecha = fila.Cells("fecha").Value
+            'vendeta.tipo = fila.Cells("tipo").Value
             vendeta.paraBorrar = fila.Cells("paraBorrar").Value
             listavendeta.Add(vendeta)
 
@@ -115,8 +115,7 @@ Public Class VentaDetalles
             VentaDetalle.idventa = idventa
             VentaDetalle.cantidad = prod.cantidad
             VentaDetalle.monto = monto
-            VentaDetalle.fecha = fecha
-            VentaDetalle.tipo = tipo
+           
             'VentaDetalle.paraBorrar = paraBorrar
 
             listavendeta.Add(VentaDetalle)
@@ -134,8 +133,7 @@ Public Class VentaDetalles
         lista.Columns("idventa").Visible = False
         lista.Columns("cantidad").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
         lista.Columns("monto").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-        lista.Columns("fecha").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-        lista.Columns("tipo").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        
         lista.Columns("paraBorrar").Width = 30
     End Sub
 
@@ -165,8 +163,7 @@ Public Class VentaDetalles
             objComando.Parameters.AddWithValue("@idventa", ventadetalle.idventa)
             objComando.Parameters.AddWithValue("@cantidad", ventadetalle.cantidad)
             objComando.Parameters.AddWithValue("@monto", ventadetalle.monto)
-            objComando.Parameters.AddWithValue("@fecha", ventadetalle.fecha)
-            objComando.Parameters.AddWithValue("@tipo", ventadetalle.tipo)
+          
             
             objComando.ExecuteNonQuery()
         Catch ex As Exception
@@ -231,8 +228,7 @@ Public Class VentaDetalles
                     lista.Columns("idventa").Visible = False
                     lista.Columns("cantidad").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
                     lista.Columns("monto").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-                    lista.Columns("fecha").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-                    lista.Columns("tipo").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                   
                     lista.Columns("paraBorrar").Width = 30
                 Else
                     lista.DataSource = Nothing

@@ -39,7 +39,7 @@ Public Class FormVentas
         pro.Id = 0
         pro.nombre = ""
         pro.Precio = 0
-        'pro.cantidad = 1
+        pro.cantidad = 1
 
         esNuevo = True
     End Sub
