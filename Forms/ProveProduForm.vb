@@ -45,11 +45,11 @@
 
     Private Sub btnAgregar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregar.Click
 
-        Dim productosSeleccionados As New List(Of productosClass)
-        Dim FormLstProductos As New LstProductos '(productosSeleccionados)
-        FormLstProductos.ShowDialog()
+        'Dim productosSeleccionados As New List(Of productosClass)
+        'Dim FormLstProductos As New FormLstProductos(productosSeleccionados)
+        'FormLstProductos.ShowDialog()
 
-        ' ProveProdu.listaProductosProveedores(proveedor.Id, productosSeleccionados, dgvProveProdu)
+        'ProveProdu.listaProductosProveedores(proveedor.Id, productosSeleccionados, dgvProveProdu)
     End Sub
 
     Private Sub btnCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancelar.Click
