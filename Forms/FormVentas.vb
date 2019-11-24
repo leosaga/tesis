@@ -39,7 +39,7 @@ Public Class FormVentas
         pro.Id = 0
         pro.nombre = ""
         pro.Precio = 0
-        pro.cantidad = 1
+        pro.cantidad = 0
 
         esNuevo = True
     End Sub
@@ -66,7 +66,7 @@ Public Class FormVentas
 
         txtDescripcion.Text = pro.nombre
         txtIdProducto.Text = pro.Id
-        txtCantidad.Text = pro.cantidad
+        txtCantidad.Text = 1
 
     End Sub
 
@@ -102,7 +102,8 @@ Public Class FormVentas
 
         txtDescripcion.Clear()
         TxtPrecio.Clear()
-        txtCantidad.Clear()
+        'txtCantidad.Clear()
+        txtCantidad.Text = 1
         txtIdProducto.Text = 0
         txtTotal.Text = Val(vendeta.cantidad) * Val(vendeta.monto) + Val(txtTotal.Text)
 
@@ -141,8 +142,4 @@ Public Class FormVentas
         ventas.ActualizarTablas(dgvventadetalle, Venta.Id)
         Close()
     End Sub
-
-
-
-
 End Class
