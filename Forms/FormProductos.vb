@@ -1,6 +1,5 @@
 ﻿Imports System.Data
 Imports System.Data.SqlClient
-
 Public Class FormProductos
 
     Private listaProductos_ As List(Of productosClass)
@@ -32,18 +31,13 @@ Public Class FormProductos
 
     End Sub
 
-    Private Sub DataGridView1_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvProductos.CellContentClick
-        Producto.Id = dgvProductos.Item("Id", dgvProductos.CurrentRow.Index).Value
-        Producto.nombre = dgvProductos.Item("nombre", dgvProductos.CurrentRow.Index).Value
-        Producto.cantidad = dgvProductos.Item("cantidad", dgvProductos.CurrentRow.Index).Value
-        Producto.Precio = dgvProductos.Item("Precio", dgvProductos.CurrentRow.Index).Value
-        Close()
-    End Sub
-
-    Private Sub Label1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label1.Click
-
-    End Sub
-
+    'Private Sub DataGridView1_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvProductos.CellContentClick
+    '    Producto.Id = dgvProductos.Item("Id", dgvProductos.CurrentRow.Index).Value
+    '    Producto.nombre = dgvProductos.Item("nombre", dgvProductos.CurrentRow.Index).Value
+    '    Producto.cantidad = dgvProductos.Item("cantidad", dgvProductos.CurrentRow.Index).Value
+    '    Producto.Precio = dgvProductos.Item("Precio", dgvProductos.CurrentRow.Index).Value
+    '    Close()
+    'End Sub
     Private Sub btnAgregar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregar.Click
 
         For Each Producto As DataGridViewRow In dgvProductos.SelectedRows
@@ -51,8 +45,8 @@ Public Class FormProductos
 
             productos.Id = Producto.Cells("id").Value
             productos.nombre = Producto.Cells("nombre").Value
-            productos.cantidad = Producto.Cells("telefono").Value
-            productos.Precio = Producto.Cells("direccion").Value
+            productos.cantidad = Producto.Cells("cantidad").Value
+            productos.Precio = Producto.Cells("Precio").Value
 
 
             listaProductos.Add(productos)

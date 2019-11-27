@@ -57,6 +57,7 @@ Public Class FormVentas
 
 
         txtIdVenta.Text = Venta.Id
+        txtIdComprobante.Text = Venta.id_comprobante
         idCliente.CargarComboCliente(CmbCliente)
         CmbCliente.SelectedValue = Venta.id_cliente
 
@@ -124,12 +125,13 @@ Public Class FormVentas
  
     
     Private Sub txtRecibido_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtRecibido.TextChanged
-        txtVuelto.Text = Val(txtTotal.Text) - Val(txtRecibido.Text)
+        txtVuelto.Text = Val(txtRecibido.Text) - Val(txtTotal.Text)
     End Sub
 
    
     Private Sub BtnAceptar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnAceptar.Click
         Venta.Id = txtIdVenta.Text
+        Venta.id_comprobante = txtIdComprobante.Text
         Venta.id_cliente = CmbCliente.SelectedValue
         Venta.fecha = DateTimePicker2.Text
         Venta.id_comprobante = ComboComprobante.SelectedValue
@@ -142,4 +144,7 @@ Public Class FormVentas
         ventas.ActualizarTablas(dgvventadetalle, Venta.Id)
         Close()
     End Sub
+
+    
+ 
 End Class

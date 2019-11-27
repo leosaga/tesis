@@ -79,6 +79,7 @@
     <Compile Include="Clases\Funciones.vb" />
     <Compile Include="Clases\ProductoPorProveedor.vb" />
     <Compile Include="Clases\ProveedoresClass.vb" />
+    <Compile Include="Clases\ProveedorPorProducto.vb" />
     <Compile Include="Clases\RubroClass.vb" />
     <Compile Include="Clases\UsuariosClass.vb" />
     <Compile Include="Clases\ventaClass.vb" />

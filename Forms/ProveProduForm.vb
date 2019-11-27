@@ -1,6 +1,6 @@
 ﻿Public Class ProveProduForm
 
-    Dim ProveProdu As New ProductoPorProveedor
+    Dim ProveProdu As New ProveedorPorProducto
     Private Proveedor_ As New ProveedoresClass
     Private esNuevo_ As Boolean
     Dim func As New Funciones
@@ -41,15 +41,13 @@
         esNuevo = True
 
     End Sub
-
-
     Private Sub btnAgregar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregar.Click
 
-        'Dim productosSeleccionados As New List(Of productosClass)
-        'Dim FormLstProductos As New FormLstProductos(productosSeleccionados)
-        'FormLstProductos.ShowDialog()
+        Dim productosSeleccionados As New List(Of productosClass)
+        Dim FormProductos As New FormProductos(productosSeleccionados)
+        FormProductos.ShowDialog()
 
-        'ProveProdu.listaProductosProveedores(proveedor.Id, productosSeleccionados, dgvProveProdu)
+        ProveProdu.listaProveedoresProductos(proveedor.Id, productosSeleccionados, dgvProveProdu)
     End Sub
 
     Private Sub btnCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancelar.Click
@@ -66,13 +64,14 @@
         ProveProdu.Consultar(proveedor.Id, dgvProveProdu)
     End Sub
     Private Sub btnAceptar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAceptar.Click
+
         If func.validarCampos(Me, ErrorProvider1) Then
 
             proveedor.Nombre = txtNombre.Text
             proveedor.Telefono = txtTelefono.Text
             proveedor.Direccion = txtDireccion.Text
             proveedor.Localidad = txtLocalidad.Text
-          
+
 
             If esNuevo Then
                 proveedor.Id = proveedor.Agregar(proveedor)

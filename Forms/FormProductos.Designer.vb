@@ -22,7 +22,7 @@ Partial Class FormProductos
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Me.Label1 = New System.Windows.Forms.Label
         Me.btnAgregar = New System.Windows.Forms.Button
         Me.dgvProductos = New System.Windows.Forms.DataGridView
@@ -46,9 +46,9 @@ Partial Class FormProductos
         'btnAgregar
         '
         Me.btnAgregar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnAgregar.BackColor = System.Drawing.Color.Black
-        Me.btnAgregar.Font = New System.Drawing.Font("Modern No. 20", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAgregar.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnAgregar.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.btnAgregar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
+        Me.btnAgregar.ForeColor = System.Drawing.SystemColors.WindowText
         Me.btnAgregar.Location = New System.Drawing.Point(8, 503)
         Me.btnAgregar.Name = "btnAgregar"
         Me.btnAgregar.Size = New System.Drawing.Size(93, 52)
@@ -61,9 +61,9 @@ Partial Class FormProductos
         Me.dgvProductos.AllowUserToAddRows = False
         Me.dgvProductos.AllowUserToDeleteRows = False
         Me.dgvProductos.AllowUserToResizeRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Green
-        Me.dgvProductos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Green
+        Me.dgvProductos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
         Me.dgvProductos.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -78,9 +78,9 @@ Partial Class FormProductos
         'btnCancelar
         '
         Me.btnCancelar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnCancelar.BackColor = System.Drawing.Color.Black
-        Me.btnCancelar.Font = New System.Drawing.Font("Modern No. 20", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnCancelar.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.btnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
+        Me.btnCancelar.ForeColor = System.Drawing.SystemColors.WindowText
         Me.btnCancelar.Location = New System.Drawing.Point(949, 503)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(93, 52)

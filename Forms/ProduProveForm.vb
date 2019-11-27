@@ -44,10 +44,7 @@
         esNuevo = True
 
     End Sub
-
-
     Private Sub btnAgregar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregar.Click
-
 
         Dim proveedoresSeleccionados As New List(Of ProveedoresClass)
         Dim LstProveedores As New LstProveedores(proveedoresSeleccionados)
@@ -98,8 +95,6 @@
             ProduProve.Visible = False
 
         Next
-
-
     End Sub
 
     Dim idRubro As New RubroClass

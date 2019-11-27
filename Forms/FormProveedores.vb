@@ -4,19 +4,31 @@ Public Class FormProveedores
 
     Dim proveedor As New ProveedoresClass
 
+    Public Sub FormProveedores_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
-    Private Sub FormProveedores_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         proveedor.ConsultarProveedor(dgvProveedores)
 
     End Sub
 
-
     Private Sub btnAgregar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregar.Click
+
         Dim ProveProduForm As New ProveProduForm()
         ProveProduForm.ShowDialog()
         proveedor.ConsultarProveedor(dgvProveedores)
+
     End Sub
 
+    Private Sub btnEliminar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEliminar.Click
+
+        proveedor.Id = dgvProveedores.Item("id", dgvProveedores.CurrentRow.Index).Value
+        Dim respuesta As DialogResult = MessageBox.Show("¿esta seguro de eliminar  " & proveedor.Id.ToString & "?", "advertencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2)
+        If respuesta = Windows.Forms.DialogResult.OK Then
+            'proveedor.Eliminar(proveedor)
+        End If
+
+        proveedor.ConsultarProveedor(dgvProveedores)
+
+    End Sub
 
     Public Sub ModificarProveedor()
 
@@ -27,9 +39,9 @@ Public Class FormProveedores
         proveedor.Telefono = dgvProveedores.Item("Telefono", dgvProveedores.CurrentRow.Index).Value
      
 
-        'Dim ProduProveForm As New ProduProveForm(proveedor)
-        'ProduProveForm.ShowDialog()
-        'proveedor.ConsultarProveedor(dgvProveedores)
+        Dim ProveProduForm As New ProveProduForm(proveedor)
+        ProveProduForm.ShowDialog()
+        proveedor.ConsultarProveedor(dgvProveedores)
 
     End Sub
 
@@ -37,15 +49,7 @@ Public Class FormProveedores
         ModificarProveedor()
     End Sub
 
-    Private Sub btnEliminar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEliminar.Click
-        proveedor.Id = dgvProveedores.Item("id", dgvProveedores.CurrentRow.Index).Value
-        Dim respuesta As DialogResult = MessageBox.Show("¿esta seguro de eliminar  " & proveedor.Id.ToString & "?", "advertencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2)
-        If respuesta = Windows.Forms.DialogResult.OK Then
-            'proveedor.Eliminar(proveedor)
-        End If
-
-        proveedor.ConsultarProveedor(dgvProveedores)
-    End Sub
+   
 
     Private Sub btnCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancelar.Click
         Me.Close()
