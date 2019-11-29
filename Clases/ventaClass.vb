@@ -41,14 +41,14 @@ Public Class ventaClass
             id_comprobante_ = value
         End Set
     End Property
-    Public Property CantDeP() As Integer
-        Get
-            Return CantDeP_
-        End Get
-        Set(ByVal value As Integer)
-            CantDeP_ = value
-        End Set
-    End Property
+    'Public Property CantDeP() As Integer
+    '    Get
+    '        Return CantDeP_
+    '    End Get
+    '    Set(ByVal value As Integer)
+    '        CantDeP_ = value
+    '    End Set
+    'End Property
     Public Property Total() As Integer
         Get
             Return Total_
@@ -100,8 +100,8 @@ Public Class ventaClass
         For Each fila As DataGridViewRow In listaventadet.Rows
             If fila.Cells("id").Value = 0 And fila.Cells("paraBorrar").Value = False Then
                 Dim vendeta As New VentaDetalles
-                vendeta.idProducto = fila.Cells("idProducto").Value
-                vendeta.idventa = idVenta
+                vendeta.id_Producto = fila.Cells("id_Producto").Value
+                vendeta.id_venta = idVenta
                 vendeta.Agregar(vendeta)
                 '¿Controlar si el alumno está repetido?
             End If
@@ -120,16 +120,14 @@ Public Class ventaClass
             Dim objComando As New SqlCommand("ventasAgregar", objConexion)
             objComando.CommandType = CommandType.StoredProcedure
             objComando.Parameters.AddWithValue("@id_cliente", venta.id_cliente)
-            objComando.Parameters.AddWithValue("@TdeComprobante", venta.TdeComprobante)
+            objComando.Parameters.AddWithValue("@id_comprobante", venta.id_comprobante)
             objComando.Parameters.AddWithValue("@fecha", venta.fecha)
+            objComando.Parameters.AddWithValue("@total", venta.Total)
             objComando.ExecuteNonQuery()
 
             Dim objComando2 As New SqlCommand("ventaUltima", objConexion)
             objComando2.CommandType = CommandType.StoredProcedure
             Return objComando2.ExecuteScalar()
-
-        Catch ex As Exception
-            MsgBox(ex.Message)
         Finally
             Cerrar()
         End Try
@@ -141,8 +139,9 @@ Public Class ventaClass
             Dim objComando As New SqlCommand("ventasModificar", objConexion)
             objComando.CommandType = CommandType.StoredProcedure
             objComando.Parameters.AddWithValue("@id_cliente", venta.id_cliente)
-            objComando.Parameters.AddWithValue("@TdeComprobante", venta.TdeComprobante)
+            objComando.Parameters.AddWithValue("@id_Comprobante", venta.id_comprobante)
             objComando.Parameters.AddWithValue("@fecha", venta.fecha)
+            objComando.Parameters.AddWithValue("@total", venta.Total)
             objComando.ExecuteNonQuery()
         Catch ex As Exception
             MsgBox(ex.Message)

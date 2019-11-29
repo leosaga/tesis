@@ -35,8 +35,6 @@ Partial Class FormVentas
         Me.GroupBox2 = New System.Windows.Forms.GroupBox
         Me.ComboComprobante = New System.Windows.Forms.ComboBox
         Me.Label17 = New System.Windows.Forms.Label
-        Me.Label16 = New System.Windows.Forms.Label
-        Me.txtIdComprobante = New System.Windows.Forms.TextBox
         Me.GroupBox4 = New System.Windows.Forms.GroupBox
         Me.TxtPrecio = New System.Windows.Forms.TextBox
         Me.labelPrecio = New System.Windows.Forms.Label
@@ -182,8 +180,6 @@ Partial Class FormVentas
         Me.GroupBox2.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.GroupBox2.Controls.Add(Me.ComboComprobante)
         Me.GroupBox2.Controls.Add(Me.Label17)
-        Me.GroupBox2.Controls.Add(Me.Label16)
-        Me.GroupBox2.Controls.Add(Me.txtIdComprobante)
         Me.GroupBox2.Location = New System.Drawing.Point(463, 9)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(325, 107)
@@ -194,7 +190,7 @@ Partial Class FormVentas
         'ComboComprobante
         '
         Me.ComboComprobante.FormattingEnabled = True
-        Me.ComboComprobante.Location = New System.Drawing.Point(167, 64)
+        Me.ComboComprobante.Location = New System.Drawing.Point(141, 44)
         Me.ComboComprobante.Name = "ComboComprobante"
         Me.ComboComprobante.Size = New System.Drawing.Size(127, 21)
         Me.ComboComprobante.TabIndex = 3
@@ -204,31 +200,11 @@ Partial Class FormVentas
         Me.Label17.AutoSize = True
         Me.Label17.BackColor = System.Drawing.Color.Transparent
         Me.Label17.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label17.Location = New System.Drawing.Point(52, 67)
+        Me.Label17.Location = New System.Drawing.Point(138, 28)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(109, 13)
         Me.Label17.TabIndex = 30
         Me.Label17.Text = "Tipo de Comprobante"
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.BackColor = System.Drawing.Color.Transparent
-        Me.Label16.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label16.Location = New System.Drawing.Point(81, 31)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(80, 13)
-        Me.Label16.TabIndex = 28
-        Me.Label16.Text = "id comprobante"
-        '
-        'txtIdComprobante
-        '
-        Me.txtIdComprobante.Enabled = False
-        Me.txtIdComprobante.Location = New System.Drawing.Point(167, 28)
-        Me.txtIdComprobante.Name = "txtIdComprobante"
-        Me.txtIdComprobante.ReadOnly = True
-        Me.txtIdComprobante.Size = New System.Drawing.Size(47, 20)
-        Me.txtIdComprobante.TabIndex = 29
         '
         'GroupBox4
         '
@@ -501,8 +477,6 @@ Partial Class FormVentas
     Friend WithEvents txtCantidad As System.Windows.Forms.TextBox
     Friend WithEvents ComboComprobante As System.Windows.Forms.ComboBox
     Friend WithEvents Label17 As System.Windows.Forms.Label
-    Friend WithEvents Label16 As System.Windows.Forms.Label
-    Friend WithEvents txtIdComprobante As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents BtnAceptar As System.Windows.Forms.Button

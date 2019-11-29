@@ -57,7 +57,7 @@ Public Class FormVentas
 
 
         txtIdVenta.Text = Venta.Id
-        txtIdComprobante.Text = Venta.id_comprobante
+        ' txtIdComprobante.Text = Venta.id_comprobante
         idCliente.CargarComboCliente(CmbCliente)
         CmbCliente.SelectedValue = Venta.id_cliente
 
@@ -93,9 +93,9 @@ Public Class FormVentas
     Private Sub btnAgregar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregar.Click
 
         Dim vendeta As New VentaDetalles
-        vendeta.idProducto = txtIdProducto.Text
+        vendeta.id_Producto = txtIdProducto.Text
         vendeta.cantidad = txtCantidad.Text
-        vendeta.monto = TxtPrecio.Text
+        vendeta.total = TxtPrecio.Text
         vendeta.producto = txtDescripcion.Text
         vendeta.paraBorrar = False
         vendeta.agregaraLista(vendeta, dgvventadetalle)
@@ -106,7 +106,7 @@ Public Class FormVentas
         'txtCantidad.Clear()
         txtCantidad.Text = 1
         txtIdProducto.Text = 0
-        txtTotal.Text = Val(vendeta.cantidad) * Val(vendeta.monto) + Val(txtTotal.Text)
+        txtTotal.Text = Val(vendeta.cantidad) * Val(vendeta.total) + Val(txtTotal.Text)
 
 
         
@@ -131,7 +131,7 @@ Public Class FormVentas
    
     Private Sub BtnAceptar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnAceptar.Click
         Venta.Id = txtIdVenta.Text
-        Venta.id_comprobante = txtIdComprobante.Text
+        'Venta.id_comprobante = txtIdComprobante.Text
         Venta.id_cliente = CmbCliente.SelectedValue
         Venta.fecha = DateTimePicker2.Text
         Venta.id_comprobante = ComboComprobante.SelectedValue
