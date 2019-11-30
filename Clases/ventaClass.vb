@@ -102,6 +102,7 @@ Public Class ventaClass
                 Dim vendeta As New VentaDetalles
                 vendeta.id_Producto = fila.Cells("id_Producto").Value
                 vendeta.id_venta = idVenta
+                vendeta.cantidad = fila.Cells("cantidad").Value
                 vendeta.Agregar(vendeta)
                 '¿Controlar si el alumno está repetido?
             End If

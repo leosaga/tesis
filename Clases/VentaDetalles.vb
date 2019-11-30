@@ -100,7 +100,7 @@ Public Class VentaDetalles
             vendeta.id_Producto = fila.Cells("id_producto").Value
             vendeta.id_venta = fila.Cells("id_venta").Value
             vendeta.cantidad = fila.Cells("cantidad").Value
-            vendeta.total = fila.Cells("total").Value
+            ' vendeta.total = fila.Cells("total").Value
             'vendeta.fecha = fila.Cells("fecha").Value
             'vendeta.tipo = fila.Cells("tipo").Value
             vendeta.paraBorrar = fila.Cells("paraBorrar").Value
@@ -114,7 +114,7 @@ Public Class VentaDetalles
             VentaDetalle.id_Producto = prod.Id
             VentaDetalle.id_venta = id_venta
             VentaDetalle.cantidad = prod.cantidad
-            VentaDetalle.total = total
+            'VentaDetalle.total = total
            
             'VentaDetalle.paraBorrar = paraBorrar
 
@@ -132,27 +132,28 @@ Public Class VentaDetalles
         lista.Columns("id_Producto").Visible = False
         lista.Columns("id_venta").Visible = False
         lista.Columns("cantidad").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-        lista.Columns("total").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        'lista.Columns("total").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
         
         lista.Columns("paraBorrar").Width = 30
     End Sub
 
-    Public Sub ActualizarTablas(ByVal listavendeta As DataGridView, ByVal idventa As Integer)
-        For Each fila As DataGridViewRow In listavendeta.Rows
-            If fila.Cells("id").Value = 0 And fila.Cells("paraBorrar").Value = False Then
-                Dim ventadetalle As New VentaDetalles
-                ventadetalle.id_Producto = fila.Cells("id_producto").Value
-                ventadetalle.id_venta = id_venta
-                ventadetalle.Agregar(ventadetalle)
-                '¿Controlar si la venta está repetido?
-            End If
-            If fila.Cells("id").Value <> 0 And fila.Cells("paraBorrar").Value = True Then
-                Dim ventadet As New VentaDetalles
-                ventadet.id = fila.Cells("id").Value
-                ventadet.Borrar(ventadet)
-            End If
-        Next
-    End Sub
+    'Public Sub ActualizarTablas(ByVal listavendeta As DataGridView, ByVal idventa As Integer)
+    '    For Each fila As DataGridViewRow In listavendeta.Rows
+    '        If fila.Cells("id").Value = 0 And fila.Cells("paraBorrar").Value = False Then
+    '            Dim ventadetalle As New VentaDetalles
+    '            ventadetalle.id_Producto = fila.Cells("id_producto").Value
+    '            ventadetalle.id_venta = id_venta
+    '            ventadetalle.cantidad = fila.Cells("cantidad").Value
+    '            ventadetalle.Agregar(ventadetalle)
+    '            '¿Controlar si la venta está repetido?
+    '        End If
+    '        If fila.Cells("id").Value <> 0 And fila.Cells("paraBorrar").Value = True Then
+    '            Dim ventadet As New VentaDetalles
+    '            ventadet.id = fila.Cells("id").Value
+    '            ventadet.Borrar(ventadet)
+    '        End If
+    '    Next
+    'End Sub
 
     Public Sub Agregar(ByVal ventadetalle As VentaDetalles)
         Try
@@ -162,7 +163,7 @@ Public Class VentaDetalles
             objComando.Parameters.AddWithValue("@id_Producto", ventadetalle.id_Producto)
             objComando.Parameters.AddWithValue("@id_venta", ventadetalle.id_venta)
             objComando.Parameters.AddWithValue("@cantidad", ventadetalle.cantidad)
-            objComando.Parameters.AddWithValue("@total", ventadetalle.total)
+            'objComando.Parameters.AddWithValue("@total", ventadetalle.total)
           
             
             objComando.ExecuteNonQuery()

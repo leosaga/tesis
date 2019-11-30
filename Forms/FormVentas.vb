@@ -135,6 +135,8 @@ Public Class FormVentas
         Venta.id_cliente = CmbCliente.SelectedValue
         Venta.fecha = DateTimePicker2.Text
         Venta.id_comprobante = ComboComprobante.SelectedValue
+        Venta.Total = txtTotal.Text
+
         If esNuevo Then
             Venta.Id = Venta.Agregar(Venta)
         Else
