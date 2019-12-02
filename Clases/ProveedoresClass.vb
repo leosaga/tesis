@@ -2,8 +2,8 @@
 Imports System.Data.SqlClient
 Public Class ProveedoresClass
     Inherits Conexion
-    Dim Id_, Telefono_ As Integer
-    Dim Nombre_, Direccion_, Localidad_ As String
+    Dim Id_, telefono_ As Integer
+    Dim nombre_, direccion_, localidad_ As String
 
     Public Property Id() As Integer
         Get
@@ -13,36 +13,36 @@ Public Class ProveedoresClass
             Id_ = value
         End Set
     End Property
-    Public Property Nombre() As String
+    Public Property nombre() As String
         Get
-            Return Nombre_
+            Return nombre_
         End Get
         Set(ByVal value As String)
-            Nombre_ = value
+            nombre_ = value
         End Set
     End Property
-    Public Property Direccion() As String
+    Public Property direccion() As String
         Get
-            Return Direccion_
+            Return direccion_
         End Get
         Set(ByVal value As String)
-            Direccion_ = value
+            direccion_ = value
         End Set
     End Property
-    Public Property Localidad() As String
+    Public Property localidad() As String
         Get
-            Return Localidad_
+            Return localidad_
         End Get
         Set(ByVal value As String)
-            Localidad_ = value
+            localidad_ = value
         End Set
     End Property
-    Public Property Telefono() As Integer
+    Public Property telefono() As Integer
         Get
-            Return Telefono_
+            Return telefono_
         End Get
         Set(ByVal value As Integer)
-            Telefono_ = value
+            telefono_ = value
         End Set
     End Property
 
@@ -75,7 +75,7 @@ Public Class ProveedoresClass
     End Sub
 
 
-    Public Function Agregar(ByVal Proveedores As ProveedoresClass) As Integer
+    Public Function Agregar(ByVal proveedores As ProveedoresClass) As Integer
 
         Try
             Abrir()
@@ -84,10 +84,10 @@ Public Class ProveedoresClass
             objComando.CommandType = CommandType.StoredProcedure
 
             'sqlComando.Parameters.AddWithValue("@Id", Producto.Id)
-            objComando.Parameters.AddWithValue("@nombre", Proveedores.Nombre)
-            objComando.Parameters.AddWithValue("@direccion", Proveedores.Direccion)
-            objComando.Parameters.AddWithValue("@localidad", Proveedores.Localidad)
-            objComando.Parameters.AddWithValue("@telefono", Proveedores.Telefono)
+            objComando.Parameters.AddWithValue("@nombre", Proveedores.nombre)
+            objComando.Parameters.AddWithValue("@direccion", Proveedores.direccion)
+            objComando.Parameters.AddWithValue("@localidad", Proveedores.localidad)
+            objComando.Parameters.AddWithValue("@telefono", Proveedores.telefono)
 
 
             objComando.ExecuteNonQuery()

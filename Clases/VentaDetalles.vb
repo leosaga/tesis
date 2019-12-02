@@ -100,7 +100,7 @@ Public Class VentaDetalles
             vendeta.id_Producto = fila.Cells("id_producto").Value
             vendeta.id_venta = fila.Cells("id_venta").Value
             vendeta.cantidad = fila.Cells("cantidad").Value
-            ' vendeta.total = fila.Cells("total").Value
+            vendeta.total = fila.Cells("total").Value
             'vendeta.fecha = fila.Cells("fecha").Value
             'vendeta.tipo = fila.Cells("tipo").Value
             vendeta.paraBorrar = fila.Cells("paraBorrar").Value
@@ -163,7 +163,7 @@ Public Class VentaDetalles
             objComando.Parameters.AddWithValue("@id_Producto", ventadetalle.id_Producto)
             objComando.Parameters.AddWithValue("@id_venta", ventadetalle.id_venta)
             objComando.Parameters.AddWithValue("@cantidad", ventadetalle.cantidad)
-            'objComando.Parameters.AddWithValue("@total", ventadetalle.total)
+            objComando.Parameters.AddWithValue("@total", ventadetalle.total)
           
             
             objComando.ExecuteNonQuery()

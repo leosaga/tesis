@@ -8,6 +8,8 @@ Public Class FormVentasDetalle
 
     Private Sub btnAceptar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAceptar.Click
         FormVentas.ShowDialog()
+
+        Ventas.VentasLlenarTabla(DataGridView1)
     End Sub
 
     Private Sub btnCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancelar.Click
