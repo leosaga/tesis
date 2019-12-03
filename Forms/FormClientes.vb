@@ -40,7 +40,7 @@ Public Class FormClientes
     Private Sub btnEliminar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEliminar.Click
 
         Clientes.Id = DataGridView1.Item("Id", DataGridView1.CurrentRow.Index).Value
-        Dim respuesta As DialogResult = MessageBox.Show("¿esta seguro de eliminar" & Clientes.Id.ToString & "?", "advertencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2)
+        Dim respuesta As DialogResult = MessageBox.Show("¿esta seguro de eliminar " & Clientes.Id.ToString & " ? ", "advertencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2)
         If respuesta = Windows.Forms.DialogResult.OK Then
 
             Clientes.Eliminar(Clientes.Id)

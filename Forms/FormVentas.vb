@@ -139,11 +139,15 @@ Public Class FormVentas
 
         If esNuevo Then
             Venta.Id = Venta.Agregar(Venta)
+
         Else
             Venta.Id = txtIdVenta.Text
             Venta.Modificar(Venta)
         End If
+
         ventas.ActualizarTablas(dgvventadetalle, Venta.Id)
+        Venta.actualizarstock(Venta)
+
         Close()
     End Sub
 

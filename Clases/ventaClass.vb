@@ -165,5 +165,19 @@ Public Class ventaClass
         End Try
     End Sub
 
+    Public Sub actualizarstock(ByVal id_venta As ventaClass)
+        Try
+            Abrir()
+            Dim objComando As New SqlCommand("actualizarstock", objConexion)
+            objComando.CommandType = CommandType.StoredProcedure
+            objComando.Parameters.AddWithValue("@id_venta", id_venta.Id)
+            objComando.ExecuteNonQuery()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            Cerrar()
+        End Try
+
+    End Sub
 
 End Class

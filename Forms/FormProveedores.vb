@@ -21,9 +21,9 @@ Public Class FormProveedores
     Private Sub btnEliminar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEliminar.Click
 
         proveedor.Id = dgvProveedores.Item("id", dgvProveedores.CurrentRow.Index).Value
-        Dim respuesta As DialogResult = MessageBox.Show("¿esta seguro de eliminar  " & proveedor.Id.ToString & "?", "advertencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2)
+        Dim respuesta As DialogResult = MessageBox.Show("¿esta seguro de eliminar  " & proveedor.Id.ToString & " ? ", "advertencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2)
         If respuesta = Windows.Forms.DialogResult.OK Then
-            'proveedor.Eliminar(proveedor)
+            proveedor.Eliminar(proveedor)
         End If
 
         proveedor.ConsultarProveedor(dgvProveedores)

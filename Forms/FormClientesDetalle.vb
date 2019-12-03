@@ -44,8 +44,8 @@ Public Class FormClientesDetalle
         pro.apellido = ""
         pro.direccion = Nothing
         pro.telefono = Nothing
-        pro.CuentaTotal = 0
-        pro.habilitado = Nothing
+        'pro.CuentaTotal = 0
+        'pro.habilitado = Nothing
 
         pro_ = pro
         esNuevo = True
@@ -59,8 +59,8 @@ Public Class FormClientesDetalle
         txtApellido.Text = pro.apellido
         txtDireccion.Text = pro.direccion
         txtTelefono.Text = pro.telefono
-        txtCuentaTotal.Text = pro.CuentaTotal
-        pro.habilitado = RadioButton1.Text
+        'txtCuentaTotal.Text = pro.CuentaTotal
+        'pro.habilitado = RadioButton1.Text
 
     End Sub
 
@@ -77,8 +77,8 @@ Public Class FormClientesDetalle
             pro.apellido = txtApellido.Text
             pro.direccion = txtDireccion.Text
             pro.telefono = txtTelefono.Text
-            pro.CuentaTotal = txtCuentaTotal.Text
-            pro.habilitado = RadioButton1.Text
+            'pro.CuentaTotal = txtCuentaTotal.Text
+            'pro.habilitado = RadioButton1.Text
 
             If esNuevo Then
 

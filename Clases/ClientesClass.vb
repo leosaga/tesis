@@ -63,22 +63,22 @@ Public Class ClientesClass
             CuentaTotal_ = value
         End Set
     End Property
-    Public Property habilitado() As String
-        Get
-            Return habilitado_
-        End Get
-        Set(ByVal value As String)
-            habilitado_ = value
-        End Set
-    End Property
-    Public Property nombreyapellido() As String
-        Get
-            Return nombreyapellido_
-        End Get
-        Set(ByVal value As String)
-            nombreyapellido_ = value
-        End Set
-    End Property
+    'Public Property habilitado() As String
+    '    Get
+    '        Return habilitado_
+    '    End Get
+    '    Set(ByVal value As String)
+    '        habilitado_ = value
+    '    End Set
+    'End Property
+    'Public Property nombreyapellido() As String
+    '    Get
+    '        Return nombreyapellido_
+    '    End Get
+    '    Set(ByVal value As String)
+    '        nombreyapellido_ = value
+    '    End Set
+    'End Property
 
     Public Sub ClientesConsultar(ByVal listado As DataGridView)
         Try
@@ -118,8 +118,8 @@ Public Class ClientesClass
             objComando.Parameters.AddWithValue("@apellido", clientes.apellido)
             objComando.Parameters.AddWithValue("@direccion", clientes.direccion)
             objComando.Parameters.AddWithValue("@telefono", clientes.telefono)
-            objComando.Parameters.AddWithValue("@CuentaTotal", clientes.CuentaTotal)
-            objComando.Parameters.AddWithValue("@habilitado", clientes.habilitado)
+            'objComando.Parameters.AddWithValue("@CuentaTotal", clientes.CuentaTotal)
+            'objComando.Parameters.AddWithValue("@habilitado", clientes.habilitado)
 
             If objComando.ExecuteNonQuery Then
 
@@ -149,8 +149,8 @@ Public Class ClientesClass
             objComando.Parameters.AddWithValue("@apellido", clientes.apellido)
             objComando.Parameters.AddWithValue("@direccion", clientes.direccion)
             objComando.Parameters.AddWithValue("@telefono", clientes.telefono)
-            objComando.Parameters.AddWithValue("@CuentaTotal", clientes.CuentaTotal)
-            objComando.Parameters.AddWithValue("@habilitado", clientes.habilitado)
+            'objComando.Parameters.AddWithValue("@CuentaTotal", clientes.CuentaTotal)
+            'objComando.Parameters.AddWithValue("@habilitado", clientes.habilitado)
 
             objComando.ExecuteNonQuery()
 

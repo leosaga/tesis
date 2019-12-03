@@ -2,7 +2,7 @@
 Imports System.Data.SqlClient
 Public Class productosClass
     Inherits Conexion
-    Dim Id_, id_Rubro_, codigo_, cantidad_, Ganancia_, Precio_, precio_venta_ As Integer
+    Dim Id_, id_Rubro_, codigo_, cantidad_, Precio_ As Integer
     Dim nombre_, unidad_ As String
 
     Public Property Id() As Integer
@@ -59,14 +59,14 @@ Public Class productosClass
         End Set
     End Property
 
-    Public Property Ganancia() As Integer
-        Get
-            Return Ganancia_
-        End Get
-        Set(ByVal value As Integer)
-            Ganancia_ = value
-        End Set
-    End Property
+    'Public Property Ganancia() As Integer
+    '    Get
+    '        Return Ganancia_
+    '    End Get
+    '    Set(ByVal value As Integer)
+    '        Ganancia_ = value
+    '    End Set
+    'End Property
 
     Public Property Precio() As Integer
         Get
@@ -77,14 +77,14 @@ Public Class productosClass
         End Set
     End Property
 
-    Public Property precio_venta() As Integer
-        Get
-            Return precio_venta_
-        End Get
-        Set(ByVal value As Integer)
-            precio_venta_ = value
-        End Set
-    End Property
+    'Public Property precio_venta() As Integer
+    '    Get
+    '        Return precio_venta_
+    '    End Get
+    '    Set(ByVal value As Integer)
+    '        precio_venta_ = value
+    '    End Set
+    'End Property
 
     Public Sub ConsultarProducto(ByVal listado As DataGridView)
         Try
@@ -190,8 +190,8 @@ Public Class productosClass
             objComando.Parameters.AddWithValue("@Precio", Producto.Precio)
             objComando.Parameters.AddWithValue("@cantidad", Producto.cantidad)
             objComando.Parameters.AddWithValue("@id_Rubro", Producto.id_Rubro)
-            objComando.Parameters.AddWithValue("@Ganancia", Producto.Ganancia)
-            objComando.Parameters.AddWithValue("@precio_venta", Producto.precio_venta)
+            'objComando.Parameters.AddWithValue("@Ganancia", Producto.Ganancia)
+            'objComando.Parameters.AddWithValue("@precio_venta", Producto.precio_venta)
             objComando.ExecuteNonQuery()
 
             Dim objComando2 As New SqlCommand("ProductoUltimo", objConexion)
@@ -221,8 +221,8 @@ Public Class productosClass
             objComando.Parameters.AddWithValue("@Precio", Producto.Precio)
             objComando.Parameters.AddWithValue("@cantidad", Producto.cantidad)
             objComando.Parameters.AddWithValue("@id_Rubro", Producto.id_Rubro)
-            objComando.Parameters.AddWithValue("@Ganancia", Producto.Ganancia)
-            objComando.Parameters.AddWithValue("@precio_venta", Producto.precio_venta)
+            'objComando.Parameters.AddWithValue("@Ganancia", Producto.Ganancia)
+            'objComando.Parameters.AddWithValue("@precio_venta", Producto.precio_venta)
 
 
             objComando.ExecuteNonQuery()

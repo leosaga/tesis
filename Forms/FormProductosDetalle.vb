@@ -43,8 +43,8 @@ Public Class FormProductosDetalle
         pro.codigo = Nothing
         pro.Precio = Nothing
         pro.cantidad = Nothing
-        pro.Ganancia = Nothing
-        pro.precio_venta = Nothing
+        ' pro.Ganancia = Nothing
+        ' pro.precio_venta = Nothing
      
         pro_ = pro
         esNuevo = True
@@ -60,8 +60,8 @@ Public Class FormProductosDetalle
         txtPrecio.Text = pro.Precio
         txtCantidad.Text = pro.cantidad
         cmbRubro.Text = pro.id_Rubro
-        txtGanancia.Text = pro.Ganancia
-        txtPrecioVenta.Text = pro.precio_venta
+        'txtGanancia.Text = pro.Ganancia
+        'txtPrecioVenta.Text = pro.precio_venta
 
     End Sub
 
@@ -78,8 +78,8 @@ Public Class FormProductosDetalle
             pro.Precio = txtPrecio.Text
             pro.cantidad = txtCantidad.Text
             pro.id_Rubro = cmbRubro.Text
-            pro.Ganancia = txtGanancia.Text
-            pro.precio_venta = txtPrecioVenta.Text
+            'pro.Ganancia = txtGanancia.Text
+            'pro.precio_venta = txtPrecioVenta.Text
 
             If esNuevo Then
 

@@ -127,14 +127,14 @@ Public Class ProveedoresClass
 
     End Sub
 
-    Public Sub Eliminar(ByVal au_id As String)
+    Public Sub Eliminar(ByVal proveedores As ProveedoresClass)
 
         Try
             Abrir()
 
             Dim objComando As New SqlCommand("proveedoresEliminar", objConexion)
             objComando.CommandType = CommandType.StoredProcedure
-            objComando.Parameters.AddWithValue("@Id", Id)
+            objComando.Parameters.AddWithValue("@Id", proveedores.Id)
             objComando.ExecuteNonQuery()
         Catch ex As Exception
             MsgBox(ex.Message)
