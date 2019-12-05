@@ -137,23 +137,23 @@ Public Class VentaDetalles
         lista.Columns("paraBorrar").Width = 30
     End Sub
 
-    'Public Sub ActualizarTablas(ByVal listavendeta As DataGridView, ByVal idventa As Integer)
-    '    For Each fila As DataGridViewRow In listavendeta.Rows
-    '        If fila.Cells("id").Value = 0 And fila.Cells("paraBorrar").Value = False Then
-    '            Dim ventadetalle As New VentaDetalles
-    '            ventadetalle.id_Producto = fila.Cells("id_producto").Value
-    '            ventadetalle.id_venta = id_venta
-    '            ventadetalle.cantidad = fila.Cells("cantidad").Value
-    '            ventadetalle.Agregar(ventadetalle)
-    '            '¿Controlar si la venta está repetido?
-    '        End If
-    '        If fila.Cells("id").Value <> 0 And fila.Cells("paraBorrar").Value = True Then
-    '            Dim ventadet As New VentaDetalles
-    '            ventadet.id = fila.Cells("id").Value
-    '            ventadet.Borrar(ventadet)
-    '        End If
-    '    Next
-    'End Sub
+    Public Sub ActualizarTablas(ByVal listavendeta As DataGridView, ByVal idventa As Integer)
+        For Each fila As DataGridViewRow In listavendeta.Rows
+            If fila.Cells("id").Value = 0 And fila.Cells("paraBorrar").Value = False Then
+                Dim ventadetalle As New VentaDetalles
+                ventadetalle.id_Producto = fila.Cells("id_producto").Value
+                ventadetalle.id_venta = id_venta
+                ventadetalle.cantidad = fila.Cells("cantidad").Value
+                ventadetalle.Agregar(ventadetalle)
+                '¿Controlar si la venta está repetido?
+            End If
+            If fila.Cells("id").Value <> 0 And fila.Cells("paraBorrar").Value = True Then
+                Dim ventadet As New VentaDetalles
+                ventadet.id = fila.Cells("id").Value
+                ventadet.Borrar(ventadet)
+            End If
+        Next
+    End Sub
 
     Public Sub Agregar(ByVal ventadetalle As VentaDetalles)
         Try
@@ -164,8 +164,8 @@ Public Class VentaDetalles
             objComando.Parameters.AddWithValue("@id_venta", ventadetalle.id_venta)
             objComando.Parameters.AddWithValue("@cantidad", ventadetalle.cantidad)
             objComando.Parameters.AddWithValue("@total", ventadetalle.total)
-          
-            
+
+
             objComando.ExecuteNonQuery()
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -244,5 +244,5 @@ Public Class VentaDetalles
 
 
 
-    
+
 End Class
