@@ -1,12 +1,13 @@
 USE [mercadosantaritaSQL]
 GO
 
-/****** Object:  StoredProcedure [dbo].[productosModificar]    Script Date: 06/03/2019 23:56:50 ******/
+/****** Object:  StoredProcedure [dbo].[productosModificar]    Script Date: 12/05/2019 22:45:06 ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
+
 
 
 CREATE PROCEDURE [dbo].[productosModificar]
@@ -18,8 +19,8 @@ CREATE PROCEDURE [dbo].[productosModificar]
 @Precio decimal,
 @cantidad int,
 @id_Rubro int,
-@Ganancia decimal(18,0),
-@precio_venta decimal
+@Ganancia decimal(10,2),
+@precio_venta decimal(10,2)
 
 	
 AS
@@ -43,6 +44,7 @@ BEGIN
   WHERE Id=@Id
   
 END
+
 
 GO
 

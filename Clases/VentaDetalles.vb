@@ -242,7 +242,36 @@ Public Class VentaDetalles
         End Try
     End Sub
 
+    Public Sub Modificar(ByVal ventadetalle As VentaDetalles)
+        Try
+            Abrir()
 
+            Dim objComando As New SqlCommand("ventasModificar", objConexion)
+
+
+            objComando.CommandType = CommandType.StoredProcedure
+
+        
+
+
+            objComando.Parameters.AddWithValue("@Id", ventadetalle.id)
+            objComando.Parameters.AddWithValue("@id_venta", ventadetalle.id_venta)
+            objComando.Parameters.AddWithValue("@id_Producto", ventadetalle.id_Producto)
+            objComando.Parameters.AddWithValue("@cantidad", ventadetalle.cantidad)
+            objComando.Parameters.AddWithValue("@total", ventadetalle.total)
+            'objComando.Parameters.AddWithValue("@producto", ventadetalle.producto)
+           
+
+            objComando.ExecuteNonQuery()
+
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            Cerrar()
+        End Try
+
+    End Sub
 
 
 End Class
