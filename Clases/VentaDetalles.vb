@@ -7,8 +7,8 @@ Public Class VentaDetalles
     Private id_venta_ As Integer
     Private cantidad_ As Integer
     Private total_ As Decimal
-    Private fecha_ As DateTime
-    Private tipo_ As String
+    'Private fecha_ As DateTime
+    'Private tipo_ As String
     Private producto_ As String
     Private paraBorrar_ As Boolean
 
@@ -163,7 +163,7 @@ Public Class VentaDetalles
             objComando.Parameters.AddWithValue("@id_Producto", ventadetalle.id_Producto)
             objComando.Parameters.AddWithValue("@id_venta", ventadetalle.id_venta)
             objComando.Parameters.AddWithValue("@cantidad", ventadetalle.cantidad)
-            objComando.Parameters.AddWithValue("@total", ventadetalle.total)
+            ' objComando.Parameters.AddWithValue("@total", ventadetalle.total)
 
 
             objComando.ExecuteNonQuery()
@@ -182,7 +182,7 @@ Public Class VentaDetalles
             Dim ventaDet As New VentaDetalles
             ventaDet.id_Producto = detalle.Cells("id_Producto").Value
             ventaDet.cantidad = detalle.Cells("cantidad").Value
-            ventaDet.total = detalle.Cells("total").Value
+            ' ventaDet.total = detalle.Cells("total").Value
             ventaDet.producto = detalle.Cells("producto").Value
             ventaDet.paraBorrar = detalle.Cells("paraBorrar").Value
             If detalle.Cells("id").Value <> 0 Or detalle.Cells("paraBorrar").Value = False Then
