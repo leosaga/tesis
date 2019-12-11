@@ -6,12 +6,11 @@ Public Class FormVentas
     Dim Venta As New ventaClass
     Private comprobante As New FacturacionClass
     Private pro As New productosClass
-    Private vent_ As ventaClass
+    Private vent_ As New ventaClass
     Private esNuevo_ As Boolean
     Dim func As New Funciones
 
-
-    Private Property vent() As ventaClass
+    Public Property vent() As ventaClass
         Get
             Return vent_
 
@@ -44,6 +43,21 @@ Public Class FormVentas
         esNuevo = True
     End Sub
 
+    Public Sub New(ByVal ven As ventaClass)
+        InitializeComponent()
+
+        Dim pro As New productosClass
+
+        pro.Id = 0
+        pro.nombre = ""
+        pro.Precio = 0
+        pro.cantidad = 0
+
+        vent = ven
+
+        esNuevo = False
+    End Sub
+
     Private Sub btnCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancelar.Click
 
         Me.Close()
@@ -56,13 +70,14 @@ Public Class FormVentas
     Private Sub FormVentas_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
 
-        txtIdVenta.Text = Venta.Id
+        txtIdVenta.Text = vent.Id
         ' txtIdComprobante.Text = Venta.id_comprobante
         idCliente.CargarComboCliente(CmbCliente)
-        CmbCliente.SelectedValue = Venta.id_cliente
+        CmbCliente.SelectedValue = vent.id_cliente
+        DateTimePicker2.Text = vent.fecha
 
         idComprobante.CargarComboComprobante(ComboComprobante)
-        ComboComprobante.SelectedValue = Venta.id_comprobante
+        ComboComprobante.SelectedValue = vent.id_comprobante
 
 
         txtDescripcion.Text = pro.nombre

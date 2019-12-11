@@ -5,7 +5,7 @@ Public Class ventaClass
     Inherits Conexion
     Dim Id_, id_cliente_, id_comprobante_, CantDeP_, Total_ As Integer
     Dim TdeComprobante_ As String
-    Dim fecha_ As DateTime
+    Dim fecha_ As Date
 
     Public Property Id() As Integer
         Get
@@ -58,11 +58,11 @@ Public Class ventaClass
         End Set
     End Property
 
-    Public Property fecha() As DateTime
+    Public Property fecha() As Date
         Get
             Return fecha_
         End Get
-        Set(ByVal value As DateTime)
+        Set(ByVal value As Date)
             fecha_ = value
         End Set
     End Property
