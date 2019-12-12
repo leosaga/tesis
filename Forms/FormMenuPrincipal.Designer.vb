@@ -31,7 +31,6 @@ Partial Class FormMenuPrincipal
         Me.StockDeProductosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.ClientesToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem
         Me.GastosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.UsuariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.PanelContenedor = New System.Windows.Forms.Panel
         Me.Label1 = New System.Windows.Forms.Label
         Me.PictureBox1 = New System.Windows.Forms.PictureBox
@@ -45,7 +44,7 @@ Partial Class FormMenuPrincipal
         Me.MenuStrip1.BackColor = System.Drawing.Color.Green
         Me.MenuStrip1.Dock = System.Windows.Forms.DockStyle.Left
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VentasToolStripMenuItem, Me.ProductosToolStripMenuItem, Me.ClientesToolStripMenuItem1, Me.GastosToolStripMenuItem, Me.UsuariosToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VentasToolStripMenuItem, Me.ProductosToolStripMenuItem, Me.ClientesToolStripMenuItem1, Me.GastosToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(105, 698)
@@ -111,16 +110,6 @@ Partial Class FormMenuPrincipal
         Me.GastosToolStripMenuItem.Size = New System.Drawing.Size(99, 130)
         Me.GastosToolStripMenuItem.Text = "Gastos"
         '
-        'UsuariosToolStripMenuItem
-        '
-        Me.UsuariosToolStripMenuItem.AutoSize = False
-        Me.UsuariosToolStripMenuItem.BackColor = System.Drawing.Color.Green
-        Me.UsuariosToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UsuariosToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.UsuariosToolStripMenuItem.Name = "UsuariosToolStripMenuItem"
-        Me.UsuariosToolStripMenuItem.Size = New System.Drawing.Size(99, 130)
-        Me.UsuariosToolStripMenuItem.Text = "Usuarios"
-        '
         'PanelContenedor
         '
         Me.PanelContenedor.Controls.Add(Me.Label1)
@@ -182,7 +171,6 @@ Partial Class FormMenuPrincipal
     Friend WithEvents ProductosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ClientesToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents GastosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents UsuariosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents RubrosToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ProveedoresToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents StockDeProductosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem

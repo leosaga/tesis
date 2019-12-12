@@ -27,8 +27,8 @@
         'FormGastos.Show()
     End Sub
 
-    Private Sub UsuariosToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles UsuariosToolStripMenuItem.Click
-        FormUsuarios.Show()
+    Private Sub UsuariosToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        'FormUsuarios.Show()
     End Sub
 
     Private Sub RubrosToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RubrosToolStripMenuItem1.Click
