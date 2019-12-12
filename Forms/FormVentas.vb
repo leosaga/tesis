@@ -84,6 +84,8 @@ Public Class FormVentas
         txtIdProducto.Text = pro.Id
         txtCantidad.Text = 1
 
+
+
     End Sub
 
     Public Sub btnBuscar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBuscar.Click
@@ -122,10 +124,6 @@ Public Class FormVentas
         txtCantidad.Text = 1
         txtIdProducto.Text = 0
         txtTotal.Text = Val(vendeta.cantidad) * Val(vendeta.total) + Val(txtTotal.Text)
-
-
-        
-
 
     End Sub
 
