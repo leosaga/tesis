@@ -103,7 +103,7 @@ Public Class ventaClass
                 vendeta.id_Producto = fila.Cells("id_Producto").Value
                 vendeta.id_venta = idVenta
                 vendeta.cantidad = fila.Cells("cantidad").Value
-                vendeta.total = fila.Cells("total").Value
+                'vendeta.total = fila.Cells("total").Value
                 vendeta.Agregar(vendeta)
                 '¿Controlar si el alumno está repetido?
             End If

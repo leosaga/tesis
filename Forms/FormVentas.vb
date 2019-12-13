@@ -112,7 +112,7 @@ Public Class FormVentas
         Dim vendeta As New VentaDetalles
         vendeta.id_Producto = txtIdProducto.Text
         vendeta.cantidad = txtCantidad.Text
-        vendeta.total = TxtPrecio.Text
+        vendeta.precio = TxtPrecio.Text
         vendeta.producto = txtDescripcion.Text
         vendeta.paraBorrar = False
         vendeta.agregaraLista(vendeta, dgvventadetalle)
@@ -123,7 +123,7 @@ Public Class FormVentas
         'txtCantidad.Clear()
         txtCantidad.Text = 1
         txtIdProducto.Text = 0
-        txtTotal.Text = Val(vendeta.cantidad) * Val(vendeta.total) + Val(txtTotal.Text)
+        txtTotal.Text = Val(vendeta.cantidad) * Val(vendeta.precio) + Val(txtTotal.Text)
 
     End Sub
 

@@ -6,7 +6,7 @@ Public Class VentaDetalles
     Private id_producto_ As Integer
     Private id_venta_ As Integer
     Private cantidad_ As Integer
-    Private total_ As Decimal
+    Private precio_ As Decimal
     'Private fecha_ As DateTime
     'Private tipo_ As String
     Private producto_ As String
@@ -47,12 +47,12 @@ Public Class VentaDetalles
             cantidad_ = value
         End Set
     End Property
-    Public Property total() As Decimal
+    Public Property precio() As Decimal
         Get
-            Return total_
+            Return precio_
         End Get
         Set(ByVal value As Decimal)
-            total_ = value
+            precio_ = value
         End Set
     End Property
 
@@ -100,7 +100,7 @@ Public Class VentaDetalles
             vendeta.id_Producto = fila.Cells("id_producto").Value
             vendeta.id_venta = fila.Cells("id_venta").Value
             vendeta.cantidad = fila.Cells("cantidad").Value
-            vendeta.total = fila.Cells("total").Value
+            vendeta.precio = fila.Cells("precio").Value
             'vendeta.fecha = fila.Cells("fecha").Value
             'vendeta.tipo = fila.Cells("tipo").Value
             vendeta.paraBorrar = fila.Cells("paraBorrar").Value
@@ -114,7 +114,7 @@ Public Class VentaDetalles
             VentaDetalle.id_Producto = prod.Id
             VentaDetalle.id_venta = id_venta
             VentaDetalle.cantidad = prod.cantidad
-            'VentaDetalle.total = total
+            VentaDetalle.precio = precio
            
             'VentaDetalle.paraBorrar = paraBorrar
 
@@ -163,7 +163,7 @@ Public Class VentaDetalles
             objComando.Parameters.AddWithValue("@id_Producto", ventadetalle.id_Producto)
             objComando.Parameters.AddWithValue("@id_venta", ventadetalle.id_venta)
             objComando.Parameters.AddWithValue("@cantidad", ventadetalle.cantidad)
-            ' objComando.Parameters.AddWithValue("@total", ventadetalle.total)
+            objComando.Parameters.AddWithValue("@precio", ventadetalle.precio)
 
 
             objComando.ExecuteNonQuery()
@@ -182,7 +182,7 @@ Public Class VentaDetalles
             Dim ventaDet As New VentaDetalles
             ventaDet.id_Producto = detalle.Cells("id_Producto").Value
             ventaDet.cantidad = detalle.Cells("cantidad").Value
-            ' ventaDet.total = detalle.Cells("total").Value
+            ventaDet.precio = detalle.Cells("precio").Value
             ventaDet.producto = detalle.Cells("producto").Value
             ventaDet.paraBorrar = detalle.Cells("paraBorrar").Value
             If detalle.Cells("id").Value <> 0 Or detalle.Cells("paraBorrar").Value = False Then
@@ -228,7 +228,7 @@ Public Class VentaDetalles
                     lista.Columns("id_Producto").Visible = False
                     lista.Columns("id_venta").Visible = False
                     lista.Columns("cantidad").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-                    lista.Columns("total").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                    ' lista.Columns("total").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
 
                     lista.Columns("paraBorrar").Width = 30
                 Else
@@ -258,7 +258,7 @@ Public Class VentaDetalles
             objComando.Parameters.AddWithValue("@id_venta", ventadetalle.id_venta)
             objComando.Parameters.AddWithValue("@id_Producto", ventadetalle.id_Producto)
             objComando.Parameters.AddWithValue("@cantidad", ventadetalle.cantidad)
-            objComando.Parameters.AddWithValue("@total", ventadetalle.total)
+            objComando.Parameters.AddWithValue("@precio", ventadetalle.precio)
             'objComando.Parameters.AddWithValue("@producto", ventadetalle.producto)
            
 
