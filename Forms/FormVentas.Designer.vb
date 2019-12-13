@@ -39,13 +39,13 @@ Partial Class FormVentas
         Me.TxtPrecio = New System.Windows.Forms.TextBox
         Me.labelPrecio = New System.Windows.Forms.Label
         Me.txtCantidad = New System.Windows.Forms.TextBox
-        Me.btnAgregar = New System.Windows.Forms.Button
         Me.btnBuscar = New System.Windows.Forms.Button
         Me.Label10 = New System.Windows.Forms.Label
         Me.Label6 = New System.Windows.Forms.Label
         Me.txtIdProducto = New System.Windows.Forms.TextBox
         Me.Label7 = New System.Windows.Forms.Label
         Me.txtDescripcion = New System.Windows.Forms.TextBox
+        Me.btnAgregar = New System.Windows.Forms.Button
         Me.dgvventadetalle = New System.Windows.Forms.DataGridView
         Me.Label12 = New System.Windows.Forms.Label
         Me.txtVuelto = New System.Windows.Forms.TextBox
@@ -248,19 +248,6 @@ Partial Class FormVentas
         Me.txtCantidad.Size = New System.Drawing.Size(75, 20)
         Me.txtCantidad.TabIndex = 42
         '
-        'btnAgregar
-        '
-        Me.btnAgregar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnAgregar.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.btnAgregar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
-        Me.btnAgregar.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.btnAgregar.Location = New System.Drawing.Point(798, 173)
-        Me.btnAgregar.Name = "btnAgregar"
-        Me.btnAgregar.Size = New System.Drawing.Size(122, 55)
-        Me.btnAgregar.TabIndex = 5
-        Me.btnAgregar.Text = "Agregar Producto"
-        Me.btnAgregar.UseVisualStyleBackColor = False
-        '
         'btnBuscar
         '
         Me.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -320,6 +307,19 @@ Partial Class FormVentas
         Me.txtDescripcion.Name = "txtDescripcion"
         Me.txtDescripcion.Size = New System.Drawing.Size(177, 20)
         Me.txtDescripcion.TabIndex = 26
+        '
+        'btnAgregar
+        '
+        Me.btnAgregar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnAgregar.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.btnAgregar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
+        Me.btnAgregar.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.btnAgregar.Location = New System.Drawing.Point(798, 173)
+        Me.btnAgregar.Name = "btnAgregar"
+        Me.btnAgregar.Size = New System.Drawing.Size(122, 55)
+        Me.btnAgregar.TabIndex = 5
+        Me.btnAgregar.Text = "Agregar Producto"
+        Me.btnAgregar.UseVisualStyleBackColor = False
         '
         'dgvventadetalle
         '

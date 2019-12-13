@@ -180,4 +180,42 @@ Public Class ventaClass
 
     End Sub
 
+    Public Sub Consultar(ByVal idventa As Integer, ByVal lista As DataGridView)
+        Try
+            Abrir()
+            Dim objComando As New SqlCommand("DetalleVentaConsultar", objConexion)
+            objComando.CommandType = CommandType.StoredProcedure
+            objComando.Parameters.AddWithValue("@idventa", idventa)
+
+            If objComando.ExecuteNonQuery Then
+                Dim objDataAdapter As New SqlDataAdapter(objComando)
+                Dim objDataTable As New Data.DataTable
+                objDataAdapter.Fill(objDataTable)
+                If objDataTable.Rows.Count > 0 Then
+                    lista.DataSource = objDataTable
+                    lista.Columns("id").Width = 30
+                    lista.Columns("idproducto").Visible = False
+                    lista.Columns("idventa").Visible = False
+                    lista.Columns("nombreProducto").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                    lista.Columns("paraBorrar").Width = 30
+                Else
+                    lista.DataSource = Nothing
+                End If
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            Cerrar()
+        End Try
+    End Sub
+
+
+
+
+
+
+
+
+
+
 End Class

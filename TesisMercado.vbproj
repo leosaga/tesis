@@ -173,13 +173,11 @@
       <DependentUpon>FormUsuarios.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormUsuarios.vb">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FormUsuariosDetalle.Designer.vb">
       <DependentUpon>FormUsuariosDetalle.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormUsuariosDetalle.vb">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FormVentas.Designer.vb">
       <DependentUpon>FormVentas.vb</DependentUpon>
