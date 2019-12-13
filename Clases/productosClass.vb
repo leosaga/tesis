@@ -2,8 +2,8 @@
 Imports System.Data.SqlClient
 Public Class productosClass
     Inherits Conexion
-    Dim Id_, id_Rubro_, codigo_, cantidad_, Precio_ As Integer
-    Dim precio_venta_, ganancia_ As Decimal
+    Dim Id_, id_Rubro_, codigo_, cantidad_, Precio_, ganancia_ As Integer
+    Dim precio_venta_ As Decimal
     Dim nombre_, unidad_ As String
 
     Public Property Id() As Integer
@@ -60,11 +60,11 @@ Public Class productosClass
         End Set
     End Property
 
-    Public Property Ganancia() As Decimal
+    Public Property ganancia() As Integer
         Get
             Return ganancia_
         End Get
-        Set(ByVal value As Decimal)
+        Set(ByVal value As Integer)
             ganancia_ = value
         End Set
     End Property
@@ -191,7 +191,7 @@ Public Class productosClass
             objComando.Parameters.AddWithValue("@Precio", Producto.Precio)
             objComando.Parameters.AddWithValue("@cantidad", Producto.cantidad)
             objComando.Parameters.AddWithValue("@id_Rubro", Producto.id_Rubro)
-            objComando.Parameters.AddWithValue("@Ganancia", Producto.Ganancia)
+            objComando.Parameters.AddWithValue("@ganancia", Producto.ganancia)
             objComando.Parameters.AddWithValue("@precio_venta", Producto.precio_venta)
             objComando.ExecuteNonQuery()
 
@@ -222,7 +222,7 @@ Public Class productosClass
             objComando.Parameters.AddWithValue("@Precio", Producto.Precio)
             objComando.Parameters.AddWithValue("@cantidad", Producto.cantidad)
             objComando.Parameters.AddWithValue("@id_Rubro", Producto.id_Rubro)
-            objComando.Parameters.AddWithValue("@Ganancia", Producto.Ganancia)
+            objComando.Parameters.AddWithValue("@ganancia", Producto.ganancia)
             objComando.Parameters.AddWithValue("@precio_venta", Producto.precio_venta)
 
 

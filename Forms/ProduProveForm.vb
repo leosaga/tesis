@@ -41,7 +41,7 @@
         producto.cantidad = 0
         producto.Precio = 0
         producto.id_Rubro = Nothing
-        producto.Ganancia = 0
+        producto.ganancia = 0
         producto.precio_venta = 0
         esNuevo = True
 
@@ -71,7 +71,7 @@
             producto.cantidad = txtCantidad.Text
             producto.Precio = txtPrecio.Text
             producto.id_Rubro = cmbRubro.SelectedValue
-            producto.Ganancia = txtGanancia.Text
+            producto.ganancia = txtGanancia.Text
             producto.precio_venta = txtPrecioVenta.Text
 
             If esNuevo Then
@@ -190,6 +190,6 @@
     End Sub
 
     Private Sub txtPrecioVenta_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtPrecioVenta.TextChanged
-        txtPrecioVenta.Text = Val(txtPrecio.Text) - Val(txtGanancia.Text)
+        txtPrecioVenta.Text = Val(txtPrecio.Text) * Val(txtGanancia.Text) / Val("100") + Val(txtPrecio.Text)
     End Sub
 End Class

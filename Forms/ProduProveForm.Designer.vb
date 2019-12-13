@@ -317,6 +317,7 @@ Partial Class ProduProveForm
         '
         Me.txtPrecioVenta.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.txtPrecioVenta.Enabled = False
         Me.txtPrecioVenta.Location = New System.Drawing.Point(270, 106)
         Me.txtPrecioVenta.Name = "txtPrecioVenta"
         Me.txtPrecioVenta.Size = New System.Drawing.Size(210, 20)

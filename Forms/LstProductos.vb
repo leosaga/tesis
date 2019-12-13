@@ -39,6 +39,8 @@ Public Class LstProductos
         producto.cantidad = dgvProductos.Item("cantidad", dgvProductos.CurrentRow.Index).Value
         producto.Precio = dgvProductos.Item("precio", dgvProductos.CurrentRow.Index).Value
         producto.id_Rubro = dgvProductos.Item("id_Rubro", dgvProductos.CurrentRow.Index).Value
+        producto.ganancia = dgvProductos.Item("ganancia", dgvProductos.CurrentRow.Index).Value
+        producto.precio_venta = dgvProductos.Item("precio_venta", dgvProductos.CurrentRow.Index).Value
 
         Dim ProduProveForm As New ProduProveForm(producto)
         ProduProveForm.ShowDialog()
