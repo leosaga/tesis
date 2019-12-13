@@ -41,6 +41,8 @@
         producto.cantidad = 0
         producto.Precio = 0
         producto.id_Rubro = Nothing
+        producto.Ganancia = 0
+        producto.precio_venta = 0
         esNuevo = True
 
     End Sub
@@ -51,6 +53,8 @@
         LstProveedores.ShowDialog()
 
         ProduProve.listaProductosProveedores(producto.Id, proveedoresSeleccionados, dgvProduProve)
+
+
     End Sub
 
     Private Sub btnCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancelar.Click
@@ -67,6 +71,8 @@
             producto.cantidad = txtCantidad.Text
             producto.Precio = txtPrecio.Text
             producto.id_Rubro = cmbRubro.SelectedValue
+            producto.Ganancia = txtGanancia.Text
+            producto.precio_venta = txtPrecioVenta.Text
 
             If esNuevo Then
                 producto.Id = producto.Agregar(producto)
@@ -108,6 +114,10 @@
         txtid.Text = producto.Id
         idRubro.CargarCombo(cmbRubro)
         cmbRubro.SelectedValue = producto.id_Rubro
+        txtGanancia.Text = producto.Ganancia
+        txtPrecioVenta.Text = producto.precio_venta
+
+
 
         ProduProve.Consultar(producto.Id, dgvProduProve)
     End Sub
@@ -155,7 +165,31 @@
         End If
     End Sub
 
+    Private Sub txtPrecioVenta_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtPrecioVenta.KeyPress
+        If Char.IsNumber(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsSeparator(e.KeyChar) Then
+            e.Handled = False
+        Else
+            e.Handled = True
+        End If
+    End Sub
 
+    Private Sub txtGanancia_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtGanancia.KeyPress
+        If Char.IsNumber(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsSeparator(e.KeyChar) Then
+            e.Handled = False
+        Else
+            e.Handled = True
+        End If
+    End Sub
 
-    
+    Private Sub txtPrecioVenta_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtPrecioVenta.TextChanged
+        txtPrecioVenta.Text = Val(txtPrecio.Text) - Val(txtGanancia.Text)
+    End Sub
 End Class

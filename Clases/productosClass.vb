@@ -3,6 +3,7 @@ Imports System.Data.SqlClient
 Public Class productosClass
     Inherits Conexion
     Dim Id_, id_Rubro_, codigo_, cantidad_, Precio_ As Integer
+    Dim precio_venta_, ganancia_ As Decimal
     Dim nombre_, unidad_ As String
 
     Public Property Id() As Integer
@@ -59,14 +60,14 @@ Public Class productosClass
         End Set
     End Property
 
-    'Public Property Ganancia() As Integer
-    '    Get
-    '        Return Ganancia_
-    '    End Get
-    '    Set(ByVal value As Integer)
-    '        Ganancia_ = value
-    '    End Set
-    'End Property
+    Public Property Ganancia() As Decimal
+        Get
+            Return ganancia_
+        End Get
+        Set(ByVal value As Decimal)
+            ganancia_ = value
+        End Set
+    End Property
 
     Public Property Precio() As Integer
         Get
@@ -77,14 +78,14 @@ Public Class productosClass
         End Set
     End Property
 
-    'Public Property precio_venta() As Integer
-    '    Get
-    '        Return precio_venta_
-    '    End Get
-    '    Set(ByVal value As Integer)
-    '        precio_venta_ = value
-    '    End Set
-    'End Property
+    Public Property precio_venta() As Decimal
+        Get
+            Return precio_venta_
+        End Get
+        Set(ByVal value As Decimal)
+            precio_venta_ = value
+        End Set
+    End Property
 
     Public Sub ConsultarProducto(ByVal listado As DataGridView)
         Try
@@ -190,8 +191,8 @@ Public Class productosClass
             objComando.Parameters.AddWithValue("@Precio", Producto.Precio)
             objComando.Parameters.AddWithValue("@cantidad", Producto.cantidad)
             objComando.Parameters.AddWithValue("@id_Rubro", Producto.id_Rubro)
-            'objComando.Parameters.AddWithValue("@Ganancia", Producto.Ganancia)
-            'objComando.Parameters.AddWithValue("@precio_venta", Producto.precio_venta)
+            objComando.Parameters.AddWithValue("@Ganancia", Producto.Ganancia)
+            objComando.Parameters.AddWithValue("@precio_venta", Producto.precio_venta)
             objComando.ExecuteNonQuery()
 
             Dim objComando2 As New SqlCommand("ProductoUltimo", objConexion)
@@ -221,8 +222,8 @@ Public Class productosClass
             objComando.Parameters.AddWithValue("@Precio", Producto.Precio)
             objComando.Parameters.AddWithValue("@cantidad", Producto.cantidad)
             objComando.Parameters.AddWithValue("@id_Rubro", Producto.id_Rubro)
-            'objComando.Parameters.AddWithValue("@Ganancia", Producto.Ganancia)
-            'objComando.Parameters.AddWithValue("@precio_venta", Producto.precio_venta)
+            objComando.Parameters.AddWithValue("@Ganancia", Producto.Ganancia)
+            objComando.Parameters.AddWithValue("@precio_venta", Producto.precio_venta)
 
 
             objComando.ExecuteNonQuery()
@@ -254,39 +255,7 @@ Public Class productosClass
         End Try
 
     End Sub
-    'Public Sub listaAlumnosMaterias(ByVal idMateria As Integer, ByVal listaAlumnos As List(Of Alumnos), ByVal lista As DataGridView)
-    '    Dim listaventa As New List(Of ventaClass)
-    '    For Each fila As DataGridViewRow In lista.Rows
-    '        Dim vent As New ventaClass
-    '        vent.Id = fila.Cells("id").Value
-    '        vent.idAlumno = fila.Cells("idAlumno").Value
-    '        vent.idMateria = fila.Cells("idMateria").Value
-    '        vent.nombreAlumno = fila.Cells("nombreAlumno").Value
-    '        vent.paraBorrar = fila.Cells("paraBorrar").Value
-    '        listaventa.Add(vent)
-    '    Next
 
-    '    For Each ven As ventaClass In listaventa
-    '        Dim ventadet As New ventaClass
-    '        ventadet.id = 0
-    '        ventadet.idDetalle = ven.Id
-    '        ventadet.nombreAlumno = ven.nombre
-    '        ventadet.idMateria = idMateria
-    '        ventadet.Add(ventaClass)
-    '    Next
-    '    lista.DataSource = listaventa
-
-    '    For Each fila As DataGridViewRow In lista.Rows
-    '        If fila.Cells("paraBorrar").Value = True Then
-    '            fila.Visible = False
-    '        End If
-    '    Next
-
-    '    lista.Columns("id").Width = 30
-    '    lista.Columns("idAlumno").Visible = False
-    '    lista.Columns("idMateria").Visible = False
-    '    lista.Columns("nombreAlumno").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-    '    lista.Columns("paraBorrar").Width = 30
-    'End Sub
+  
 
 End Class
