@@ -28,8 +28,22 @@ Public Class FormVentasDetalle
     End Sub
 
     Private Sub btnModificar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnModificar.Click
-        'modificarventa()
+        modificarventa()
 
+        'Ventas.Id = DataGridView1.Item("Id", DataGridView1.CurrentRow.Index).Value
+        'Ventas.fecha = DataGridView1.Item("Fecha", DataGridView1.CurrentRow.Index).Value
+        'Ventas.id_comprobante = DataGridView1.Item("id_comprobante", DataGridView1.CurrentRow.Index).Value
+        'Ventas.id_cliente = DataGridView1.Item("id_cliente", DataGridView1.CurrentRow.Index).Value
+        'Ventas.Total = DataGridView1.Item("total", DataGridView1.CurrentRow.Index).Value
+
+        'Dim FormVentas As New FormVentas(Ventas)
+        'FormVentas.ShowDialog()
+        'Ventas.VentasLlenarTabla(DataGridView1)
+        'Ventas.Modificar(Ventas)
+
+    End Sub
+
+    Public Sub modificarventa()
         Ventas.Id = DataGridView1.Item("Id", DataGridView1.CurrentRow.Index).Value
         Ventas.fecha = DataGridView1.Item("Fecha", DataGridView1.CurrentRow.Index).Value
         Ventas.id_comprobante = DataGridView1.Item("id_comprobante", DataGridView1.CurrentRow.Index).Value
@@ -38,21 +52,7 @@ Public Class FormVentasDetalle
 
         Dim FormVentas As New FormVentas(Ventas)
         FormVentas.ShowDialog()
-        Ventas.VentasLlenarTabla(DataGridView1)
-        'Ventas.Modificar(Ventas)
-
+        'Ventas.VentasLlenarTabla(DataGridView1)
     End Sub
-
-    'Public Sub modificarventa()
-    '    Ventas.Id = DataGridView1.Item("Id", DataGridView1.CurrentRow.Index).Value
-    '    Ventas.fecha = DataGridView1.Item("Fecha", DataGridView1.CurrentRow.Index).Value
-    '    Ventas.id_comprobante = DataGridView1.Item("id_comprobante", DataGridView1.CurrentRow.Index).Value
-    '    Ventas.id_cliente = DataGridView1.Item("id_cliente", DataGridView1.CurrentRow.Index).Value
-    '    Ventas.Total = DataGridView1.Item("total", DataGridView1.CurrentRow.Index).Value
-
-    '    ' Dim FormVentas As New FormVentas(Ventas)
-    '    FormVentas.ShowDialog()
-    '    Ventas.VentasLlenarTabla(DataGridView1)
-    'End Sub
 
 End Class

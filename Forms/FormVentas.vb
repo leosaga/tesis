@@ -46,13 +46,6 @@ Public Class FormVentas
     Public Sub New(ByVal ven As ventaClass)
         InitializeComponent()
 
-        Dim pro As New productosClass
-
-        pro.Id = 0
-        pro.nombre = ""
-        pro.Precio = 0
-        pro.cantidad = 0
-
         vent = ven
 
         esNuevo = False
@@ -84,6 +77,9 @@ Public Class FormVentas
         txtIdProducto.Text = pro.Id
         txtCantidad.Text = 1
 
+        txtTotal.Text = vent_.Total
+
+        Venta.Consultar(vent_.Id, dgvventadetalle)
 
 
     End Sub
