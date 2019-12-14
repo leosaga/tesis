@@ -75,7 +75,7 @@ Public Class ProveedoresClass
     End Sub
 
 
-    Public Function Agregar(ByVal proveedores As ProveedoresClass) As Integer
+    Public Function Agregar(ByVal proveedor As ProveedoresClass) As Integer
 
         Try
             Abrir()
@@ -84,10 +84,10 @@ Public Class ProveedoresClass
             objComando.CommandType = CommandType.StoredProcedure
 
             'sqlComando.Parameters.AddWithValue("@Id", Producto.Id)
-            objComando.Parameters.AddWithValue("@nombre", Proveedores.nombre)
-            objComando.Parameters.AddWithValue("@direccion", Proveedores.direccion)
-            objComando.Parameters.AddWithValue("@localidad", Proveedores.localidad)
-            objComando.Parameters.AddWithValue("@telefono", Proveedores.telefono)
+            objComando.Parameters.AddWithValue("@nombre", proveedor.nombre)
+            objComando.Parameters.AddWithValue("@direccion", proveedor.direccion)
+            objComando.Parameters.AddWithValue("@localidad", proveedor.localidad)
+            objComando.Parameters.AddWithValue("@telefono", proveedor.telefono)
 
 
             objComando.ExecuteNonQuery()
@@ -103,7 +103,7 @@ Public Class ProveedoresClass
         End Try
 
     End Function
-    Public Sub Modificar(ByVal Proveedores As ProveedoresClass)
+    Public Sub Modificar(ByVal Proveedor As ProveedoresClass)
         Try
             Abrir()
 
@@ -111,11 +111,11 @@ Public Class ProveedoresClass
 
             objComando.CommandType = CommandType.StoredProcedure
 
-            objComando.Parameters.AddWithValue("@Id", Proveedores.Id)
-            objComando.Parameters.AddWithValue("@nombre", Proveedores.Nombre)
-            objComando.Parameters.AddWithValue("@direccion", Proveedores.Direccion)
-            objComando.Parameters.AddWithValue("@localidad", Proveedores.Localidad)
-            objComando.Parameters.AddWithValue("@telefono", Proveedores.Telefono)
+            objComando.Parameters.AddWithValue("@Id", Proveedor.Id)
+            objComando.Parameters.AddWithValue("@nombre", Proveedor.Nombre)
+            objComando.Parameters.AddWithValue("@direccion", Proveedor.direccion)
+            objComando.Parameters.AddWithValue("@localidad", Proveedor.localidad)
+            objComando.Parameters.AddWithValue("@telefono", Proveedor.telefono)
 
             objComando.ExecuteNonQuery()
 
@@ -127,14 +127,14 @@ Public Class ProveedoresClass
 
     End Sub
 
-    Public Sub Eliminar(ByVal proveedores As ProveedoresClass)
+    Public Sub Eliminar(ByVal proveedor As ProveedoresClass)
 
         Try
             Abrir()
 
             Dim objComando As New SqlCommand("proveedoresEliminar", objConexion)
             objComando.CommandType = CommandType.StoredProcedure
-            objComando.Parameters.AddWithValue("@Id", proveedores.Id)
+            objComando.Parameters.AddWithValue("@Id", proveedor.Id)
             objComando.ExecuteNonQuery()
         Catch ex As Exception
             MsgBox(ex.Message)

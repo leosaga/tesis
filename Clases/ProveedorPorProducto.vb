@@ -66,13 +66,13 @@ Public Class ProveedorPorProducto
             listaProveProdu.Add(ProveProdu)
         Next
 
-        For Each pro As productosClass In listaProductos
+        For Each pre As productosClass In listaProductos
             Dim ProveProdu As New ProveedorPorProducto
 
             ProveProdu.id = 0
-            ProveProdu.idProveedor = pro.Id
+            ProveProdu.idProveedor = pre.Id
             ProveProdu.idProducto = idProducto
-            ProveProdu.nombreProducto = pro.nombre
+            ProveProdu.nombreProducto = pre.nombre
 
             listaProveProdu.Add(ProveProdu)
         Next
@@ -155,7 +155,7 @@ Public Class ProveedorPorProducto
                     lista.Columns("id").Width = 40
                     lista.Columns("idproducto").Visible = False
                     lista.Columns("idproveedor").Visible = False
-                    lista.Columns("nombreproveedor").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                    lista.Columns("nombreproducto").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
                     lista.Columns("paraBorrar").Width = 30
                 Else
                     lista.DataSource = Nothing
