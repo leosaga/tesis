@@ -23,7 +23,7 @@ Partial Class ProduProveForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Me.Label7 = New System.Windows.Forms.Label
         Me.txtPrecio = New System.Windows.Forms.TextBox
         Me.Label6 = New System.Windows.Forms.Label
@@ -121,9 +121,9 @@ Partial Class ProduProveForm
         Me.dgvProduProve.AllowUserToAddRows = False
         Me.dgvProduProve.AllowUserToDeleteRows = False
         Me.dgvProduProve.AllowUserToResizeRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Green
-        Me.dgvProduProve.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Green
+        Me.dgvProduProve.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvProduProve.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -275,7 +275,7 @@ Partial Class ProduProveForm
         Me.Label8.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(490, 83)
+        Me.Label8.Location = New System.Drawing.Point(490, 109)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(39, 13)
         Me.Label8.TabIndex = 51
@@ -286,7 +286,7 @@ Partial Class ProduProveForm
         Me.cmbRubro.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.cmbRubro.FormattingEnabled = True
-        Me.cmbRubro.Location = New System.Drawing.Point(546, 80)
+        Me.cmbRubro.Location = New System.Drawing.Point(546, 106)
         Me.cmbRubro.Name = "cmbRubro"
         Me.cmbRubro.Size = New System.Drawing.Size(121, 21)
         Me.cmbRubro.TabIndex = 6
@@ -307,7 +307,7 @@ Partial Class ProduProveForm
         Me.Ganancia.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Ganancia.AutoSize = True
-        Me.Ganancia.Location = New System.Drawing.Point(484, 109)
+        Me.Ganancia.Location = New System.Drawing.Point(484, 83)
         Me.Ganancia.Name = "Ganancia"
         Me.Ganancia.Size = New System.Drawing.Size(56, 13)
         Me.Ganancia.TabIndex = 55
@@ -328,7 +328,7 @@ Partial Class ProduProveForm
         '
         Me.txtGanancia.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.txtGanancia.Location = New System.Drawing.Point(546, 106)
+        Me.txtGanancia.Location = New System.Drawing.Point(546, 80)
         Me.txtGanancia.Name = "txtGanancia"
         Me.txtGanancia.Size = New System.Drawing.Size(121, 20)
         Me.txtGanancia.TabIndex = 57
