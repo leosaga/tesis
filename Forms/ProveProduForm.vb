@@ -5,7 +5,7 @@
     Private esNuevo_ As Boolean
     Dim func As New Funciones
 
-    Public Property proveedor() As ProveedoresClass
+    Public Property Proveedor() As ProveedoresClass
         Get
             Return Proveedor_
         End Get
@@ -60,8 +60,8 @@
         txtDireccion.Text = proveedor.Direccion
         txtLocalidad.Text = proveedor.Localidad
         txtid.Text = proveedor.Id
-
-        ProveProdu.Consultar(proveedor.Id, dgvProveProdu)
+        ProveProdu.Consultar(Proveedor.Id, dgvProveProdu)
+        'ProveProdu.Consultar(proveedor.Id, dgvProveProdu)
     End Sub
     Private Sub btnAceptar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAceptar.Click
 
