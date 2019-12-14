@@ -191,4 +191,8 @@
     Private Sub txtGanancia_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtGanancia.TextChanged
         txtPrecioVenta.Text = Val(txtPrecio.Text) * Val(txtGanancia.Text) / Val("100") + Val(txtPrecio.Text)
     End Sub
+
+    Private Sub txtPrecio_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtPrecio.TextChanged
+        txtPrecioVenta.Text = Val(txtPrecio.Text) * Val(txtGanancia.Text) / Val("100") + Val(txtPrecio.Text)
+    End Sub
 End Class

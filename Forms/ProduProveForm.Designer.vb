@@ -23,7 +23,7 @@ Partial Class ProduProveForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Me.Label7 = New System.Windows.Forms.Label
         Me.txtPrecio = New System.Windows.Forms.TextBox
         Me.Label6 = New System.Windows.Forms.Label
@@ -121,9 +121,9 @@ Partial Class ProduProveForm
         Me.dgvProduProve.AllowUserToAddRows = False
         Me.dgvProduProve.AllowUserToDeleteRows = False
         Me.dgvProduProve.AllowUserToResizeRows = False
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Green
-        Me.dgvProduProve.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Green
+        Me.dgvProduProve.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvProduProve.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
