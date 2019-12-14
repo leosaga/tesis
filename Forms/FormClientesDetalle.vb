@@ -162,21 +162,21 @@ Public Class FormClientesDetalle
     'End Sub
 
 
-    Private Sub RadioButton1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadioButton1.CheckedChanged
+    'Private Sub RadioButton1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
-        Dim Elija As String
+    '    Dim Elija As String
 
-        If RadioButton1.Checked = True Then
+    '    If RadioButton1.Checked = True Then
 
-            Elija = RadioButton1.Text
+    '        Elija = RadioButton1.Text
 
-        ElseIf RadioButton2.Checked = True Then
+    '    ElseIf RadioButton2.Checked = True Then
 
-            Elija = RadioButton2.Text
-        End If
+    '        Elija = RadioButton2.Text
+    '    End If
 
-        'MsgBox("Usted eligió  " & Elija)
-    End Sub
+    '    'MsgBox("Usted eligió  " & Elija)
+    'End Sub
 
     Private Sub txtNombre_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtNombre.KeyPress
         If Char.IsLetter(e.KeyChar) Then
@@ -224,7 +224,7 @@ Public Class FormClientesDetalle
         End If
     End Sub
 
-    Private Sub txtCuentaTotal_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtCuentaTotal.KeyPress
+    Private Sub txtCuentaTotal_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
         If Char.IsNumber(e.KeyChar) Then
             e.Handled = False
         ElseIf Char.IsControl(e.KeyChar) Then

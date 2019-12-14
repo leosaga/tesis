@@ -71,7 +71,7 @@ Public Class ProveedorPorProducto
 
             ProveProdu.id = 0
             ProveProdu.idProveedor = pre.Id
-            ProveProdu.idProducto = idProducto
+            ProveProdu.idProveedor = idProveedor
             ProveProdu.nombreProducto = pre.nombre
 
             listaProveProdu.Add(ProveProdu)
@@ -116,8 +116,9 @@ Public Class ProveedorPorProducto
             Abrir()
             Dim sqlComando As New SqlCommand("ProveProduAgregar", objConexion)
             sqlComando.CommandType = CommandType.StoredProcedure
-            sqlComando.Parameters.AddWithValue("@idProveedor", ProveProdu.idProveedor)
             sqlComando.Parameters.AddWithValue("@idProducto", ProveProdu.idProducto)
+            sqlComando.Parameters.AddWithValue("@idProveedor", ProveProdu.idProveedor)
+
             sqlComando.ExecuteNonQuery()
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -145,7 +146,7 @@ Public Class ProveedorPorProducto
             Abrir()
             Dim objComando As New SqlCommand("ProveProduConsultar", objConexion)
             objComando.CommandType = CommandType.StoredProcedure
-            objComando.Parameters.AddWithValue("@idproveedor", idProducto)
+            objComando.Parameters.AddWithValue("@idproveedor", idProveedor)
             If objComando.ExecuteNonQuery Then
                 Dim objDataAdapter As New SqlDataAdapter(objComando)
                 Dim objDataTable As New Data.DataTable

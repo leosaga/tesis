@@ -1,7 +1,7 @@
 ﻿Public Class ProveProduForm
 
     Dim ProveProdu As New ProveedorPorProducto
-    Private Proveedor_ As New ProveedoresClass
+    Private proveedor_ As New ProveedoresClass
     Private esNuevo_ As Boolean
     Dim func As New Funciones
 

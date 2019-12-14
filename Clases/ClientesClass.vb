@@ -8,8 +8,7 @@ Public Class ClientesClass
     Dim Id_ As Integer
     Dim telefono_ As Long
     Dim nombre_, apellido_, direccion_ As String
-    Dim CuentaTotal_ As Decimal
-    Dim habilitado_, nombreyapellido_ As String
+    'Dim nombreyapellido_ As String
 
     Public Property Id() As Integer
         Get
@@ -55,14 +54,14 @@ Public Class ClientesClass
             direccion_ = value
         End Set
     End Property
-    Public Property CuentaTotal() As Decimal
-        Get
-            Return CuentaTotal_
-        End Get
-        Set(ByVal value As Decimal)
-            CuentaTotal_ = value
-        End Set
-    End Property
+    'Public Property CuentaTotal() As Decimal
+    '    Get
+    '        Return CuentaTotal_
+    '    End Get
+    '    Set(ByVal value As Decimal)
+    '        CuentaTotal_ = value
+    '    End Set
+    'End Property
     'Public Property habilitado() As String
     '    Get
     '        Return habilitado_
