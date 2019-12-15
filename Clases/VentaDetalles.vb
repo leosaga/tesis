@@ -180,6 +180,7 @@ Public Class VentaDetalles
 
         For Each detalle As DataGridViewRow In lista.Rows
             Dim ventaDet As New VentaDetalles
+            ventaDet.id = detalle.Cells("id").Value
             ventaDet.id_Producto = detalle.Cells("id_Producto").Value
             ventaDet.id_venta = detalle.Cells("id_venta").Value
             ventaDet.cantidad = detalle.Cells("cantidad").Value
