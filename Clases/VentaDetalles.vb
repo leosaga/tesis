@@ -161,7 +161,7 @@ Public Class VentaDetalles
             Dim objComando As New SqlCommand("ventadetalleAgregar", objConexion)
             objComando.CommandType = CommandType.StoredProcedure
             objComando.Parameters.AddWithValue("@id_Producto", ventadetalle.id_Producto)
-            'objComando.Parameters.AddWithValue("@id_venta", ventadetalle.id_venta)
+            objComando.Parameters.AddWithValue("@id_venta", ventadetalle.id_venta)
             objComando.Parameters.AddWithValue("@cantidad", ventadetalle.cantidad)
             objComando.Parameters.AddWithValue("@precio", ventadetalle.precio)
 
