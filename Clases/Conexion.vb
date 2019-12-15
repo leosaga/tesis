@@ -67,10 +67,10 @@ Public Class Conexion
 
     Protected Function Abrir()
         Try
-            servidor_ = "DESKTOP-IEID114\SQLEXPRESS"
+            servidor_ = "DESKTOP-O022KNB"
             baseDatos_ = "mercadosantaritaSQL"
-            usuario_ = "sa"
-            password_ = "leo"
+            usuario_ = ""
+            password_ = ""
             If usuario_ = "" And password_ = "" Then
                 strConexion = "Data Source=" & servidor_ & "; DataBase=" & baseDatos_ & "; Trusted_Connection=True"
             Else
