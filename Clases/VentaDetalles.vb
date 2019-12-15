@@ -132,7 +132,7 @@ Public Class VentaDetalles
         lista.Columns("id_Producto").Visible = False
         lista.Columns("id_venta").Visible = False
         lista.Columns("cantidad").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-        'lista.Columns("total").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        'lista.Columns("precio").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
         
         lista.Columns("paraBorrar").Width = 30
     End Sub
@@ -161,7 +161,7 @@ Public Class VentaDetalles
             Dim objComando As New SqlCommand("ventadetalleAgregar", objConexion)
             objComando.CommandType = CommandType.StoredProcedure
             objComando.Parameters.AddWithValue("@id_Producto", ventadetalle.id_Producto)
-            objComando.Parameters.AddWithValue("@id_venta", ventadetalle.id_venta)
+            'objComando.Parameters.AddWithValue("@id_venta", ventadetalle.id_venta)
             objComando.Parameters.AddWithValue("@cantidad", ventadetalle.cantidad)
             objComando.Parameters.AddWithValue("@precio", ventadetalle.precio)
 
