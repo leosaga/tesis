@@ -76,7 +76,6 @@ Public Class FormVentas
         txtDescripcion.Text = pro.nombre
         txtIdProducto.Text = pro.Id
         txtCantidad.Text = 1
-
         txtTotal.Text = vent_.Total
 
         Venta.Consultar(vent_.Id, dgvventadetalle)
@@ -110,6 +109,7 @@ Public Class FormVentas
         vendeta.cantidad = txtCantidad.Text
         vendeta.precio = TxtPrecio.Text
         vendeta.producto = txtDescripcion.Text
+        'vendeta.id_venta = txtIdVenta.Text
         vendeta.paraBorrar = False
         vendeta.agregaraLista(vendeta, dgvventadetalle)
         'txtTotal.Text = vendeta.calcularTotal(dgvventadetalle)
@@ -163,4 +163,5 @@ Public Class FormVentas
     
  
   
+   
 End Class
