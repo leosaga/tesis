@@ -140,6 +140,7 @@ Public Class ventaClass
             Abrir()
             Dim objComando As New SqlCommand("ventasModificar", objConexion)
             objComando.CommandType = CommandType.StoredProcedure
+            objComando.Parameters.AddWithValue("@id", venta.Id)
             objComando.Parameters.AddWithValue("@id_cliente", venta.id_cliente)
             objComando.Parameters.AddWithValue("@id_Comprobante", venta.id_comprobante)
             objComando.Parameters.AddWithValue("@fecha", venta.fecha)

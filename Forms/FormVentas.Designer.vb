@@ -22,6 +22,7 @@ Partial Class FormVentas
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Me.btnEliminar = New System.Windows.Forms.Button
         Me.btnCancelar = New System.Windows.Forms.Button
         Me.Label3 = New System.Windows.Forms.Label
@@ -323,12 +324,20 @@ Partial Class FormVentas
         '
         'dgvventadetalle
         '
+        Me.dgvventadetalle.AllowUserToAddRows = False
+        Me.dgvventadetalle.AllowUserToDeleteRows = False
+        Me.dgvventadetalle.AllowUserToResizeRows = False
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Green
+        Me.dgvventadetalle.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvventadetalle.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dgvventadetalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvventadetalle.Location = New System.Drawing.Point(4, 246)
         Me.dgvventadetalle.Name = "dgvventadetalle"
+        Me.dgvventadetalle.ReadOnly = True
+        Me.dgvventadetalle.RowHeadersVisible = False
         Me.dgvventadetalle.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvventadetalle.Size = New System.Drawing.Size(787, 182)
         Me.dgvventadetalle.TabIndex = 40

@@ -117,7 +117,7 @@ Public Class ProductoPorProveedor
             Dim sqlComando As New SqlCommand("ProduProveAgregar", objConexion)
             sqlComando.CommandType = CommandType.StoredProcedure
             sqlComando.Parameters.AddWithValue("@idProveedor", ProduProve.idProveedor)
-            sqlComando.Parameters.AddWithValue("@idProducto", ProduProve.idProducto)
+            sqlComando.Parameters.AddWithValue("@idproducto", ProduProve.idProducto)
             sqlComando.ExecuteNonQuery()
         Catch ex As Exception
             MsgBox(ex.Message)

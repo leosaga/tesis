@@ -5,12 +5,12 @@ Public Class VentaDetalles
     Private id_ As Integer
     Private id_producto_ As Integer
     Private id_venta_ As Integer
-    Private cantidad_ As Integer
-    Private precio_ As Decimal
+    Private cantidad_ As Integer 'Esta propiedad se usa solo en el dataGridView
+    Private precio_ As Decimal 'Esta propiedad se usa solo en el dataGridView
     'Private fecha_ As DateTime
     'Private tipo_ As String
-    Private producto_ As String
-    Private paraBorrar_ As Boolean
+    Private producto_ As String 'Esta propiedad se usa solo en el dataGridView
+    Private paraBorrar_ As Boolean 'Esta propiedad se usa solo en el dataGridView
 
     Public Property id() As Integer
         Get
