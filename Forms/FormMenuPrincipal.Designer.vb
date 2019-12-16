@@ -32,16 +32,12 @@ Partial Class FormMenuPrincipal
         Me.ClientesToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem
         Me.GastosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.PanelContenedor = New System.Windows.Forms.Panel
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox
         Me.MenuStrip1.SuspendLayout()
-        Me.PanelContenedor.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.BackColor = System.Drawing.Color.Green
+        Me.MenuStrip1.BackColor = System.Drawing.Color.ForestGreen
         Me.MenuStrip1.Dock = System.Windows.Forms.DockStyle.Left
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VentasToolStripMenuItem, Me.ProductosToolStripMenuItem, Me.ClientesToolStripMenuItem1, Me.GastosToolStripMenuItem})
@@ -54,7 +50,7 @@ Partial Class FormMenuPrincipal
         'VentasToolStripMenuItem
         '
         Me.VentasToolStripMenuItem.AutoSize = False
-        Me.VentasToolStripMenuItem.BackColor = System.Drawing.Color.Green
+        Me.VentasToolStripMenuItem.BackColor = System.Drawing.Color.ForestGreen
         Me.VentasToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.VentasToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.VentasToolStripMenuItem.Name = "VentasToolStripMenuItem"
@@ -64,7 +60,7 @@ Partial Class FormMenuPrincipal
         'ProductosToolStripMenuItem
         '
         Me.ProductosToolStripMenuItem.AutoSize = False
-        Me.ProductosToolStripMenuItem.BackColor = System.Drawing.Color.Green
+        Me.ProductosToolStripMenuItem.BackColor = System.Drawing.Color.ForestGreen
         Me.ProductosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RubrosToolStripMenuItem1, Me.ProveedoresToolStripMenuItem1, Me.StockDeProductosToolStripMenuItem})
         Me.ProductosToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ProductosToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight
@@ -93,7 +89,7 @@ Partial Class FormMenuPrincipal
         'ClientesToolStripMenuItem1
         '
         Me.ClientesToolStripMenuItem1.AutoSize = False
-        Me.ClientesToolStripMenuItem1.BackColor = System.Drawing.Color.Green
+        Me.ClientesToolStripMenuItem1.BackColor = System.Drawing.Color.ForestGreen
         Me.ClientesToolStripMenuItem1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ClientesToolStripMenuItem1.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.ClientesToolStripMenuItem1.Name = "ClientesToolStripMenuItem1"
@@ -103,7 +99,7 @@ Partial Class FormMenuPrincipal
         'GastosToolStripMenuItem
         '
         Me.GastosToolStripMenuItem.AutoSize = False
-        Me.GastosToolStripMenuItem.BackColor = System.Drawing.Color.Green
+        Me.GastosToolStripMenuItem.BackColor = System.Drawing.Color.ForestGreen
         Me.GastosToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GastosToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.GastosToolStripMenuItem.Name = "GastosToolStripMenuItem"
@@ -112,43 +108,20 @@ Partial Class FormMenuPrincipal
         '
         'PanelContenedor
         '
-        Me.PanelContenedor.Controls.Add(Me.Label1)
-        Me.PanelContenedor.Controls.Add(Me.PictureBox1)
+        Me.PanelContenedor.BackColor = System.Drawing.Color.Transparent
+        Me.PanelContenedor.BackgroundImage = Global.TesisMercado.My.Resources.Resources.FONDO31
+        Me.PanelContenedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelContenedor.Location = New System.Drawing.Point(105, 0)
         Me.PanelContenedor.Name = "PanelContenedor"
         Me.PanelContenedor.Size = New System.Drawing.Size(830, 698)
         Me.PanelContenedor.TabIndex = 3
         '
-        'Label1
-        '
-        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label1.BackColor = System.Drawing.Color.Green
-        Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label1.Font = New System.Drawing.Font("PMingLiU-ExtB", 72.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label1.Location = New System.Drawing.Point(34, 427)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(784, 127)
-        Me.Label1.TabIndex = 4
-        Me.Label1.Text = "Mercado Santa Rita"
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(475, 189)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(334, 245)
-        Me.PictureBox1.TabIndex = 3
-        Me.PictureBox1.TabStop = False
-        '
         'FormMenuPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.OrangeRed
+        Me.BackColor = System.Drawing.Color.White
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(935, 698)
         Me.Controls.Add(Me.PanelContenedor)
@@ -160,8 +133,6 @@ Partial Class FormMenuPrincipal
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
-        Me.PanelContenedor.ResumeLayout(False)
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -175,7 +146,5 @@ Partial Class FormMenuPrincipal
     Friend WithEvents ProveedoresToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents StockDeProductosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents PanelContenedor As System.Windows.Forms.Panel
-    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
-    Friend WithEvents Label1 As System.Windows.Forms.Label
 
 End Class
