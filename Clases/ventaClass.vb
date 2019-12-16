@@ -6,6 +6,7 @@ Public Class ventaClass
     Dim Id_, id_cliente_, id_comprobante_, CantDeP_, Total_ As Integer
     Dim TdeComprobante_ As String
     Dim fecha_ As Date
+    Dim habilitado_ As Boolean
 
     Public Property Id() As Integer
         Get
@@ -64,6 +65,14 @@ Public Class ventaClass
         End Get
         Set(ByVal value As Date)
             fecha_ = value
+        End Set
+    End Property
+    Public Property habilitado() As Boolean
+        Get
+            Return habilitado_
+        End Get
+        Set(ByVal value As Boolean)
+            habilitado_ = value
         End Set
     End Property
 
@@ -127,6 +136,7 @@ Public Class ventaClass
             objComando.Parameters.AddWithValue("@id_comprobante", venta.id_comprobante)
             objComando.Parameters.AddWithValue("@fecha", venta.fecha)
             objComando.Parameters.AddWithValue("@total", venta.Total)
+            objComando.Parameters.AddWithValue("@habilitado", venta.habilitado)
             objComando.ExecuteNonQuery()
 
             Dim objComando2 As New SqlCommand("ventaUltima", objConexion)
@@ -147,6 +157,7 @@ Public Class ventaClass
             objComando.Parameters.AddWithValue("@id_Comprobante", venta.id_comprobante)
             objComando.Parameters.AddWithValue("@fecha", venta.fecha)
             objComando.Parameters.AddWithValue("@total", venta.Total)
+            objComando.Parameters.AddWithValue("@habilitado", venta.habilitado)
             objComando.ExecuteNonQuery()
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -197,9 +208,9 @@ Public Class ventaClass
                 If objDataTable.Rows.Count > 0 Then
                     lista.DataSource = objDataTable
                     lista.Columns("id").Width = 30
-                    lista.Columns("idproducto").Visible = False
-                    lista.Columns("idventa").Visible = False
-                    lista.Columns("nombreProducto").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                    lista.Columns("id_producto").Visible = False
+                    lista.Columns("id_venta").Visible = False
+                    lista.Columns("Producto").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
                     lista.Columns("paraBorrar").Width = 30
                 Else
                     lista.DataSource = Nothing

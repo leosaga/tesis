@@ -56,6 +56,7 @@ Partial Class FormVentas
         Me.Label2 = New System.Windows.Forms.Label
         Me.Label8 = New System.Windows.Forms.Label
         Me.BtnAceptar = New System.Windows.Forms.Button
+        Me.habilitado = New System.Windows.Forms.RadioButton
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
@@ -179,6 +180,7 @@ Partial Class FormVentas
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.GroupBox2.Controls.Add(Me.habilitado)
         Me.GroupBox2.Controls.Add(Me.ComboComprobante)
         Me.GroupBox2.Controls.Add(Me.Label17)
         Me.GroupBox2.Location = New System.Drawing.Point(463, 9)
@@ -191,7 +193,7 @@ Partial Class FormVentas
         'ComboComprobante
         '
         Me.ComboComprobante.FormattingEnabled = True
-        Me.ComboComprobante.Location = New System.Drawing.Point(141, 44)
+        Me.ComboComprobante.Location = New System.Drawing.Point(6, 31)
         Me.ComboComprobante.Name = "ComboComprobante"
         Me.ComboComprobante.Size = New System.Drawing.Size(127, 21)
         Me.ComboComprobante.TabIndex = 3
@@ -201,7 +203,7 @@ Partial Class FormVentas
         Me.Label17.AutoSize = True
         Me.Label17.BackColor = System.Drawing.Color.Transparent
         Me.Label17.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label17.Location = New System.Drawing.Point(138, 28)
+        Me.Label17.Location = New System.Drawing.Point(3, 15)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(109, 13)
         Me.Label17.TabIndex = 30
@@ -423,6 +425,17 @@ Partial Class FormVentas
         Me.BtnAceptar.Text = "Aceptar"
         Me.BtnAceptar.UseVisualStyleBackColor = False
         '
+        'habilitado
+        '
+        Me.habilitado.AutoSize = True
+        Me.habilitado.Location = New System.Drawing.Point(203, 35)
+        Me.habilitado.Name = "habilitado"
+        Me.habilitado.Size = New System.Drawing.Size(72, 17)
+        Me.habilitado.TabIndex = 31
+        Me.habilitado.TabStop = True
+        Me.habilitado.Text = "Habilitado"
+        Me.habilitado.UseVisualStyleBackColor = True
+        '
         'FormVentas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -491,4 +504,5 @@ Partial Class FormVentas
     Friend WithEvents BtnAceptar As System.Windows.Forms.Button
     Friend WithEvents TxtPrecio As System.Windows.Forms.TextBox
     Friend WithEvents labelPrecio As System.Windows.Forms.Label
+    Friend WithEvents habilitado As System.Windows.Forms.RadioButton
 End Class
