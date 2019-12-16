@@ -7,6 +7,7 @@ Public Class VentaDetalles
     Private id_venta_ As Integer
     Private cantidad_ As Integer 'Esta propiedad se usa solo en el dataGridView
     Private precio_ As Decimal 'Esta propiedad se usa solo en el dataGridView
+    ' Private precio_venta_ As Decimal
     'Private fecha_ As DateTime
     'Private tipo_ As String
     Private producto_ As String 'Esta propiedad se usa solo en el dataGridView
@@ -55,6 +56,14 @@ Public Class VentaDetalles
             precio_ = value
         End Set
     End Property
+    'Public Property precio_venta() As Decimal
+    '    Get
+    '        Return precio_venta_
+    '    End Get
+    '    Set(ByVal value As Decimal)
+    '        precio_venta_ = value
+    '    End Set
+    'End Property
 
     Public Property paraBorrar() As String
         Get
@@ -100,7 +109,7 @@ Public Class VentaDetalles
             vendeta.id_Producto = fila.Cells("id_producto").Value
             vendeta.id_venta = fila.Cells("id_venta").Value
             vendeta.cantidad = fila.Cells("cantidad").Value
-            vendeta.precio = fila.Cells("precio").Value
+            vendeta.precio = fila.Cells("precio_venta").Value
             'vendeta.fecha = fila.Cells("fecha").Value
             'vendeta.tipo = fila.Cells("tipo").Value
             vendeta.paraBorrar = fila.Cells("paraBorrar").Value
@@ -132,7 +141,7 @@ Public Class VentaDetalles
         lista.Columns("id_Producto").Visible = False
         lista.Columns("id_venta").Visible = False
         lista.Columns("cantidad").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-        'lista.Columns("precio").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        lista.Columns("precio").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
         
         lista.Columns("paraBorrar").Width = 30
     End Sub

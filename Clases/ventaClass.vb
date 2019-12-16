@@ -81,8 +81,10 @@ Public Class ventaClass
                 If objDataTable.Rows.Count > 0 Then
                     listado.DataSource = objDataTable
                     listado.Columns("id").Width = 50
-                    'listado.Columns("nombre").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-                    'listado.Columns("codigo").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                    listado.Columns("fecha").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                    listado.Columns("id_comprobante").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                    listado.Columns("id_cliente").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                    listado.Columns("total").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
 
                 Else
                     listado.DataSource = Nothing

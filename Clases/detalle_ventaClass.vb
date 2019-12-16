@@ -4,9 +4,9 @@ Imports System.Data.SqlClient
 Public Class detalle_ventaClass
 
     Inherits Conexion
-    Dim Id_, id_producto_, id_venta_, cantidad_, monto_ As Integer
-    Dim fecha_ As DateTime
-    Dim tipo_ As String
+    Dim Id_, id_producto_, id_venta_, cantidad_, precio_ As Integer
+    'Dim fecha_ As DateTime
+    'Dim tipo_ As String
 
     Public Property Id() As Integer
         Get
@@ -42,30 +42,30 @@ Public Class detalle_ventaClass
             cantidad_ = value
         End Set
     End Property
-    Public Property monto() As Integer
+    Public Property precio() As Integer
         Get
-            Return monto_
+            Return precio_
         End Get
         Set(ByVal value As Integer)
-            monto_ = value
+            precio_ = value
         End Set
     End Property
-    Public Property fecha() As DateTime
-        Get
-            Return fecha_
-        End Get
-        Set(ByVal value As DateTime)
-            fecha_ = value
-        End Set
-    End Property
-    Public Property tipo() As String
-        Get
-            Return tipo_
-        End Get
-        Set(ByVal value As String)
-            tipo_ = value
-        End Set
-    End Property
+    'Public Property fecha() As DateTime
+    '    Get
+    '        Return fecha_
+    '    End Get
+    '    Set(ByVal value As DateTime)
+    '        fecha_ = value
+    '    End Set
+    'End Property
+    'Public Property tipo() As String
+    '    Get
+    '        Return tipo_
+    '    End Get
+    '    Set(ByVal value As String)
+    '        tipo_ = value
+    '    End Set
+    'End Property
 
     Public Sub VentaLlenarTabla(ByVal listado As DataGridView)
         Try

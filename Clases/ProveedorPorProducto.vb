@@ -70,7 +70,7 @@ Public Class ProveedorPorProducto
             Dim ProveProdu As New ProveedorPorProducto
 
             ProveProdu.id = 0
-            ProveProdu.idProveedor = pre.Id
+            ProveProdu.idProducto = pre.Id
             ProveProdu.idProveedor = idProveedor
             ProveProdu.nombreProducto = pre.nombre
 
@@ -87,8 +87,8 @@ Public Class ProveedorPorProducto
 
 
         lista.Columns("id").Width = 30
-        lista.Columns("idProveedor").Visible = False
-        lista.Columns("idProducto").Visible = False
+        lista.Columns("idProveedor").Visible = True
+        lista.Columns("idProducto").Visible = True
         lista.Columns("nombreproducto").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
         lista.Columns("paraBorrar").Width = 30
     End Sub
@@ -116,8 +116,8 @@ Public Class ProveedorPorProducto
             Abrir()
             Dim sqlComando As New SqlCommand("ProveProduAgregar", objConexion)
             sqlComando.CommandType = CommandType.StoredProcedure
-            sqlComando.Parameters.AddWithValue("@idProducto", ProveProdu.idProducto)
-            sqlComando.Parameters.AddWithValue("@idProveedor", ProveProdu.idProveedor)
+            sqlComando.Parameters.AddWithValue("@idproducto", ProveProdu.idProducto)
+            sqlComando.Parameters.AddWithValue("@idproveedor", ProveProdu.idProveedor)
 
             sqlComando.ExecuteNonQuery()
         Catch ex As Exception

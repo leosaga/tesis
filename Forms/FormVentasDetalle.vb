@@ -52,7 +52,8 @@ Public Class FormVentasDetalle
 
         Dim FormVentas As New FormVentas(Ventas)
         FormVentas.ShowDialog()
-        'Ventas.VentasLlenarTabla(DataGridView1)
+        ' Ventas.VentasLlenarTabla(DataGridView1)
     End Sub
 
+    
 End Class
