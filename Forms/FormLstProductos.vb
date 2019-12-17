@@ -62,7 +62,7 @@ Public Class FormLstProductos
         producto.Id = DataGridView1.Item("Id", DataGridView1.CurrentRow.Index).Value
         producto.nombre = DataGridView1.Item("nombre", DataGridView1.CurrentRow.Index).Value
         producto.cantidad = DataGridView1.Item("cantidad", DataGridView1.CurrentRow.Index).Value
-        producto.Precio = DataGridView1.Item("Precio", DataGridView1.CurrentRow.Index).Value
+        producto.precio_venta = DataGridView1.Item("Precio_venta", DataGridView1.CurrentRow.Index).Value
         Close()
     End Sub
 
@@ -76,7 +76,7 @@ Public Class FormLstProductos
         producto.Id = DataGridView1.Item("Id", DataGridView1.CurrentRow.Index).Value
         producto.nombre = DataGridView1.Item("nombre", DataGridView1.CurrentRow.Index).Value
         producto.cantidad = DataGridView1.Item("cantidad", DataGridView1.CurrentRow.Index).Value
-        producto.Precio = DataGridView1.Item("Precio", DataGridView1.CurrentRow.Index).Value
+        producto.precio_venta = DataGridView1.Item("Precio_venta", DataGridView1.CurrentRow.Index).Value
         Close()
     End Sub
 End Class

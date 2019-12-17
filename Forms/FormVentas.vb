@@ -89,7 +89,7 @@ Public Class FormVentas
         txtIdProducto.Text = FormLstProductos.producto.Id
         txtDescripcion.Text = FormLstProductos.producto.nombre
 
-        TxtPrecio.Text = FormLstProductos.producto.Precio
+        TxtPrecio.Text = FormLstProductos.producto.precio_venta
     End Sub
 
     Private Sub DataGridView1_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvventadetalle.CellContentClick
@@ -165,4 +165,5 @@ Public Class FormVentas
   
    
     
+   
 End Class

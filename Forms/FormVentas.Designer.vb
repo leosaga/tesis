@@ -22,7 +22,7 @@ Partial Class FormVentas
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Me.btnEliminar = New System.Windows.Forms.Button
         Me.btnCancelar = New System.Windows.Forms.Button
         Me.Label3 = New System.Windows.Forms.Label
@@ -34,6 +34,7 @@ Partial Class FormVentas
         Me.CmbCliente = New System.Windows.Forms.ComboBox
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker
         Me.GroupBox2 = New System.Windows.Forms.GroupBox
+        Me.habilitado = New System.Windows.Forms.RadioButton
         Me.ComboComprobante = New System.Windows.Forms.ComboBox
         Me.Label17 = New System.Windows.Forms.Label
         Me.GroupBox4 = New System.Windows.Forms.GroupBox
@@ -56,7 +57,6 @@ Partial Class FormVentas
         Me.Label2 = New System.Windows.Forms.Label
         Me.Label8 = New System.Windows.Forms.Label
         Me.BtnAceptar = New System.Windows.Forms.Button
-        Me.habilitado = New System.Windows.Forms.RadioButton
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
@@ -189,6 +189,17 @@ Partial Class FormVentas
         Me.GroupBox2.TabIndex = 37
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Datos de la Factura"
+        '
+        'habilitado
+        '
+        Me.habilitado.AutoSize = True
+        Me.habilitado.Location = New System.Drawing.Point(203, 35)
+        Me.habilitado.Name = "habilitado"
+        Me.habilitado.Size = New System.Drawing.Size(72, 17)
+        Me.habilitado.TabIndex = 31
+        Me.habilitado.TabStop = True
+        Me.habilitado.Text = "Habilitado"
+        Me.habilitado.UseVisualStyleBackColor = True
         '
         'ComboComprobante
         '
@@ -329,9 +340,9 @@ Partial Class FormVentas
         Me.dgvventadetalle.AllowUserToAddRows = False
         Me.dgvventadetalle.AllowUserToDeleteRows = False
         Me.dgvventadetalle.AllowUserToResizeRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Green
-        Me.dgvventadetalle.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Green
+        Me.dgvventadetalle.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvventadetalle.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -424,17 +435,6 @@ Partial Class FormVentas
         Me.BtnAceptar.TabIndex = 57
         Me.BtnAceptar.Text = "Aceptar"
         Me.BtnAceptar.UseVisualStyleBackColor = False
-        '
-        'habilitado
-        '
-        Me.habilitado.AutoSize = True
-        Me.habilitado.Location = New System.Drawing.Point(203, 35)
-        Me.habilitado.Name = "habilitado"
-        Me.habilitado.Size = New System.Drawing.Size(72, 17)
-        Me.habilitado.TabIndex = 31
-        Me.habilitado.TabStop = True
-        Me.habilitado.Text = "Habilitado"
-        Me.habilitado.UseVisualStyleBackColor = True
         '
         'FormVentas
         '

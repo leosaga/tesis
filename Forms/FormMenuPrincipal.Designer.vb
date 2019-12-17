@@ -24,15 +24,15 @@ Partial Class FormMenuPrincipal
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMenuPrincipal))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip
-        Me.VentasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.ProductosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.RubrosToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem
         Me.ProveedoresToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem
         Me.StockDeProductosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.ClientesToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem
+        Me.PanelContenedor = New System.Windows.Forms.Panel
+        Me.VentasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.GastosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem
-        Me.PanelContenedor = New System.Windows.Forms.Panel
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -47,20 +47,6 @@ Partial Class FormMenuPrincipal
         Me.MenuStrip1.Size = New System.Drawing.Size(110, 698)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
-        '
-        'VentasToolStripMenuItem
-        '
-        Me.VentasToolStripMenuItem.AutoSize = False
-        Me.VentasToolStripMenuItem.BackColor = System.Drawing.Color.OliveDrab
-        Me.VentasToolStripMenuItem.BackgroundImage = Global.TesisMercado.My.Resources.Resources.db_list
-        Me.VentasToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.VentasToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 16.0!)
-        Me.VentasToolStripMenuItem.ForeColor = System.Drawing.Color.Black
-        Me.VentasToolStripMenuItem.Name = "VentasToolStripMenuItem"
-        Me.VentasToolStripMenuItem.Size = New System.Drawing.Size(99, 130)
-        Me.VentasToolStripMenuItem.Text = "Ventas"
-        Me.VentasToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.VentasToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
         '
         'ProductosToolStripMenuItem
         '
@@ -79,19 +65,19 @@ Partial Class FormMenuPrincipal
         'RubrosToolStripMenuItem1
         '
         Me.RubrosToolStripMenuItem1.Name = "RubrosToolStripMenuItem1"
-        Me.RubrosToolStripMenuItem1.Size = New System.Drawing.Size(273, 34)
+        Me.RubrosToolStripMenuItem1.Size = New System.Drawing.Size(272, 34)
         Me.RubrosToolStripMenuItem1.Text = "Rubros"
         '
         'ProveedoresToolStripMenuItem1
         '
         Me.ProveedoresToolStripMenuItem1.Name = "ProveedoresToolStripMenuItem1"
-        Me.ProveedoresToolStripMenuItem1.Size = New System.Drawing.Size(273, 34)
+        Me.ProveedoresToolStripMenuItem1.Size = New System.Drawing.Size(272, 34)
         Me.ProveedoresToolStripMenuItem1.Text = "Proveedores"
         '
         'StockDeProductosToolStripMenuItem
         '
         Me.StockDeProductosToolStripMenuItem.Name = "StockDeProductosToolStripMenuItem"
-        Me.StockDeProductosToolStripMenuItem.Size = New System.Drawing.Size(273, 34)
+        Me.StockDeProductosToolStripMenuItem.Size = New System.Drawing.Size(272, 34)
         Me.StockDeProductosToolStripMenuItem.Text = "Stock de Productos"
         '
         'ClientesToolStripMenuItem1
@@ -106,6 +92,31 @@ Partial Class FormMenuPrincipal
         Me.ClientesToolStripMenuItem1.Size = New System.Drawing.Size(99, 130)
         Me.ClientesToolStripMenuItem1.Text = "Clientes"
         Me.ClientesToolStripMenuItem1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        '
+        'PanelContenedor
+        '
+        Me.PanelContenedor.BackColor = System.Drawing.Color.Transparent
+        Me.PanelContenedor.BackgroundImage = Global.TesisMercado.My.Resources.Resources.FONDO31
+        Me.PanelContenedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PanelContenedor.Location = New System.Drawing.Point(110, 0)
+        Me.PanelContenedor.Name = "PanelContenedor"
+        Me.PanelContenedor.Size = New System.Drawing.Size(825, 698)
+        Me.PanelContenedor.TabIndex = 3
+        '
+        'VentasToolStripMenuItem
+        '
+        Me.VentasToolStripMenuItem.AutoSize = False
+        Me.VentasToolStripMenuItem.BackColor = System.Drawing.Color.OliveDrab
+        Me.VentasToolStripMenuItem.BackgroundImage = Global.TesisMercado.My.Resources.Resources.db_list
+        Me.VentasToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.VentasToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 16.0!)
+        Me.VentasToolStripMenuItem.ForeColor = System.Drawing.Color.Black
+        Me.VentasToolStripMenuItem.Name = "VentasToolStripMenuItem"
+        Me.VentasToolStripMenuItem.Size = New System.Drawing.Size(99, 130)
+        Me.VentasToolStripMenuItem.Text = "Ventas"
+        Me.VentasToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.VentasToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
         '
         'GastosToolStripMenuItem
         '
@@ -132,17 +143,6 @@ Partial Class FormMenuPrincipal
         Me.ToolStripMenuItem1.Size = New System.Drawing.Size(99, 130)
         Me.ToolStripMenuItem1.Text = "Ayuda"
         Me.ToolStripMenuItem1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        '
-        'PanelContenedor
-        '
-        Me.PanelContenedor.BackColor = System.Drawing.Color.Transparent
-        Me.PanelContenedor.BackgroundImage = Global.TesisMercado.My.Resources.Resources.FONDO31
-        Me.PanelContenedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PanelContenedor.Location = New System.Drawing.Point(110, 0)
-        Me.PanelContenedor.Name = "PanelContenedor"
-        Me.PanelContenedor.Size = New System.Drawing.Size(825, 698)
-        Me.PanelContenedor.TabIndex = 3
         '
         'FormMenuPrincipal
         '
@@ -171,8 +171,8 @@ Partial Class FormMenuPrincipal
     Friend WithEvents ProveedoresToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents StockDeProductosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ClientesToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents GastosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
+    Friend WithEvents GastosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
 
 End Class
