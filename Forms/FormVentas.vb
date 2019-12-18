@@ -4,6 +4,7 @@ Imports System.Data.SqlClient
 Public Class FormVentas
 
     Dim Venta As New ventaClass
+    Dim imp As New Impresiones
     Private comprobante As New FacturacionClass
     Private pro As New productosClass
     Private vent_ As New ventaClass
@@ -159,11 +160,10 @@ Public Class FormVentas
 
         Close()
     End Sub
-
-    
- 
-  
    
-    
-   
+    Private Sub btnImprimir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnImprimir.Click
+        'Facturas = New Facturas()
+        'imp.ListadoFiltrado = (lstListadoVentaProductos, lstListadoVentaProductos.factura, txtIdVenta.Text)
+        Facturas.Show()
+    End Sub
 End Class

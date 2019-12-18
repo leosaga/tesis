@@ -84,6 +84,8 @@
     <Compile Include="Clases\detalle_ventaClass.vb" />
     <Compile Include="Clases\FacturacionClass.vb" />
     <Compile Include="Clases\Funciones.vb" />
+    <Compile Include="Clases\Impresiones.vb" />
+    <Compile Include="Clases\lstListadoVentaProductos.vb" />
     <Compile Include="Clases\ProductoPorProveedor.vb" />
     <Compile Include="Clases\ProveedoresClass.vb" />
     <Compile Include="Clases\ProveedorPorProducto.vb" />
@@ -239,6 +241,24 @@
     </Compile>
     <Compile Include="Clases\productosClass.vb" />
     <Compile Include="Clases\Gastos.vb" />
+    <Compile Include="Reportes\CrystalReport1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\factura.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>factura.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\Facturas.Designer.vb">
+      <DependentUpon>Facturas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Facturas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Reportes\FormReporteVentas.Designer.vb">
       <DependentUpon>FormReporteVentas.vb</DependentUpon>
     </Compile>
@@ -321,6 +341,14 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\CrystalReport1.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\factura.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>factura.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Facturas.resx">
+      <DependentUpon>Facturas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\FormReporteVentas.resx">
       <DependentUpon>FormReporteVentas.vb</DependentUpon>

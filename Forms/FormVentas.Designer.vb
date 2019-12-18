@@ -22,7 +22,7 @@ Partial Class FormVentas
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Me.btnEliminar = New System.Windows.Forms.Button
         Me.btnCancelar = New System.Windows.Forms.Button
         Me.Label3 = New System.Windows.Forms.Label
@@ -340,9 +340,9 @@ Partial Class FormVentas
         Me.dgvventadetalle.AllowUserToAddRows = False
         Me.dgvventadetalle.AllowUserToDeleteRows = False
         Me.dgvventadetalle.AllowUserToResizeRows = False
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Green
-        Me.dgvventadetalle.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Green
+        Me.dgvventadetalle.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvventadetalle.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
