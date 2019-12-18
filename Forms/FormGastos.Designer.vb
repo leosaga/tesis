@@ -38,7 +38,7 @@ Partial Class FormGastos
         '
         Me.dtpFecha.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dtpFecha.Enabled = False
-        Me.dtpFecha.Location = New System.Drawing.Point(602, 9)
+        Me.dtpFecha.Location = New System.Drawing.Point(602, 3)
         Me.dtpFecha.Name = "dtpFecha"
         Me.dtpFecha.Size = New System.Drawing.Size(200, 20)
         Me.dtpFecha.TabIndex = 2
@@ -52,9 +52,9 @@ Partial Class FormGastos
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dgvGastos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvGastos.Location = New System.Drawing.Point(12, 37)
+        Me.dgvGastos.Location = New System.Drawing.Point(12, 73)
         Me.dgvGastos.Name = "dgvGastos"
-        Me.dgvGastos.Size = New System.Drawing.Size(790, 566)
+        Me.dgvGastos.Size = New System.Drawing.Size(790, 530)
         Me.dgvGastos.TabIndex = 5
         '
         'Labelfecha
@@ -63,7 +63,7 @@ Partial Class FormGastos
         Me.Labelfecha.AutoSize = True
         Me.Labelfecha.BackColor = System.Drawing.Color.Transparent
         Me.Labelfecha.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.Labelfecha.Location = New System.Drawing.Point(559, 15)
+        Me.Labelfecha.Location = New System.Drawing.Point(559, 9)
         Me.Labelfecha.Name = "Labelfecha"
         Me.Labelfecha.Size = New System.Drawing.Size(37, 13)
         Me.Labelfecha.TabIndex = 9

@@ -69,7 +69,7 @@ Public Class FormVentas
         idCliente.CargarComboCliente(CmbCliente)
         CmbCliente.SelectedValue = vent.id_cliente
         DateTimePicker2.Text = vent.fecha
-        CheckBox1.Visible = True
+        CheckBox1.Capture = False
         idComprobante.CargarComboComprobante(ComboComprobante)
         ComboComprobante.SelectedValue = vent.id_comprobante
 
@@ -122,7 +122,7 @@ Public Class FormVentas
         txtCantidad.Text = 1
         txtIdProducto.Text = 0
         txtTotal.Text = Val(vendeta.cantidad) * Val(vendeta.precio) + Val(txtTotal.Text)
-
+        CheckBox1.Capture = True
     End Sub
 
     Private Sub btnEliminar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEliminar.Click
@@ -147,7 +147,7 @@ Public Class FormVentas
         Venta.fecha = DateTimePicker2.Text
         Venta.id_comprobante = ComboComprobante.SelectedValue
         Venta.Total = txtTotal.Text
-        Venta.pagado = CheckBox1.Visible
+        Venta.pagado = CheckBox1.Checked
 
         If esNuevo Then
             Venta.Id = Venta.Agregar(Venta)
@@ -167,5 +167,9 @@ Public Class FormVentas
         'Facturas = New Facturas()
         'imp.ListadoFiltrado = (lstListadoVentaProductos, lstListadoVentaProductos.factura, txtIdVenta.Text)
         Facturas.Show()
+    End Sub
+
+    Private Sub CheckBox1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CheckBox1.CheckedChanged
+
     End Sub
 End Class

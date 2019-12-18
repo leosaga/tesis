@@ -94,6 +94,7 @@ Public Class ventaClass
                     listado.Columns("id_comprobante").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
                     listado.Columns("id_cliente").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
                     listado.Columns("total").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                    listado.Columns("pagado").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
 
                 Else
                     listado.DataSource = Nothing
