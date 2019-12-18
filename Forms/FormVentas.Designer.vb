@@ -34,7 +34,6 @@ Partial Class FormVentas
         Me.CmbCliente = New System.Windows.Forms.ComboBox
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker
         Me.GroupBox2 = New System.Windows.Forms.GroupBox
-        Me.habilitado = New System.Windows.Forms.RadioButton
         Me.ComboComprobante = New System.Windows.Forms.ComboBox
         Me.Label17 = New System.Windows.Forms.Label
         Me.GroupBox4 = New System.Windows.Forms.GroupBox
@@ -57,6 +56,7 @@ Partial Class FormVentas
         Me.Label2 = New System.Windows.Forms.Label
         Me.Label8 = New System.Windows.Forms.Label
         Me.BtnAceptar = New System.Windows.Forms.Button
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
@@ -69,9 +69,10 @@ Partial Class FormVentas
         Me.btnEliminar.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.btnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
         Me.btnEliminar.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.btnEliminar.Location = New System.Drawing.Point(798, 373)
+        Me.btnEliminar.Location = New System.Drawing.Point(1064, 459)
+        Me.btnEliminar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(122, 55)
+        Me.btnEliminar.Size = New System.Drawing.Size(163, 68)
         Me.btnEliminar.TabIndex = 6
         Me.btnEliminar.Text = "Eliminar Producto"
         Me.btnEliminar.UseVisualStyleBackColor = False
@@ -82,9 +83,10 @@ Partial Class FormVentas
         Me.btnCancelar.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.btnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
         Me.btnCancelar.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.btnCancelar.Location = New System.Drawing.Point(808, 483)
+        Me.btnCancelar.Location = New System.Drawing.Point(1077, 594)
+        Me.btnCancelar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(112, 39)
+        Me.btnCancelar.Size = New System.Drawing.Size(149, 48)
         Me.btnCancelar.TabIndex = 1
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.UseVisualStyleBackColor = False
@@ -94,9 +96,10 @@ Partial Class FormVentas
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label3.Location = New System.Drawing.Point(146, 76)
+        Me.Label3.Location = New System.Drawing.Point(195, 94)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(83, 13)
+        Me.Label3.Size = New System.Drawing.Size(108, 17)
         Me.Label3.TabIndex = 31
         Me.Label3.Text = "Fecha de Venta"
         '
@@ -105,19 +108,21 @@ Partial Class FormVentas
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label4.Location = New System.Drawing.Point(178, 37)
+        Me.Label4.Location = New System.Drawing.Point(237, 46)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(51, 13)
+        Me.Label4.Size = New System.Drawing.Size(66, 17)
         Me.Label4.TabIndex = 29
         Me.Label4.Text = "Id Cliente"
         '
         'txtIdVenta
         '
         Me.txtIdVenta.Enabled = False
-        Me.txtIdVenta.Location = New System.Drawing.Point(85, 37)
+        Me.txtIdVenta.Location = New System.Drawing.Point(113, 46)
+        Me.txtIdVenta.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtIdVenta.Name = "txtIdVenta"
         Me.txtIdVenta.ReadOnly = True
-        Me.txtIdVenta.Size = New System.Drawing.Size(47, 20)
+        Me.txtIdVenta.Size = New System.Drawing.Size(61, 22)
         Me.txtIdVenta.TabIndex = 25
         '
         'Label5
@@ -125,9 +130,10 @@ Partial Class FormVentas
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label5.Location = New System.Drawing.Point(32, 40)
+        Me.Label5.Location = New System.Drawing.Point(43, 49)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(47, 13)
+        Me.Label5.Size = New System.Drawing.Size(60, 17)
         Me.Label5.TabIndex = 24
         Me.Label5.Text = "Id Venta"
         '
@@ -137,9 +143,10 @@ Partial Class FormVentas
         Me.btnImprimir.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.btnImprimir.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
         Me.btnImprimir.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.btnImprimir.Location = New System.Drawing.Point(14, 483)
+        Me.btnImprimir.Location = New System.Drawing.Point(19, 594)
+        Me.btnImprimir.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnImprimir.Name = "btnImprimir"
-        Me.btnImprimir.Size = New System.Drawing.Size(177, 39)
+        Me.btnImprimir.Size = New System.Drawing.Size(236, 48)
         Me.btnImprimir.TabIndex = 7
         Me.btnImprimir.Text = "Imprimir"
         Me.btnImprimir.UseVisualStyleBackColor = False
@@ -154,9 +161,11 @@ Partial Class FormVentas
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.txtIdVenta)
         Me.GroupBox1.Controls.Add(Me.GroupBox2)
-        Me.GroupBox1.Location = New System.Drawing.Point(4, 3)
+        Me.GroupBox1.Location = New System.Drawing.Point(5, 4)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(788, 116)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Size = New System.Drawing.Size(1051, 143)
         Me.GroupBox1.TabIndex = 36
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos de la Venta"
@@ -164,49 +173,43 @@ Partial Class FormVentas
         'CmbCliente
         '
         Me.CmbCliente.FormattingEnabled = True
-        Me.CmbCliente.Location = New System.Drawing.Point(235, 32)
+        Me.CmbCliente.Location = New System.Drawing.Point(313, 39)
+        Me.CmbCliente.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.CmbCliente.Name = "CmbCliente"
-        Me.CmbCliente.Size = New System.Drawing.Size(203, 21)
+        Me.CmbCliente.Size = New System.Drawing.Size(269, 24)
         Me.CmbCliente.TabIndex = 2
         '
         'DateTimePicker2
         '
         Me.DateTimePicker2.Enabled = False
-        Me.DateTimePicker2.Location = New System.Drawing.Point(235, 73)
+        Me.DateTimePicker2.Location = New System.Drawing.Point(313, 90)
+        Me.DateTimePicker2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(203, 20)
+        Me.DateTimePicker2.Size = New System.Drawing.Size(269, 22)
         Me.DateTimePicker2.TabIndex = 33
         '
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.GroupBox2.Controls.Add(Me.habilitado)
+        Me.GroupBox2.Controls.Add(Me.CheckBox1)
         Me.GroupBox2.Controls.Add(Me.ComboComprobante)
         Me.GroupBox2.Controls.Add(Me.Label17)
-        Me.GroupBox2.Location = New System.Drawing.Point(463, 9)
+        Me.GroupBox2.Location = New System.Drawing.Point(617, 11)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(325, 107)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox2.Size = New System.Drawing.Size(433, 132)
         Me.GroupBox2.TabIndex = 37
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Datos de la Factura"
         '
-        'habilitado
-        '
-        Me.habilitado.AutoSize = True
-        Me.habilitado.Location = New System.Drawing.Point(203, 35)
-        Me.habilitado.Name = "habilitado"
-        Me.habilitado.Size = New System.Drawing.Size(72, 17)
-        Me.habilitado.TabIndex = 31
-        Me.habilitado.TabStop = True
-        Me.habilitado.Text = "Habilitado"
-        Me.habilitado.UseVisualStyleBackColor = True
-        '
         'ComboComprobante
         '
         Me.ComboComprobante.FormattingEnabled = True
-        Me.ComboComprobante.Location = New System.Drawing.Point(6, 31)
+        Me.ComboComprobante.Location = New System.Drawing.Point(195, 31)
+        Me.ComboComprobante.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ComboComprobante.Name = "ComboComprobante"
-        Me.ComboComprobante.Size = New System.Drawing.Size(127, 21)
+        Me.ComboComprobante.Size = New System.Drawing.Size(168, 24)
         Me.ComboComprobante.TabIndex = 3
         '
         'Label17
@@ -214,9 +217,10 @@ Partial Class FormVentas
         Me.Label17.AutoSize = True
         Me.Label17.BackColor = System.Drawing.Color.Transparent
         Me.Label17.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label17.Location = New System.Drawing.Point(3, 15)
+        Me.Label17.Location = New System.Drawing.Point(42, 35)
+        Me.Label17.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(109, 13)
+        Me.Label17.Size = New System.Drawing.Size(145, 17)
         Me.Label17.TabIndex = 30
         Me.Label17.Text = "Tipo de Comprobante"
         '
@@ -232,34 +236,39 @@ Partial Class FormVentas
         Me.GroupBox4.Controls.Add(Me.txtIdProducto)
         Me.GroupBox4.Controls.Add(Me.Label7)
         Me.GroupBox4.Controls.Add(Me.txtDescripcion)
-        Me.GroupBox4.Location = New System.Drawing.Point(4, 118)
+        Me.GroupBox4.Location = New System.Drawing.Point(5, 145)
+        Me.GroupBox4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(788, 129)
+        Me.GroupBox4.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox4.Size = New System.Drawing.Size(1051, 159)
         Me.GroupBox4.TabIndex = 39
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Datos de Productos"
         '
         'TxtPrecio
         '
-        Me.TxtPrecio.Location = New System.Drawing.Point(574, 74)
+        Me.TxtPrecio.Location = New System.Drawing.Point(765, 91)
+        Me.TxtPrecio.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TxtPrecio.Name = "TxtPrecio"
-        Me.TxtPrecio.Size = New System.Drawing.Size(72, 20)
+        Me.TxtPrecio.Size = New System.Drawing.Size(95, 22)
         Me.TxtPrecio.TabIndex = 44
         '
         'labelPrecio
         '
         Me.labelPrecio.AutoSize = True
-        Me.labelPrecio.Location = New System.Drawing.Point(531, 77)
+        Me.labelPrecio.Location = New System.Drawing.Point(708, 95)
+        Me.labelPrecio.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.labelPrecio.Name = "labelPrecio"
-        Me.labelPrecio.Size = New System.Drawing.Size(37, 13)
+        Me.labelPrecio.Size = New System.Drawing.Size(48, 17)
         Me.labelPrecio.TabIndex = 43
         Me.labelPrecio.Text = "Precio"
         '
         'txtCantidad
         '
-        Me.txtCantidad.Location = New System.Drawing.Point(707, 74)
+        Me.txtCantidad.Location = New System.Drawing.Point(943, 91)
+        Me.txtCantidad.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtCantidad.Name = "txtCantidad"
-        Me.txtCantidad.Size = New System.Drawing.Size(75, 20)
+        Me.txtCantidad.Size = New System.Drawing.Size(99, 22)
         Me.txtCantidad.TabIndex = 42
         '
         'btnBuscar
@@ -268,9 +277,10 @@ Partial Class FormVentas
         Me.btnBuscar.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.btnBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
         Me.btnBuscar.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.btnBuscar.Location = New System.Drawing.Point(10, 55)
+        Me.btnBuscar.Location = New System.Drawing.Point(13, 68)
+        Me.btnBuscar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(122, 55)
+        Me.btnBuscar.Size = New System.Drawing.Size(163, 68)
         Me.btnBuscar.TabIndex = 4
         Me.btnBuscar.Text = "Buscar Producto"
         Me.btnBuscar.UseVisualStyleBackColor = False
@@ -280,9 +290,10 @@ Partial Class FormVentas
         Me.Label10.AutoSize = True
         Me.Label10.BackColor = System.Drawing.Color.Transparent
         Me.Label10.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label10.Location = New System.Drawing.Point(652, 77)
+        Me.Label10.Location = New System.Drawing.Point(869, 95)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(49, 13)
+        Me.Label10.Size = New System.Drawing.Size(64, 17)
         Me.Label10.TabIndex = 38
         Me.Label10.Text = "Cantidad"
         '
@@ -291,17 +302,19 @@ Partial Class FormVentas
         Me.Label6.AutoSize = True
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label6.Location = New System.Drawing.Point(395, 77)
+        Me.Label6.Location = New System.Drawing.Point(527, 95)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(40, 13)
+        Me.Label6.Size = New System.Drawing.Size(52, 17)
         Me.Label6.TabIndex = 24
         Me.Label6.Text = "Codigo"
         '
         'txtIdProducto
         '
-        Me.txtIdProducto.Location = New System.Drawing.Point(441, 74)
+        Me.txtIdProducto.Location = New System.Drawing.Point(588, 91)
+        Me.txtIdProducto.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtIdProducto.Name = "txtIdProducto"
-        Me.txtIdProducto.Size = New System.Drawing.Size(75, 20)
+        Me.txtIdProducto.Size = New System.Drawing.Size(99, 22)
         Me.txtIdProducto.TabIndex = 25
         '
         'Label7
@@ -309,17 +322,19 @@ Partial Class FormVentas
         Me.Label7.AutoSize = True
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label7.Location = New System.Drawing.Point(138, 77)
+        Me.Label7.Location = New System.Drawing.Point(184, 95)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(63, 13)
+        Me.Label7.Size = New System.Drawing.Size(82, 17)
         Me.Label7.TabIndex = 27
         Me.Label7.Text = "Descripcion"
         '
         'txtDescripcion
         '
-        Me.txtDescripcion.Location = New System.Drawing.Point(207, 74)
+        Me.txtDescripcion.Location = New System.Drawing.Point(276, 91)
+        Me.txtDescripcion.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtDescripcion.Name = "txtDescripcion"
-        Me.txtDescripcion.Size = New System.Drawing.Size(177, 20)
+        Me.txtDescripcion.Size = New System.Drawing.Size(235, 22)
         Me.txtDescripcion.TabIndex = 26
         '
         'btnAgregar
@@ -328,9 +343,10 @@ Partial Class FormVentas
         Me.btnAgregar.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.btnAgregar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
         Me.btnAgregar.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.btnAgregar.Location = New System.Drawing.Point(798, 173)
+        Me.btnAgregar.Location = New System.Drawing.Point(1064, 213)
+        Me.btnAgregar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnAgregar.Name = "btnAgregar"
-        Me.btnAgregar.Size = New System.Drawing.Size(122, 55)
+        Me.btnAgregar.Size = New System.Drawing.Size(163, 68)
         Me.btnAgregar.TabIndex = 5
         Me.btnAgregar.Text = "Agregar Producto"
         Me.btnAgregar.UseVisualStyleBackColor = False
@@ -347,12 +363,13 @@ Partial Class FormVentas
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dgvventadetalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvventadetalle.Location = New System.Drawing.Point(4, 246)
+        Me.dgvventadetalle.Location = New System.Drawing.Point(5, 303)
+        Me.dgvventadetalle.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.dgvventadetalle.Name = "dgvventadetalle"
         Me.dgvventadetalle.ReadOnly = True
         Me.dgvventadetalle.RowHeadersVisible = False
         Me.dgvventadetalle.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvventadetalle.Size = New System.Drawing.Size(787, 182)
+        Me.dgvventadetalle.Size = New System.Drawing.Size(1049, 224)
         Me.dgvventadetalle.TabIndex = 40
         '
         'Label12
@@ -360,28 +377,31 @@ Partial Class FormVentas
         Me.Label12.AutoSize = True
         Me.Label12.BackColor = System.Drawing.Color.Transparent
         Me.Label12.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label12.Location = New System.Drawing.Point(182, 440)
+        Me.Label12.Location = New System.Drawing.Point(243, 542)
+        Me.Label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(71, 13)
+        Me.Label12.Size = New System.Drawing.Size(94, 17)
         Me.Label12.TabIndex = 46
         Me.Label12.Text = "Total a Pagar"
         '
         'txtVuelto
         '
         Me.txtVuelto.Enabled = False
-        Me.txtVuelto.Location = New System.Drawing.Point(581, 437)
+        Me.txtVuelto.Location = New System.Drawing.Point(775, 538)
+        Me.txtVuelto.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtVuelto.Name = "txtVuelto"
         Me.txtVuelto.ReadOnly = True
-        Me.txtVuelto.Size = New System.Drawing.Size(69, 20)
+        Me.txtVuelto.Size = New System.Drawing.Size(91, 22)
         Me.txtVuelto.TabIndex = 47
         '
         'txtTotal
         '
         Me.txtTotal.Enabled = False
-        Me.txtTotal.Location = New System.Drawing.Point(259, 437)
+        Me.txtTotal.Location = New System.Drawing.Point(345, 538)
+        Me.txtTotal.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtTotal.Name = "txtTotal"
         Me.txtTotal.ReadOnly = True
-        Me.txtTotal.Size = New System.Drawing.Size(67, 20)
+        Me.txtTotal.Size = New System.Drawing.Size(88, 22)
         Me.txtTotal.TabIndex = 48
         '
         'Label13
@@ -389,16 +409,18 @@ Partial Class FormVentas
         Me.Label13.AutoSize = True
         Me.Label13.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label13.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label13.Location = New System.Drawing.Point(470, 440)
+        Me.Label13.Location = New System.Drawing.Point(627, 542)
+        Me.Label13.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(0, 13)
+        Me.Label13.Size = New System.Drawing.Size(0, 17)
         Me.Label13.TabIndex = 49
         '
         'txtRecibido
         '
-        Me.txtRecibido.Location = New System.Drawing.Point(427, 437)
+        Me.txtRecibido.Location = New System.Drawing.Point(569, 538)
+        Me.txtRecibido.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtRecibido.Name = "txtRecibido"
-        Me.txtRecibido.Size = New System.Drawing.Size(75, 20)
+        Me.txtRecibido.Size = New System.Drawing.Size(99, 22)
         Me.txtRecibido.TabIndex = 52
         '
         'Label2
@@ -406,9 +428,10 @@ Partial Class FormVentas
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label2.Location = New System.Drawing.Point(338, 440)
+        Me.Label2.Location = New System.Drawing.Point(451, 542)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(83, 13)
+        Me.Label2.Size = New System.Drawing.Size(109, 17)
         Me.Label2.TabIndex = 55
         Me.Label2.Text = "Dinero Recibido"
         '
@@ -417,9 +440,10 @@ Partial Class FormVentas
         Me.Label8.AutoSize = True
         Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label8.Location = New System.Drawing.Point(509, 440)
+        Me.Label8.Location = New System.Drawing.Point(679, 542)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(66, 13)
+        Me.Label8.Size = New System.Drawing.Size(87, 17)
         Me.Label8.TabIndex = 56
         Me.Label8.Text = "Vuelto a Dar"
         '
@@ -429,19 +453,30 @@ Partial Class FormVentas
         Me.BtnAceptar.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.BtnAceptar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
         Me.BtnAceptar.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.BtnAceptar.Location = New System.Drawing.Point(659, 483)
+        Me.BtnAceptar.Location = New System.Drawing.Point(879, 594)
+        Me.BtnAceptar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BtnAceptar.Name = "BtnAceptar"
-        Me.BtnAceptar.Size = New System.Drawing.Size(112, 39)
+        Me.BtnAceptar.Size = New System.Drawing.Size(149, 48)
         Me.BtnAceptar.TabIndex = 57
         Me.BtnAceptar.Text = "Aceptar"
         Me.BtnAceptar.UseVisualStyleBackColor = False
         '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(195, 83)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(79, 21)
+        Me.CheckBox1.TabIndex = 31
+        Me.CheckBox1.Text = "Pagado"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
         'FormVentas
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ClientSize = New System.Drawing.Size(924, 534)
+        Me.ClientSize = New System.Drawing.Size(1232, 657)
         Me.Controls.Add(Me.BtnAceptar)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label2)
@@ -457,6 +492,7 @@ Partial Class FormVentas
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btnImprimir)
         Me.Controls.Add(Me.btnCancelar)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "FormVentas"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Ventas"
@@ -504,5 +540,5 @@ Partial Class FormVentas
     Friend WithEvents BtnAceptar As System.Windows.Forms.Button
     Friend WithEvents TxtPrecio As System.Windows.Forms.TextBox
     Friend WithEvents labelPrecio As System.Windows.Forms.Label
-    Friend WithEvents habilitado As System.Windows.Forms.RadioButton
+    Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
 End Class

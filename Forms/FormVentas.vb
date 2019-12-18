@@ -69,7 +69,7 @@ Public Class FormVentas
         idCliente.CargarComboCliente(CmbCliente)
         CmbCliente.SelectedValue = vent.id_cliente
         DateTimePicker2.Text = vent.fecha
-
+        CheckBox1.Visible = True
         idComprobante.CargarComboComprobante(ComboComprobante)
         ComboComprobante.SelectedValue = vent.id_comprobante
 
@@ -78,6 +78,7 @@ Public Class FormVentas
         txtIdProducto.Text = pro.Id
         txtCantidad.Text = 1
         txtTotal.Text = vent_.Total
+
 
         Venta.Consultar(vent_.Id, dgvventadetalle)
 
@@ -146,6 +147,7 @@ Public Class FormVentas
         Venta.fecha = DateTimePicker2.Text
         Venta.id_comprobante = ComboComprobante.SelectedValue
         Venta.Total = txtTotal.Text
+        Venta.pagado = CheckBox1.Visible
 
         If esNuevo Then
             Venta.Id = Venta.Agregar(Venta)

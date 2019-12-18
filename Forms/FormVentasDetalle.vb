@@ -49,6 +49,7 @@ Public Class FormVentasDetalle
         Ventas.id_comprobante = DataGridView1.Item("id_comprobante", DataGridView1.CurrentRow.Index).Value
         Ventas.id_cliente = DataGridView1.Item("id_cliente", DataGridView1.CurrentRow.Index).Value
         Ventas.Total = DataGridView1.Item("total", DataGridView1.CurrentRow.Index).Value
+        Ventas.pagado = DataGridView1.Item("pagado", DataGridView1.CurrentRow.Index).Value
 
         Dim FormVentas As New FormVentas(Ventas)
         FormVentas.ShowDialog()

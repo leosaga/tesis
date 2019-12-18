@@ -6,7 +6,7 @@ Public Class ventaClass
     Dim Id_, id_cliente_, id_comprobante_, CantDeP_, Total_ As Integer
     Dim TdeComprobante_ As String
     Dim fecha_ As Date
-    Dim habilitado_ As Boolean
+    Dim pagado_ As Boolean
 
     Public Property Id() As Integer
         Get
@@ -67,12 +67,12 @@ Public Class ventaClass
             fecha_ = value
         End Set
     End Property
-    Public Property habilitado() As Boolean
+    Public Property pagado() As Boolean
         Get
-            Return habilitado_
+            Return pagado_
         End Get
         Set(ByVal value As Boolean)
-            habilitado_ = value
+            pagado_ = value
         End Set
     End Property
 
@@ -114,6 +114,7 @@ Public Class ventaClass
                 vendeta.id_Producto = fila.Cells("id_Producto").Value
                 vendeta.id_venta = idVenta
                 vendeta.cantidad = fila.Cells("cantidad").Value
+
                 'vendeta.total = fila.Cells("total").Value
                 vendeta.Agregar(vendeta)
                 '¿Controlar si el alumno está repetido?
@@ -136,7 +137,7 @@ Public Class ventaClass
             objComando.Parameters.AddWithValue("@id_comprobante", venta.id_comprobante)
             objComando.Parameters.AddWithValue("@fecha", venta.fecha)
             objComando.Parameters.AddWithValue("@total", venta.Total)
-            objComando.Parameters.AddWithValue("@habilitado", venta.habilitado)
+            objComando.Parameters.AddWithValue("@pagado", venta.pagado)
             objComando.ExecuteNonQuery()
 
             Dim objComando2 As New SqlCommand("ventaUltima", objConexion)
@@ -157,7 +158,7 @@ Public Class ventaClass
             objComando.Parameters.AddWithValue("@id_Comprobante", venta.id_comprobante)
             objComando.Parameters.AddWithValue("@fecha", venta.fecha)
             objComando.Parameters.AddWithValue("@total", venta.Total)
-            objComando.Parameters.AddWithValue("@habilitado", venta.habilitado)
+            objComando.Parameters.AddWithValue("@pagado", venta.pagado)
             objComando.ExecuteNonQuery()
         Catch ex As Exception
             MsgBox(ex.Message)
