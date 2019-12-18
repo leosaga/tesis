@@ -23,7 +23,7 @@ Partial Class ProveProduForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Me.Label6 = New System.Windows.Forms.Label
         Me.txtLocalidad = New System.Windows.Forms.TextBox
         Me.Label5 = New System.Windows.Forms.Label
@@ -84,9 +84,9 @@ Partial Class ProveProduForm
         Me.dgvProveProdu.AllowUserToAddRows = False
         Me.dgvProveProdu.AllowUserToDeleteRows = False
         Me.dgvProveProdu.AllowUserToResizeRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Green
-        Me.dgvProveProdu.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Green
+        Me.dgvProveProdu.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvProveProdu.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -239,6 +239,8 @@ Partial Class ProveProduForm
         Me.Controls.Add(Me.txtTelefono)
         Me.Controls.Add(Me.txtNombre)
         Me.Controls.Add(Me.txtid)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
         Me.Name = "ProveProduForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Proveedor por Producto"

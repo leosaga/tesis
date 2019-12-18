@@ -24,7 +24,7 @@ Public Class Impresiones
         params.Clear()
         par.Value = idVenta
         params.Add(par)
-        objReporte.datadefinition.parameterfields("@idVenta").applycurrentvalues(params)
+        objReporte.datadefinition.parameterfields("@venta").applycurrentvalues(params)
 
         formulario.ShowDialog()
         formulario.Dispose()

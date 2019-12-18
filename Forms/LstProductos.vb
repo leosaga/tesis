@@ -21,7 +21,7 @@ Public Class LstProductos
     Private Sub btnBorrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBorrar.Click
 
         producto.Id = dgvProductos.Item("id", dgvProductos.CurrentRow.Index).Value
-        Dim respuesta As DialogResult = MessageBox.Show("¿esta seguro de eliminar  " & producto.Id.ToString & " ? ", "advertencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2)
+        Dim respuesta As DialogResult = MessageBox.Show("¡¡¡ este producto esta siendo usado en otras operaciones por lo tanto no se debe eliminar.  Id:  " & producto.Id.ToString & " !!! ", "advertencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2)
         If respuesta = Windows.Forms.DialogResult.OK Then
             producto.Eliminar(producto)
         End If

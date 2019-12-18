@@ -141,6 +141,9 @@ Public Class FormVentas
 
    
     Private Sub BtnAceptar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnAceptar.Click
+
+
+
         Venta.Id = txtIdVenta.Text
         'Venta.id_comprobante = txtIdComprobante.Text
         Venta.id_cliente = CmbCliente.SelectedValue
@@ -161,15 +164,17 @@ Public Class FormVentas
         Venta.actualizarstock(Venta)
 
         Close()
+
     End Sub
    
     Private Sub btnImprimir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnImprimir.Click
         'Facturas = New Facturas()
-        'imp.ListadoFiltrado = (lstListadoVentaProductos, lstListadoVentaProductos.factura, txtIdVenta.Text)
-        Facturas.Show()
+        'Public Sub ListadoFiltrado(ByVal formulario As Form, ByVal objReporte As Object, ByVal idVenta As Integer)
+
+        imp.ListadoFiltrado(Facturas, Facturas.factura1, txtIdVenta.Text)
+
+        'Facturas.Show()
     End Sub
 
-    Private Sub CheckBox1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CheckBox1.CheckedChanged
-
-    End Sub
+    
 End Class

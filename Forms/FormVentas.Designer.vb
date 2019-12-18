@@ -22,6 +22,7 @@ Partial Class FormVentas
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Me.btnEliminar = New System.Windows.Forms.Button
         Me.btnCancelar = New System.Windows.Forms.Button
@@ -34,6 +35,7 @@ Partial Class FormVentas
         Me.CmbCliente = New System.Windows.Forms.ComboBox
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker
         Me.GroupBox2 = New System.Windows.Forms.GroupBox
+        Me.Label1 = New System.Windows.Forms.Label
         Me.CheckBox1 = New System.Windows.Forms.CheckBox
         Me.ComboComprobante = New System.Windows.Forms.ComboBox
         Me.Label17 = New System.Windows.Forms.Label
@@ -57,11 +59,12 @@ Partial Class FormVentas
         Me.Label2 = New System.Windows.Forms.Label
         Me.Label8 = New System.Windows.Forms.Label
         Me.BtnAceptar = New System.Windows.Forms.Button
-        Me.Label1 = New System.Windows.Forms.Label
+        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         CType(Me.dgvventadetalle, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnEliminar
@@ -86,7 +89,7 @@ Partial Class FormVentas
         Me.btnCancelar.Location = New System.Drawing.Point(808, 483)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(112, 39)
-        Me.btnCancelar.TabIndex = 1
+        Me.btnCancelar.TabIndex = 8
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.UseVisualStyleBackColor = False
         '
@@ -141,7 +144,7 @@ Partial Class FormVentas
         Me.btnImprimir.Location = New System.Drawing.Point(14, 483)
         Me.btnImprimir.Name = "btnImprimir"
         Me.btnImprimir.Size = New System.Drawing.Size(177, 39)
-        Me.btnImprimir.TabIndex = 7
+        Me.btnImprimir.TabIndex = 10
         Me.btnImprimir.Text = "Imprimir"
         Me.btnImprimir.UseVisualStyleBackColor = False
         '
@@ -168,7 +171,8 @@ Partial Class FormVentas
         Me.CmbCliente.Location = New System.Drawing.Point(235, 32)
         Me.CmbCliente.Name = "CmbCliente"
         Me.CmbCliente.Size = New System.Drawing.Size(203, 21)
-        Me.CmbCliente.TabIndex = 2
+        Me.CmbCliente.TabIndex = 0
+        Me.CmbCliente.Tag = "*"
         '
         'DateTimePicker2
         '
@@ -192,6 +196,15 @@ Partial Class FormVentas
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Datos de la Factura"
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(189, 71)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(44, 13)
+        Me.Label1.TabIndex = 32
+        Me.Label1.Text = "Pagado"
+        '
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
@@ -208,7 +221,8 @@ Partial Class FormVentas
         Me.ComboComprobante.Location = New System.Drawing.Point(146, 25)
         Me.ComboComprobante.Name = "ComboComprobante"
         Me.ComboComprobante.Size = New System.Drawing.Size(127, 21)
-        Me.ComboComprobante.TabIndex = 3
+        Me.ComboComprobante.TabIndex = 1
+        Me.ComboComprobante.Tag = "*"
         '
         'Label17
         '
@@ -261,7 +275,7 @@ Partial Class FormVentas
         Me.txtCantidad.Location = New System.Drawing.Point(707, 74)
         Me.txtCantidad.Name = "txtCantidad"
         Me.txtCantidad.Size = New System.Drawing.Size(75, 20)
-        Me.txtCantidad.TabIndex = 42
+        Me.txtCantidad.TabIndex = 4
         '
         'btnBuscar
         '
@@ -272,7 +286,7 @@ Partial Class FormVentas
         Me.btnBuscar.Location = New System.Drawing.Point(10, 55)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(122, 55)
-        Me.btnBuscar.TabIndex = 4
+        Me.btnBuscar.TabIndex = 3
         Me.btnBuscar.Text = "Buscar Producto"
         Me.btnBuscar.UseVisualStyleBackColor = False
         '
@@ -321,7 +335,7 @@ Partial Class FormVentas
         Me.txtDescripcion.Location = New System.Drawing.Point(207, 74)
         Me.txtDescripcion.Name = "txtDescripcion"
         Me.txtDescripcion.Size = New System.Drawing.Size(177, 20)
-        Me.txtDescripcion.TabIndex = 26
+        Me.txtDescripcion.TabIndex = 100
         '
         'btnAgregar
         '
@@ -433,23 +447,19 @@ Partial Class FormVentas
         Me.BtnAceptar.Location = New System.Drawing.Point(659, 483)
         Me.BtnAceptar.Name = "BtnAceptar"
         Me.BtnAceptar.Size = New System.Drawing.Size(112, 39)
-        Me.BtnAceptar.TabIndex = 57
+        Me.BtnAceptar.TabIndex = 7
         Me.BtnAceptar.Text = "Aceptar"
         Me.BtnAceptar.UseVisualStyleBackColor = False
         '
-        'Label1
+        'ErrorProvider1
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(189, 71)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(44, 13)
-        Me.Label1.TabIndex = 32
-        Me.Label1.Text = "Pagado"
+        Me.ErrorProvider1.ContainerControl = Me
         '
         'FormVentas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSize = True
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.ClientSize = New System.Drawing.Size(924, 534)
         Me.Controls.Add(Me.BtnAceptar)
@@ -467,8 +477,11 @@ Partial Class FormVentas
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btnImprimir)
         Me.Controls.Add(Me.btnCancelar)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
         Me.Name = "FormVentas"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Tag = "*"
         Me.Text = "Ventas"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
@@ -477,6 +490,7 @@ Partial Class FormVentas
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
         CType(Me.dgvventadetalle, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -516,4 +530,5 @@ Partial Class FormVentas
     Friend WithEvents labelPrecio As System.Windows.Forms.Label
     Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
 End Class

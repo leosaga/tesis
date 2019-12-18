@@ -51,4 +51,8 @@
 
         AbrirFormHijo(New FormVentasDetalle )
     End Sub
+
+    Private Sub ToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripMenuItem1.Click
+        ayuda.Show()
+    End Sub
 End Class

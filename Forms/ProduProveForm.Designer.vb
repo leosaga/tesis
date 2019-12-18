@@ -23,7 +23,7 @@ Partial Class ProduProveForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Me.Label7 = New System.Windows.Forms.Label
         Me.txtPrecio = New System.Windows.Forms.TextBox
         Me.Label6 = New System.Windows.Forms.Label
@@ -121,9 +121,9 @@ Partial Class ProduProveForm
         Me.dgvProduProve.AllowUserToAddRows = False
         Me.dgvProduProve.AllowUserToDeleteRows = False
         Me.dgvProduProve.AllowUserToResizeRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Green
-        Me.dgvProduProve.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Green
+        Me.dgvProduProve.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
         Me.dgvProduProve.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -363,7 +363,9 @@ Partial Class ProduProveForm
         Me.Controls.Add(Me.txtCodigo)
         Me.Controls.Add(Me.txtNombre)
         Me.Controls.Add(Me.txtid)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.MaximizeBox = False
         Me.Name = "ProduProveForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Producto por Proveedor"
