@@ -69,7 +69,7 @@ Public Class FormVentas
         idCliente.CargarComboCliente(CmbCliente)
         CmbCliente.SelectedValue = vent.id_cliente
         DateTimePicker2.Text = vent.fecha
-        CheckBox1.Capture = False
+        CheckBox1.Checked = vent.pagado
         idComprobante.CargarComboComprobante(ComboComprobante)
         ComboComprobante.SelectedValue = vent.id_comprobante
 

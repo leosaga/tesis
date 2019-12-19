@@ -93,10 +93,10 @@
     <Compile Include="Clases\UsuariosClass.vb" />
     <Compile Include="Clases\ventaClass.vb" />
     <Compile Include="Clases\VentaDetalles.vb" />
-    <Compile Include="Forms\ayuda.Designer.vb">
-      <DependentUpon>ayuda.vb</DependentUpon>
+    <Compile Include="Forms\Acerca de.Designer.vb">
+      <DependentUpon>Acerca de.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ayuda.vb">
+    <Compile Include="Forms\Acerca de.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FormCalcularVuelto.Designer.vb">
@@ -273,8 +273,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\ayuda.resx">
-      <DependentUpon>ayuda.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\Acerca de.resx">
+      <DependentUpon>Acerca de.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormCalcularVuelto.resx">
       <DependentUpon>FormCalcularVuelto.vb</DependentUpon>

@@ -214,6 +214,7 @@ Public Class ventaClass
                     lista.Columns("id_venta").Visible = False
                     lista.Columns("Producto").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
                     lista.Columns("paraBorrar").Width = 30
+                    'lista.Columns("pagado").Width = 30
                 Else
                     lista.DataSource = Nothing
                 End If

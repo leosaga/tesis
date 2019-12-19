@@ -130,7 +130,7 @@ Partial Class FormMenuPrincipal
         Me.ToolStripMenuItem1.ForeColor = System.Drawing.Color.Black
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
         Me.ToolStripMenuItem1.Size = New System.Drawing.Size(99, 130)
-        Me.ToolStripMenuItem1.Text = "Ayuda"
+        Me.ToolStripMenuItem1.Text = "Acerca de"
         Me.ToolStripMenuItem1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         '
         'PanelContenedor
