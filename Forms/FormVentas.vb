@@ -144,29 +144,29 @@ Public Class FormVentas
    
     Private Sub BtnAceptar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnAceptar.Click
 
-        If func.validarCampos(Me, ErrorProvider1) Then
 
+
+        Venta.Id = txtIdVenta.Text
+        'Venta.id_comprobante = txtIdComprobante.Text
+        Venta.id_cliente = CmbCliente.SelectedValue
+        Venta.fecha = DateTimePicker2.Text
+        Venta.id_comprobante = ComboComprobante.SelectedValue
+        Venta.Total = txtTotal.Text
+        Venta.pagado = CheckBox1.Checked
+
+        If esNuevo Then
+            Venta.Id = Venta.Agregar(Venta)
+
+        Else
             Venta.Id = txtIdVenta.Text
-            'Venta.id_comprobante = txtIdComprobante.Text
-            Venta.id_cliente = CmbCliente.SelectedValue
-            Venta.fecha = DateTimePicker2.Text
-            Venta.id_comprobante = ComboComprobante.SelectedValue
-            Venta.Total = txtTotal.Text
-            Venta.pagado = CheckBox1.Checked
-
-            If esNuevo Then
-                Venta.Id = Venta.Agregar(Venta)
-
-            Else
-                Venta.Id = txtIdVenta.Text
-                Venta.Modificar(Venta)
-            End If
-
-            ventas.ActualizarTablas(dgvventadetalle, Venta.Id)
-            Venta.actualizarstock(Venta)
-
-            Close()
+            Venta.Modificar(Venta)
         End If
+
+        ventas.ActualizarTablas(dgvventadetalle, Venta.Id)
+        Venta.actualizarstock(Venta)
+
+        Close()
+
     End Sub
    
     Private Sub btnImprimir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnImprimir.Click
