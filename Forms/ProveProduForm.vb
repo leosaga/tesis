@@ -123,15 +123,7 @@
     End Sub
 
     Private Sub txtDireccion_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtDireccion.KeyPress
-        If Char.IsLetter(e.KeyChar) Then
-            e.Handled = False
-        ElseIf Char.IsControl(e.KeyChar) Then
-            e.Handled = False
-        ElseIf Char.IsSeparator(e.KeyChar) Then
-            e.Handled = False
-        Else
-            e.Handled = True
-        End If
+       
     End Sub
     Private Sub txtLocalidad_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtLocalidad.KeyPress
         If Char.IsLetter(e.KeyChar) Then
