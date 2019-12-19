@@ -137,7 +137,7 @@ Public Class ProveedoresClass
             objComando.Parameters.AddWithValue("@Id", proveedor.Id)
             objComando.ExecuteNonQuery()
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MsgBox("¡¡¡EL REGISTRO ESTA SIENDO USADO EN OTRAS OPERACIONES NO SE PUEDE ELIMINAR...!!!")
         Finally
             Cerrar()
         End Try

@@ -48,7 +48,7 @@ Partial Class ProveProduForm
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(432, 65)
+        Me.Label6.Location = New System.Drawing.Point(445, 65)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(56, 13)
         Me.Label6.TabIndex = 69
@@ -56,16 +56,17 @@ Partial Class ProveProduForm
         '
         'txtLocalidad
         '
-        Me.txtLocalidad.Location = New System.Drawing.Point(494, 62)
+        Me.txtLocalidad.Location = New System.Drawing.Point(507, 62)
+        Me.txtLocalidad.MaxLength = 20
         Me.txtLocalidad.Name = "txtLocalidad"
-        Me.txtLocalidad.Size = New System.Drawing.Size(210, 20)
+        Me.txtLocalidad.Size = New System.Drawing.Size(197, 20)
         Me.txtLocalidad.TabIndex = 4
         Me.txtLocalidad.Tag = "*"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(432, 39)
+        Me.Label5.Location = New System.Drawing.Point(445, 39)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(55, 13)
         Me.Label5.TabIndex = 68
@@ -73,9 +74,10 @@ Partial Class ProveProduForm
         '
         'txtDireccion
         '
-        Me.txtDireccion.Location = New System.Drawing.Point(493, 36)
+        Me.txtDireccion.Location = New System.Drawing.Point(506, 36)
+        Me.txtDireccion.MaxLength = 20
         Me.txtDireccion.Name = "txtDireccion"
-        Me.txtDireccion.Size = New System.Drawing.Size(210, 20)
+        Me.txtDireccion.Size = New System.Drawing.Size(197, 20)
         Me.txtDireccion.TabIndex = 3
         Me.txtDireccion.Tag = "*"
         '
@@ -110,7 +112,7 @@ Partial Class ProveProduForm
         Me.btnCancelar.Location = New System.Drawing.Point(602, 360)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(112, 39)
-        Me.btnCancelar.TabIndex = 7
+        Me.btnCancelar.TabIndex = 8
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.UseVisualStyleBackColor = False
         '
@@ -123,7 +125,7 @@ Partial Class ProveProduForm
         Me.btnAceptar.Location = New System.Drawing.Point(447, 360)
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Size = New System.Drawing.Size(112, 39)
-        Me.btnAceptar.TabIndex = 8
+        Me.btnAceptar.TabIndex = 7
         Me.btnAceptar.Text = "Aceptar"
         Me.btnAceptar.UseVisualStyleBackColor = False
         '
@@ -165,7 +167,7 @@ Partial Class ProveProduForm
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(164, 65)
+        Me.Label3.Location = New System.Drawing.Point(152, 65)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(52, 13)
         Me.Label3.TabIndex = 65
@@ -174,7 +176,7 @@ Partial Class ProveProduForm
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(164, 39)
+        Me.Label2.Location = New System.Drawing.Point(152, 39)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(47, 13)
         Me.Label2.TabIndex = 64
@@ -191,7 +193,8 @@ Partial Class ProveProduForm
         '
         'txtTelefono
         '
-        Me.txtTelefono.Location = New System.Drawing.Point(216, 62)
+        Me.txtTelefono.Location = New System.Drawing.Point(204, 62)
+        Me.txtTelefono.MaxLength = 15
         Me.txtTelefono.Name = "txtTelefono"
         Me.txtTelefono.Size = New System.Drawing.Size(210, 20)
         Me.txtTelefono.TabIndex = 2
@@ -199,7 +202,8 @@ Partial Class ProveProduForm
         '
         'txtNombre
         '
-        Me.txtNombre.Location = New System.Drawing.Point(216, 36)
+        Me.txtNombre.Location = New System.Drawing.Point(204, 36)
+        Me.txtNombre.MaxLength = 20
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(210, 20)
         Me.txtNombre.TabIndex = 1

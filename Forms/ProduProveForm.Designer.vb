@@ -69,8 +69,9 @@ Partial Class ProduProveForm
         Me.txtPrecio.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.txtPrecio.Location = New System.Drawing.Point(546, 54)
+        Me.txtPrecio.MaxLength = 6
         Me.txtPrecio.Name = "txtPrecio"
-        Me.txtPrecio.Size = New System.Drawing.Size(121, 20)
+        Me.txtPrecio.Size = New System.Drawing.Size(131, 20)
         Me.txtPrecio.TabIndex = 5
         Me.txtPrecio.Tag = "*"
         '
@@ -90,8 +91,9 @@ Partial Class ProduProveForm
         Me.txtCantidad.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.txtCantidad.Location = New System.Drawing.Point(546, 28)
+        Me.txtCantidad.MaxLength = 5
         Me.txtCantidad.Name = "txtCantidad"
-        Me.txtCantidad.Size = New System.Drawing.Size(121, 20)
+        Me.txtCantidad.Size = New System.Drawing.Size(131, 20)
         Me.txtCantidad.TabIndex = 4
         Me.txtCantidad.Tag = "*"
         '
@@ -100,7 +102,7 @@ Partial Class ProduProveForm
         Me.Label5.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(220, 83)
+        Me.Label5.Location = New System.Drawing.Point(206, 83)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(44, 13)
         Me.Label5.TabIndex = 47
@@ -110,7 +112,8 @@ Partial Class ProduProveForm
         '
         Me.txtUnidad.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.txtUnidad.Location = New System.Drawing.Point(270, 80)
+        Me.txtUnidad.Location = New System.Drawing.Point(256, 80)
+        Me.txtUnidad.MaxLength = 5
         Me.txtUnidad.Name = "txtUnidad"
         Me.txtUnidad.Size = New System.Drawing.Size(210, 20)
         Me.txtUnidad.TabIndex = 3
@@ -147,7 +150,7 @@ Partial Class ProduProveForm
         Me.btnCancelar.Location = New System.Drawing.Point(602, 438)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(112, 39)
-        Me.btnCancelar.TabIndex = 9
+        Me.btnCancelar.TabIndex = 11
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.UseVisualStyleBackColor = False
         '
@@ -173,7 +176,7 @@ Partial Class ProduProveForm
         Me.btnBorrar.Location = New System.Drawing.Point(12, 277)
         Me.btnBorrar.Name = "btnBorrar"
         Me.btnBorrar.Size = New System.Drawing.Size(112, 39)
-        Me.btnBorrar.TabIndex = 8
+        Me.btnBorrar.TabIndex = 9
         Me.btnBorrar.Text = "Borrar"
         Me.btnBorrar.UseVisualStyleBackColor = False
         '
@@ -186,7 +189,7 @@ Partial Class ProduProveForm
         Me.btnAgregar.Location = New System.Drawing.Point(12, 216)
         Me.btnAgregar.Name = "btnAgregar"
         Me.btnAgregar.Size = New System.Drawing.Size(112, 39)
-        Me.btnAgregar.TabIndex = 7
+        Me.btnAgregar.TabIndex = 8
         Me.btnAgregar.Text = "Agregar"
         Me.btnAgregar.UseVisualStyleBackColor = False
         '
@@ -207,7 +210,7 @@ Partial Class ProduProveForm
         Me.Label3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(220, 57)
+        Me.Label3.Location = New System.Drawing.Point(206, 57)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(43, 13)
         Me.Label3.TabIndex = 44
@@ -218,7 +221,7 @@ Partial Class ProduProveForm
         Me.Label2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(220, 31)
+        Me.Label2.Location = New System.Drawing.Point(206, 31)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(47, 13)
         Me.Label2.TabIndex = 43
@@ -239,7 +242,8 @@ Partial Class ProduProveForm
         '
         Me.txtCodigo.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.txtCodigo.Location = New System.Drawing.Point(270, 54)
+        Me.txtCodigo.Location = New System.Drawing.Point(256, 54)
+        Me.txtCodigo.MaxLength = 20
         Me.txtCodigo.Name = "txtCodigo"
         Me.txtCodigo.Size = New System.Drawing.Size(210, 20)
         Me.txtCodigo.TabIndex = 2
@@ -249,7 +253,8 @@ Partial Class ProduProveForm
         '
         Me.txtNombre.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.txtNombre.Location = New System.Drawing.Point(270, 28)
+        Me.txtNombre.Location = New System.Drawing.Point(256, 28)
+        Me.txtNombre.MaxLength = 20
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(210, 20)
         Me.txtNombre.TabIndex = 1
@@ -285,18 +290,19 @@ Partial Class ProduProveForm
         '
         Me.cmbRubro.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.cmbRubro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbRubro.FormattingEnabled = True
         Me.cmbRubro.Location = New System.Drawing.Point(546, 106)
         Me.cmbRubro.Name = "cmbRubro"
-        Me.cmbRubro.Size = New System.Drawing.Size(121, 21)
-        Me.cmbRubro.TabIndex = 6
+        Me.cmbRubro.Size = New System.Drawing.Size(131, 21)
+        Me.cmbRubro.TabIndex = 7
         '
         'precioventa
         '
         Me.precioventa.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.precioventa.AutoSize = True
-        Me.precioventa.Location = New System.Drawing.Point(193, 109)
+        Me.precioventa.Location = New System.Drawing.Point(179, 109)
         Me.precioventa.Name = "precioventa"
         Me.precioventa.Size = New System.Drawing.Size(71, 13)
         Me.precioventa.TabIndex = 53
@@ -318,7 +324,8 @@ Partial Class ProduProveForm
         Me.txtPrecioVenta.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.txtPrecioVenta.Enabled = False
-        Me.txtPrecioVenta.Location = New System.Drawing.Point(270, 106)
+        Me.txtPrecioVenta.Location = New System.Drawing.Point(256, 106)
+        Me.txtPrecioVenta.MaxLength = 6
         Me.txtPrecioVenta.Name = "txtPrecioVenta"
         Me.txtPrecioVenta.Size = New System.Drawing.Size(210, 20)
         Me.txtPrecioVenta.TabIndex = 56
@@ -329,9 +336,10 @@ Partial Class ProduProveForm
         Me.txtGanancia.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.txtGanancia.Location = New System.Drawing.Point(546, 80)
+        Me.txtGanancia.MaxLength = 5
         Me.txtGanancia.Name = "txtGanancia"
-        Me.txtGanancia.Size = New System.Drawing.Size(121, 20)
-        Me.txtGanancia.TabIndex = 57
+        Me.txtGanancia.Size = New System.Drawing.Size(131, 20)
+        Me.txtGanancia.TabIndex = 6
         Me.txtGanancia.Tag = "*"
         '
         'ProduProveForm

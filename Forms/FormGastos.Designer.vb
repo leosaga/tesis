@@ -46,15 +46,16 @@ Partial Class FormGastos
         'dgvGastos
         '
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Green
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White
         Me.dgvGastos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvGastos.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dgvGastos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvGastos.Location = New System.Drawing.Point(12, 73)
+        Me.dgvGastos.Location = New System.Drawing.Point(12, 37)
         Me.dgvGastos.Name = "dgvGastos"
-        Me.dgvGastos.Size = New System.Drawing.Size(790, 530)
+        Me.dgvGastos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvGastos.Size = New System.Drawing.Size(790, 566)
         Me.dgvGastos.TabIndex = 5
         '
         'Labelfecha
@@ -105,7 +106,7 @@ Partial Class FormGastos
         Me.btnBorrar.Name = "btnBorrar"
         Me.btnBorrar.Size = New System.Drawing.Size(112, 39)
         Me.btnBorrar.TabIndex = 18
-        Me.btnBorrar.Text = "Borrar"
+        Me.btnBorrar.Text = "Eliminar"
         Me.btnBorrar.UseVisualStyleBackColor = False
         '
         'BtnCerrar

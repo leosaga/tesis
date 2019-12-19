@@ -37,7 +37,7 @@ Public Class FormGastos
 
     Private Sub btnBorrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBorrar.Click
         gasto.Id = dgvGastos.Item("Id", dgvGastos.CurrentRow.Index).Value
-        Dim respuesta As DialogResult = MessageBox.Show("¿esta seguro de eliminar " & gasto.Id.ToString & " ?", "advertencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2)
+        Dim respuesta As DialogResult = MessageBox.Show("¿Esta seguro de eliminar el registro:  " & gasto.Id.ToString & " ?", "advertencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2)
         If respuesta = Windows.Forms.DialogResult.OK Then
 
             gasto.Eliminar(gasto)

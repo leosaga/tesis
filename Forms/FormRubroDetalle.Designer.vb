@@ -91,6 +91,7 @@ Partial Class FormRubroDetalle
         'txtNombreRubro
         '
         Me.txtNombreRubro.Location = New System.Drawing.Point(109, 47)
+        Me.txtNombreRubro.MaxLength = 30
         Me.txtNombreRubro.Name = "txtNombreRubro"
         Me.txtNombreRubro.Size = New System.Drawing.Size(219, 20)
         Me.txtNombreRubro.TabIndex = 1

@@ -39,7 +39,7 @@ Public Class FormRubro
     Private Sub btnEliminar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEliminar.Click
 
         Rubro.id = DataGridView1.Item("id", DataGridView1.CurrentRow.Index).Value
-        Dim respuesta As DialogResult = MessageBox.Show("¿esta seguro de eliminar " & Rubro.id.ToString & " ? ", "advertencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2)
+        Dim respuesta As DialogResult = MessageBox.Show("¿Esta seguro de eliminar el registro:  " & Rubro.id.ToString & " ? ", "advertencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2)
         If respuesta = Windows.Forms.DialogResult.OK Then
 
             Rubro.Eliminar(Rubro.id)

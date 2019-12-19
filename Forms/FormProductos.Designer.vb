@@ -22,7 +22,7 @@ Partial Class FormProductos
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Me.Label1 = New System.Windows.Forms.Label
         Me.btnAgregar = New System.Windows.Forms.Button
         Me.dgvProductos = New System.Windows.Forms.DataGridView
@@ -36,7 +36,7 @@ Partial Class FormProductos
         Me.Label1.BackColor = System.Drawing.Color.Black
         Me.Label1.Font = New System.Drawing.Font("Modern No. 20", 18.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label1.Location = New System.Drawing.Point(12, 29)
+        Me.Label1.Location = New System.Drawing.Point(12, 9)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(118, 25)
         Me.Label1.TabIndex = 16
@@ -49,9 +49,9 @@ Partial Class FormProductos
         Me.btnAgregar.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.btnAgregar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
         Me.btnAgregar.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.btnAgregar.Location = New System.Drawing.Point(8, 503)
+        Me.btnAgregar.Location = New System.Drawing.Point(532, 609)
         Me.btnAgregar.Name = "btnAgregar"
-        Me.btnAgregar.Size = New System.Drawing.Size(93, 52)
+        Me.btnAgregar.Size = New System.Drawing.Size(112, 39)
         Me.btnAgregar.TabIndex = 2
         Me.btnAgregar.Text = "Aceptar"
         Me.btnAgregar.UseVisualStyleBackColor = False
@@ -61,18 +61,18 @@ Partial Class FormProductos
         Me.dgvProductos.AllowUserToAddRows = False
         Me.dgvProductos.AllowUserToDeleteRows = False
         Me.dgvProductos.AllowUserToResizeRows = False
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Green
-        Me.dgvProductos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Green
+        Me.dgvProductos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
         Me.dgvProductos.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvProductos.Location = New System.Drawing.Point(12, 65)
+        Me.dgvProductos.Location = New System.Drawing.Point(12, 37)
         Me.dgvProductos.Name = "dgvProductos"
         Me.dgvProductos.RowTemplate.Height = 24
         Me.dgvProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvProductos.Size = New System.Drawing.Size(1028, 432)
+        Me.dgvProductos.Size = New System.Drawing.Size(790, 566)
         Me.dgvProductos.TabIndex = 13
         '
         'btnCancelar
@@ -81,9 +81,9 @@ Partial Class FormProductos
         Me.btnCancelar.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.btnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
         Me.btnCancelar.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.btnCancelar.Location = New System.Drawing.Point(949, 503)
+        Me.btnCancelar.Location = New System.Drawing.Point(690, 609)
         Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(93, 52)
+        Me.btnCancelar.Size = New System.Drawing.Size(112, 39)
         Me.btnCancelar.TabIndex = 1
         Me.btnCancelar.Text = "Volver"
         Me.btnCancelar.UseVisualStyleBackColor = False
@@ -92,7 +92,7 @@ Partial Class FormProductos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1054, 567)
+        Me.ClientSize = New System.Drawing.Size(814, 660)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.dgvProductos)

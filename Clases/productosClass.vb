@@ -249,7 +249,7 @@ Public Class productosClass
             'objComando.Parameters.AddWithValue("@id_Rubro", producto.id_Rubro)
             objComando.ExecuteNonQuery()
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MsgBox("¡¡¡EL REGISTRO ESTA SIENDO USADO EN OTRAS OPERACIONES NO SE PUEDE ELIMINAR...!!!")
         Finally
             Cerrar()
         End Try

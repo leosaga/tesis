@@ -51,7 +51,7 @@ Partial Class FormProveedores
         Me.dgvProveedores.AllowUserToDeleteRows = False
         Me.dgvProveedores.AllowUserToResizeRows = False
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Green
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White
         Me.dgvProveedores.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvProveedores.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
@@ -60,6 +60,7 @@ Partial Class FormProveedores
         Me.dgvProveedores.Location = New System.Drawing.Point(12, 37)
         Me.dgvProveedores.Name = "dgvProveedores"
         Me.dgvProveedores.RowTemplate.Height = 24
+        Me.dgvProveedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvProveedores.Size = New System.Drawing.Size(790, 566)
         Me.dgvProveedores.TabIndex = 18
         '
@@ -73,7 +74,7 @@ Partial Class FormProveedores
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(112, 39)
         Me.btnEliminar.TabIndex = 21
-        Me.btnEliminar.Text = "Borrar"
+        Me.btnEliminar.Text = "Eliminar"
         Me.btnEliminar.UseVisualStyleBackColor = False
         '
         'btnAgregar

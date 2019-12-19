@@ -54,29 +54,29 @@ Public Class FormGastosDetalle
 
 
 
-        ' If func.validarCampos(Me, ErrorProvider1) Then
+        If func.validarCampos(Me, ErrorProvider1) Then
 
-        Dim Gas As New Gastos
+            Dim Gas As New Gastos
 
 
-        Gas.Id = TxtId.Text
-        Gas.Fecha = dtpfecha.Text
-        Gas.Nfactura = txtnfactura.Text
-        Gas.Descripcion = txtdescripcion.Text
-        Gas.Monto = txtmonto.Text
+            Gas.Id = TxtId.Text
+            Gas.Fecha = dtpfecha.Text
+            Gas.Nfactura = txtnfactura.Text
+            Gas.Descripcion = txtdescripcion.Text
+            Gas.Monto = txtmonto.Text
 
-        If esNuevo Then
+            If esNuevo Then
 
-            Gas.Agregar(Gas)
-        Else
+                Gas.Agregar(Gas)
+            Else
 
-            Gas.Modificar(Gas)
+                Gas.Modificar(Gas)
+            End If
+
+
+            Close()
+
         End If
-
-
-        Close()
-
-
 
     End Sub
 
@@ -128,4 +128,5 @@ Public Class FormGastosDetalle
         End If
     End Sub
 
+   
 End Class

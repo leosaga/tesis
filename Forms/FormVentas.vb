@@ -133,6 +133,8 @@ Public Class FormVentas
         Next
     End Sub
 
+    
+
  
     
     Private Sub txtRecibido_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtRecibido.TextChanged
@@ -142,29 +144,29 @@ Public Class FormVentas
    
     Private Sub BtnAceptar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnAceptar.Click
 
+        If func.validarCampos(Me, ErrorProvider1) Then
 
-
-        Venta.Id = txtIdVenta.Text
-        'Venta.id_comprobante = txtIdComprobante.Text
-        Venta.id_cliente = CmbCliente.SelectedValue
-        Venta.fecha = DateTimePicker2.Text
-        Venta.id_comprobante = ComboComprobante.SelectedValue
-        Venta.Total = txtTotal.Text
-        Venta.pagado = CheckBox1.Checked
-
-        If esNuevo Then
-            Venta.Id = Venta.Agregar(Venta)
-
-        Else
             Venta.Id = txtIdVenta.Text
-            Venta.Modificar(Venta)
+            'Venta.id_comprobante = txtIdComprobante.Text
+            Venta.id_cliente = CmbCliente.SelectedValue
+            Venta.fecha = DateTimePicker2.Text
+            Venta.id_comprobante = ComboComprobante.SelectedValue
+            Venta.Total = txtTotal.Text
+            Venta.pagado = CheckBox1.Checked
+
+            If esNuevo Then
+                Venta.Id = Venta.Agregar(Venta)
+
+            Else
+                Venta.Id = txtIdVenta.Text
+                Venta.Modificar(Venta)
+            End If
+
+            ventas.ActualizarTablas(dgvventadetalle, Venta.Id)
+            Venta.actualizarstock(Venta)
+
+            Close()
         End If
-
-        ventas.ActualizarTablas(dgvventadetalle, Venta.Id)
-        Venta.actualizarstock(Venta)
-
-        Close()
-
     End Sub
    
     Private Sub btnImprimir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnImprimir.Click
@@ -176,5 +178,59 @@ Public Class FormVentas
         'Facturas.Show()
     End Sub
 
+    Private Sub txtIdProducto_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtIdProducto.KeyPress
+        If Char.IsNumber(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        Else
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub txtDescripcion_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtDescripcion.KeyPress
+        If Char.IsLetter(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsSeparator(e.KeyChar) Then
+            e.Handled = False
+        Else
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub TxtPrecio_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TxtPrecio.KeyPress
+        If Char.IsNumber(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        Else
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub txtCantidad_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtCantidad.KeyPress
+        If Char.IsNumber(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        Else
+            e.Handled = True
+        End If
+    End Sub
+    Private Sub txtRecibido_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtRecibido.KeyPress
+        If Char.IsNumber(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        Else
+            e.Handled = True
+        End If
+    End Sub
+
     
+  
+    
+
 End Class

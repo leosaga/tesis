@@ -44,7 +44,7 @@ Partial Class FormClientesDetalle
         Me.btnCancelar.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.btnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
         Me.btnCancelar.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.btnCancelar.Location = New System.Drawing.Point(153, 264)
+        Me.btnCancelar.Location = New System.Drawing.Point(153, 224)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(112, 39)
         Me.btnCancelar.TabIndex = 9
@@ -56,7 +56,7 @@ Partial Class FormClientesDetalle
         Me.btnAceptar.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.btnAceptar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
         Me.btnAceptar.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.btnAceptar.Location = New System.Drawing.Point(35, 264)
+        Me.btnAceptar.Location = New System.Drawing.Point(35, 224)
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Size = New System.Drawing.Size(112, 39)
         Me.btnAceptar.TabIndex = 8
@@ -169,7 +169,7 @@ Partial Class FormClientesDetalle
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(277, 310)
+        Me.ClientSize = New System.Drawing.Size(277, 277)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnAceptar)
         Me.Controls.Add(Me.Label5)

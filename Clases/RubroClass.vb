@@ -108,7 +108,7 @@ Public Class RubroClass
 
             sqlComando.ExecuteNonQuery()
         Catch ex As Exception
-            MsgBox("NO SE PUEDE ELIMINAR EL REGISTRO...!")
+            MsgBox("¡¡¡EL REGISTRO ESTA SIENDO USADO EN OTRAS OPERACIONES NO SE PUEDE ELIMINAR...!!!")
         End Try
 
     End Sub

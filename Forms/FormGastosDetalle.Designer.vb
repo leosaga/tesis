@@ -22,6 +22,7 @@ Partial Class FormGastosDetalle
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container
         Me.btnAceptar = New System.Windows.Forms.Button
         Me.btnCancelar = New System.Windows.Forms.Button
         Me.txtdescripcion = New System.Windows.Forms.TextBox
@@ -33,6 +34,10 @@ Partial Class FormGastosDetalle
         Me.txtnfactura = New System.Windows.Forms.TextBox
         Me.TxtId = New System.Windows.Forms.TextBox
         Me.LabelID = New System.Windows.Forms.Label
+        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.Label2 = New System.Windows.Forms.Label
+        Me.Label3 = New System.Windows.Forms.Label
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnAceptar
@@ -62,9 +67,11 @@ Partial Class FormGastosDetalle
         'txtdescripcion
         '
         Me.txtdescripcion.Location = New System.Drawing.Point(110, 67)
+        Me.txtdescripcion.MaxLength = 30
         Me.txtdescripcion.Name = "txtdescripcion"
         Me.txtdescripcion.Size = New System.Drawing.Size(251, 20)
         Me.txtdescripcion.TabIndex = 2
+        Me.txtdescripcion.Tag = "*"
         '
         'LabelDescripcion
         '
@@ -95,9 +102,11 @@ Partial Class FormGastosDetalle
         'txtmonto
         '
         Me.txtmonto.Location = New System.Drawing.Point(110, 93)
+        Me.txtmonto.MaxLength = 20
         Me.txtmonto.Name = "txtmonto"
         Me.txtmonto.Size = New System.Drawing.Size(251, 20)
         Me.txtmonto.TabIndex = 3
+        Me.txtmonto.Tag = "*"
         '
         'Label1
         '
@@ -111,9 +120,11 @@ Partial Class FormGastosDetalle
         'txtnfactura
         '
         Me.txtnfactura.Location = New System.Drawing.Point(110, 41)
+        Me.txtnfactura.MaxLength = 25
         Me.txtnfactura.Name = "txtnfactura"
         Me.txtnfactura.Size = New System.Drawing.Size(251, 20)
         Me.txtnfactura.TabIndex = 1
+        Me.txtnfactura.Tag = "*"
         '
         'TxtId
         '
@@ -132,11 +143,39 @@ Partial Class FormGastosDetalle
         Me.LabelID.TabIndex = 10
         Me.LabelID.Text = "ID"
         '
+        'ErrorProvider1
+        '
+        Me.ErrorProvider1.ContainerControl = Me
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.Red
+        Me.Label2.Location = New System.Drawing.Point(367, 43)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(14, 18)
+        Me.Label2.TabIndex = 11
+        Me.Label2.Text = "*"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.Red
+        Me.Label3.Location = New System.Drawing.Point(367, 91)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(14, 18)
+        Me.Label3.TabIndex = 12
+        Me.Label3.Text = "*"
+        '
         'FormGastosDetalle
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(440, 183)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.LabelID)
         Me.Controls.Add(Me.TxtId)
         Me.Controls.Add(Me.txtnfactura)
@@ -152,7 +191,9 @@ Partial Class FormGastosDetalle
         Me.MaximizeBox = False
         Me.Name = "FormGastosDetalle"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Tag = "*"
         Me.Text = "Gastos Detalle"
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -168,4 +209,7 @@ Partial Class FormGastosDetalle
     Friend WithEvents txtnfactura As System.Windows.Forms.TextBox
     Friend WithEvents TxtId As System.Windows.Forms.TextBox
     Friend WithEvents LabelID As System.Windows.Forms.Label
+    Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
 End Class
